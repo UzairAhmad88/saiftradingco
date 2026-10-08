@@ -1,0 +1,73 @@
+import React from "react";
+import { cn } from "@/lib/utils/cn";
+
+export interface SectionHeadingProps {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  align?: "left" | "center" | "split";
+  as?: "h1" | "h2" | "h3";
+  className?: string;
+}
+
+export function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  align = "left",
+  as: HeadingTag = "h2",
+  className,
+}: SectionHeadingProps) {
+  if (align === "split") {
+    return (
+      <div
+        className={cn(
+          "flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16",
+          className
+        )}
+      >
+        <div className="space-y-3 max-w-2xl">
+          {eyebrow && (
+            <span className="type-eyebrow text-[#B69B5E] block">
+              {eyebrow}
+            </span>
+          )}
+          <HeadingTag className="type-heading-l text-[#F5F5F5]">
+            {title}
+          </HeadingTag>
+        </div>
+        {description && (
+          <p className="type-small text-[#A3A3A3] max-w-md font-light leading-relaxed">
+            {description}
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  const isCenter = align === "center";
+
+  return (
+    <div
+      className={cn(
+        "space-y-4 mb-12 sm:mb-16",
+        isCenter ? "text-center max-w-3xl mx-auto" : "max-w-3xl",
+        className
+      )}
+    >
+      {eyebrow && (
+        <span className="type-eyebrow text-[#B69B5E] block">
+          {eyebrow}
+        </span>
+      )}
+      <HeadingTag className="type-heading-l text-[#F5F5F5]">
+        {title}
+      </HeadingTag>
+      {description && (
+        <p className="type-body text-[#A3A3A3] font-light leading-relaxed">
+          {description}
+        </p>
+      )}
+    </div>
+  );
+}
