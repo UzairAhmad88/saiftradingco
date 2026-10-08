@@ -135,6 +135,14 @@ export function constructMetadata({
         images: [resolvedOgImage],
       }),
     },
+    icons: {
+      icon: [
+        { url: "/icon.svg", type: "image/svg+xml" },
+        { url: "/icon", type: "image/png" },
+      ],
+      apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+      shortcut: ["/icon.svg"],
+    },
   };
 
   if (keywords && keywords.length > 0) {
