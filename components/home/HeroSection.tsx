@@ -19,10 +19,10 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+      <div className="relative z-10 w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 xl:gap-14 items-center">
           {/* Editorial Content Column — 65% Light Green Environment with 23% Black Typography */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-6 sm:space-y-8 animate-fade-in">
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-5 sm:space-y-6 md:space-y-8 animate-fade-in">
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center gap-2 self-start px-3 py-1.5 border border-[#294D2C]/30 bg-[#CFE7AA] text-[#294D2C] text-[10px] sm:text-[11px] uppercase tracking-[0.22em] rounded-[4px] font-semibold">
               <span className="w-1.5 h-1.5 rounded-full bg-[#294D2C]" aria-hidden="true" />
@@ -33,7 +33,7 @@ export function HeroSection() {
             <div className="space-y-3">
               <h1
                 id="hero-heading"
-                className="font-serif text-4xl sm:text-6xl md:text-7xl xl:text-[5rem] font-normal text-[#050505] tracking-tight leading-[1.05] text-balance font-semibold"
+                className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.75rem] 2xl:text-[5.25rem] font-semibold text-[#050505] tracking-tight leading-[1.05] text-balance"
               >
                 Selected Rough{" "}
                 <span className="italic font-light text-[#294D2C]">

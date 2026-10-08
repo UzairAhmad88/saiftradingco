@@ -9,9 +9,9 @@ export function EducationSection() {
       aria-labelledby="education-heading"
       className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-20 sm:py-28"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16 lg:mb-20">
           <div className="space-y-3 max-w-2xl">
             <span className="type-eyebrow text-[#294D2C] block font-bold">
               Mineral Knowledge
@@ -29,7 +29,7 @@ export function EducationSection() {
         </div>
 
         {/* Education Preview Grid — Off-White Breathing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {EDUCATION_ARTICLES_DATA.map((article) => (
             <article
               key={article.slug}

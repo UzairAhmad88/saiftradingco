@@ -9,7 +9,7 @@ export function IntroSection() {
       aria-labelledby="intro-heading"
       className="border-b border-[#D4DEC5] bg-[#F7F7F1] py-20 sm:py-28"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Eyebrow + Large Editorial Headline */}
           <div className="lg:col-span-6 space-y-6">

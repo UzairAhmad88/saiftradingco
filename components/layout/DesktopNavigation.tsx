@@ -35,7 +35,7 @@ export function DesktopNavigation({ className }: DesktopNavigationProps) {
   return (
     <nav
       aria-label="Primary navigation"
-      className={cn("hidden md:flex items-center space-x-7 lg:space-x-9 text-xs uppercase tracking-[0.2em]", className)}
+      className={cn("hidden md:flex items-center space-x-4 lg:space-x-7 xl:space-x-9 text-[11px] lg:text-xs uppercase tracking-[0.16em] lg:tracking-[0.2em]", className)}
     >
       {PRIMARY_NAV_ITEMS.map((item) => {
         const active = isItemActive(item.href);

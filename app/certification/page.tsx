@@ -27,7 +27,7 @@ export default function CertificationPage() {
       >
       {/* Breadcrumbs Header */}
       <div className="border-b border-[#D4DEC5] bg-[#CFE7AA]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
           <Breadcrumbs items={breadcrumbs} />
         </div>
       </div>
@@ -37,7 +37,7 @@ export default function CertificationPage() {
         aria-labelledby="certification-hero-heading"
         className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-16 sm:py-24"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-[#294D2C]/20 bg-[#CFE7AA] text-[#294D2C] text-[10px] sm:text-[11px] uppercase tracking-[0.22em] rounded-[3px]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#294D2C]" aria-hidden="true" />
@@ -46,7 +46,7 @@ export default function CertificationPage() {
 
             <h1
               id="certification-hero-heading"
-              className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-[#050505] tracking-tight leading-[1.08]"
+              className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#050505] tracking-tight leading-[1.08]"
             >
               Gemstone Certification &amp; Verification
             </h1>
@@ -63,7 +63,7 @@ export default function CertificationPage() {
         aria-labelledby="what-reports-prove"
         className="border-b border-[#D4DEC5] bg-[#F7F7F1] py-20 sm:py-24"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5 space-y-4">
               <span className="type-eyebrow text-[#294D2C] block">
@@ -138,7 +138,7 @@ export default function CertificationPage() {
         aria-labelledby="distinction-heading"
         className="border-b border-[#262626] bg-[#050505] py-20 sm:py-24 text-[#F7F7F1]"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
           <div className="p-8 sm:p-12 bg-[#101010] border border-[#262626] rounded-[4px] space-y-8 shadow-2xl">
             <div className="space-y-3 max-w-3xl">
               <span className="type-eyebrow text-[#B7D98B] block">
@@ -184,7 +184,7 @@ export default function CertificationPage() {
         aria-labelledby="saif-protocol"
         className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-20 sm:py-24"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <span className="type-eyebrow text-[#294D2C] block">

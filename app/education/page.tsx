@@ -36,7 +36,7 @@ export default function EducationPage() {
       >
         {/* Breadcrumb Header */}
         <div className="border-b border-[#D4DEC5] bg-[#CFE7AA]/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <Breadcrumbs items={breadcrumbs} />
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function EducationPage() {
           aria-labelledby="education-hero-heading"
           className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-16 sm:py-24"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="max-w-3xl space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 border border-[#294D2C]/20 bg-[#CFE7AA] text-[#294D2C] text-[10px] sm:text-[11px] uppercase tracking-[0.22em] rounded-[3px]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#294D2C]" aria-hidden="true" />
@@ -55,7 +55,7 @@ export default function EducationPage() {
 
               <h1
                 id="education-hero-heading"
-                className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-[#050505] tracking-tight leading-[1.08]"
+                className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#050505] tracking-tight leading-[1.08]"
               >
                 Mineral Knowledge &amp; Guides
               </h1>
@@ -73,7 +73,7 @@ export default function EducationPage() {
             aria-labelledby="featured-guide-heading"
             className="border-b border-[#D4DEC5] bg-[#CFE7AA]/30 py-16 sm:py-20"
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
               <div className="sr-only">
                 <h2 id="featured-guide-heading">Featured Technical Guide</h2>
               </div>
@@ -87,7 +87,7 @@ export default function EducationPage() {
           aria-labelledby="mineral-guides-heading"
           className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-20 sm:py-24"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
               <div className="space-y-3">
                 <span className="type-eyebrow text-[#294D2C] block">
@@ -119,7 +119,7 @@ export default function EducationPage() {
             aria-labelledby="buying-guides-heading"
             className="border-b border-[#D4DEC5] bg-[#F7F7F1] py-20 sm:py-24"
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
                 <div className="space-y-3">
                   <span className="type-eyebrow text-[#294D2C] block">
@@ -151,7 +151,7 @@ export default function EducationPage() {
           aria-labelledby="standards-guides-heading"
           className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-20 sm:py-24"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
               <div className="space-y-3">
                 <span className="type-eyebrow text-[#294D2C] block">
@@ -183,7 +183,7 @@ export default function EducationPage() {
             aria-labelledby="care-guides-heading"
             className="border-b border-[#D4DEC5] bg-[#F7F7F1] py-20 sm:py-24"
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
                 <div className="space-y-3">
                   <span className="type-eyebrow text-[#294D2C] block">
@@ -212,7 +212,7 @@ export default function EducationPage() {
 
         {/* Cross-Link Strip to Collections — Black Contrast Section */}
         <section className="bg-[#050505] py-16 text-[#F7F7F1]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="space-y-1">
               <h3 className="font-serif text-xl sm:text-2xl text-[#F7F7F1]">
                 Explore Our Physical Gemstone Collections

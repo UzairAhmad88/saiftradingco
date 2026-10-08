@@ -23,10 +23,10 @@ export function AdminHeader({
         <button
           type="button"
           onClick={onToggleSidebar}
-          className="lg:hidden p-2 text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+          className="lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center p-2 text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
           aria-label="Toggle navigation drawer"
         >
-          <Menu className="w-4 h-4" />
+          <Menu className="w-5 h-5" />
         </button>
 
         <div>

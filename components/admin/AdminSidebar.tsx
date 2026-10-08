@@ -97,10 +97,10 @@ export function AdminSidebar({
             <button
               type="button"
               onClick={onClose}
-              className="lg:hidden p-1.5 text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+              className="lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center p-2 text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
               aria-label="Close navigation menu"
             >
-              <X className="w-4 h-4" />
+              <X className="w-5 h-5" />
             </button>
           </div>
 
@@ -167,10 +167,10 @@ export function AdminSidebar({
               <button
                 type="submit"
                 title="Sign out of Admin Console"
-                className="p-1.5 text-[#9A9A94] hover:text-[#F5F5F0] hover:bg-[#171717] border border-[#262626] rounded-[4px] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+                className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2 text-[#9A9A94] hover:text-[#F5F5F0] hover:bg-[#171717] border border-[#262626] rounded-[4px] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
                 aria-label="Sign out"
               >
-                <LogOut className="w-3.5 h-3.5" aria-hidden="true" />
+                <LogOut className="w-4 h-4" aria-hidden="true" />
               </button>
             </form>
           </div>

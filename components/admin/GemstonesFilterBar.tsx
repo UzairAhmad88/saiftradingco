@@ -117,7 +117,7 @@ export function GemstonesFilterBar({
               id="filter-status"
               value={currentStatus}
               onChange={(e) => updateParam("status", e.target.value)}
-              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-1.5 px-2.5 focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
+              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-2 px-3 min-h-[40px] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
             >
               <option value="all">All Statuses</option>
               <option value="available">Available (Public)</option>
@@ -136,7 +136,7 @@ export function GemstonesFilterBar({
               id="filter-category"
               value={currentCategory}
               onChange={(e) => updateParam("category", e.target.value)}
-              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-1.5 px-2.5 focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
+              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-2 px-3 min-h-[40px] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
             >
               <option value="all">All Categories</option>
               {categories.map((cat) => (
@@ -156,7 +156,7 @@ export function GemstonesFilterBar({
               id="filter-featured"
               value={currentFeatured}
               onChange={(e) => updateParam("featured", e.target.value)}
-              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-1.5 px-2.5 focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
+              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-2 px-3 min-h-[40px] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
             >
               <option value="all">All</option>
               <option value="featured">Featured Only</option>
@@ -173,7 +173,7 @@ export function GemstonesFilterBar({
               id="filter-sort"
               value={currentSort}
               onChange={(e) => updateParam("sort", e.target.value)}
-              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-1.5 px-2.5 focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
+              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-2 px-3 min-h-[40px] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
             >
               <option value="newest">Newest Added</option>
               <option value="updated">Recently Updated</option>
@@ -191,9 +191,9 @@ export function GemstonesFilterBar({
               type="button"
               onClick={handleResetFilters}
               disabled={isPending}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs text-[#9CCB63] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[40px] text-xs text-[#9CCB63] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
             >
-              <RotateCcw className="w-3 h-3" />
+              <RotateCcw className="w-3.5 h-3.5" />
               <span>Reset</span>
             </button>
           )}

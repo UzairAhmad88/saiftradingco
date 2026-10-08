@@ -99,7 +99,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
       >
         {/* Breadcrumb Header */}
         <div className="border-b border-[#D4DEC5] bg-[#CFE7AA]/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <Breadcrumbs items={breadcrumbs} />
           </div>
         </div>
@@ -109,7 +109,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           aria-labelledby="contact-heading"
           className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-16 sm:py-20 lg:py-24"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="max-w-3xl space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 border border-[#294D2C]/20 bg-[#CFE7AA] text-[#294D2C] text-[10px] sm:text-[11px] uppercase tracking-[0.22em] rounded-[3px]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#294D2C]" aria-hidden="true" />
@@ -117,7 +117,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </div>
               <h1
                 id="contact-heading"
-                className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#050505] font-normal tracking-tight leading-[1.08]"
+                className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#050505] font-semibold tracking-tight leading-[1.08]"
               >
                 LET&apos;S DISCUSS YOUR<br />NEXT GEMSTONE.
               </h1>
@@ -131,7 +131,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         {/* Main Content: Contact Information + Inquiry Form */}
         <section
           aria-labelledby="contact-details-heading"
-          className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          className="py-16 sm:py-24 w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16"
         >
           <h2 id="contact-details-heading" className="sr-only">
             Contact Details and Trade Inquiry Form
@@ -158,7 +158,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           aria-labelledby="contact-explore-heading"
           className="border-t border-[#D4DEC5] bg-[#F7F7F1] py-14"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-[#D4DEC5] pb-8 mb-8">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.25em] text-[#294D2C] block font-medium">

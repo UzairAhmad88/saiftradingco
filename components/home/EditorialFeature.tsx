@@ -10,7 +10,7 @@ export function EditorialFeature() {
       aria-labelledby="editorial-heading"
       className="border-b border-[#262626] bg-[#050505] py-20 sm:py-28 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Editorial Image Column (Dramatic high-contrast presentation) */}
           <div className="lg:col-span-6 order-2 lg:order-1">

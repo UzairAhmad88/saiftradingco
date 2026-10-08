@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t border-[#262626] bg-[#050505] text-[#EDEDE4] text-sm mt-auto">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-10 lg:px-12 py-16 sm:py-20">
+      <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-16 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Column 1: Brand & Specialization Statement (lg:col-span-4) */}
           <div className="lg:col-span-4 space-y-4">

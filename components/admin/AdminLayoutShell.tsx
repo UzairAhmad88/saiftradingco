@@ -40,7 +40,7 @@ export function AdminLayoutShell({
         <main
           id="admin-main"
           tabIndex={-1}
-          className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto focus:outline-none"
+          className="flex-1 p-4 sm:p-6 lg:p-8 w-full max-w-7xl 2xl:max-w-[1536px] mx-auto focus:outline-none"
         >
           {children}
         </main>

@@ -459,11 +459,11 @@ export function InquiryForm({
 
         {/* 7. Privacy Notice */}
         <div className="pt-2">
-          <p className="text-xs text-[#9A9A94] leading-relaxed">
+          <p className="text-xs text-[#777A70] leading-relaxed">
             By submitting this form, you agree that the information provided may be used to respond to your inquiry in accordance with our{" "}
             <Link
               href="/privacy"
-              className="text-[#D8D8D2] hover:text-[#9CCB63] underline underline-offset-2 transition-colors"
+              className="text-[#050505] hover:text-[#294D2C] underline underline-offset-2 transition-colors font-medium"
             >
               Privacy Policy
             </Link>

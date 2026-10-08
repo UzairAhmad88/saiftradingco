@@ -131,7 +131,7 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
       >
         {/* Breadcrumb Header */}
         <div className="border-b border-[#D4DEC5] bg-[#CFE7AA]/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <Breadcrumbs items={breadcrumbs} />
           </div>
         </div>
@@ -152,7 +152,7 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
             </div>
 
             {/* Single Semantic H1 */}
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-[#050505] tracking-tight leading-[1.1] text-balance">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#050505] tracking-tight leading-[1.1] text-balance">
               {article.title}
             </h1>
 
@@ -244,7 +244,7 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
         {/* Related Rough Gemstones — Light Green Base */}
         {relatedGemstones.length > 0 && (
           <section className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-16 sm:py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
               <RelatedGemstonesSection
                 relatedGemstones={relatedGemstones}
                 categoryName={article.mineralFamily || "Catalogue Specimens"}
@@ -256,7 +256,7 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
 
         {/* Related Technical Articles Strip — Off-White Rhythm */}
         <section className="border-b border-[#D4DEC5] bg-[#F7F7F1] py-16 sm:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <RelatedArticles articles={relatedArticles} />
           </div>
         </section>

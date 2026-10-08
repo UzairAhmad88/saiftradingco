@@ -10,8 +10,8 @@ export const metadata: Metadata = constructMetadata({
 export default function TermsPage() {
   return (
     <main id="main-content" tabIndex={-1} className="w-full bg-[#E5F1D2] py-16 sm:py-24 focus:outline-none">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] p-8 sm:p-12 shadow-sm space-y-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] p-6 sm:p-8 md:p-12 shadow-sm space-y-8">
           <div>
             <h1 className="text-3xl sm:text-5xl font-serif text-[#050505] tracking-tight mb-3">
               Terms of Service
