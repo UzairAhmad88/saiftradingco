@@ -5,7 +5,7 @@ Production-ready starter for a premium rough gemstone catalogue + business websi
 - Premium responsive public website
 - Collections, search, filters and gemstone detail pages
 - Certification and education
-- Contact/WhatsApp inquiry
+- Contact & direct trade inquiry
 - Admin-only authentication
 - Gemstone CRUD, images, certificates and Available/Sold/Hidden states
 - Technical SEO, performance and accessibility
