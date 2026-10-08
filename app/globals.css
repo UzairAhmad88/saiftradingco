@@ -2,19 +2,23 @@
 
 @theme {
   --color-brand-bg-primary: #050505;
-  --color-brand-bg-secondary: #101010;
-  --color-brand-surface: #171717;
+  --color-brand-bg-deep: #0A0A0A;
+  --color-brand-surface: #111111;
+  --color-brand-surface-secondary: #171717;
   --color-brand-surface-elevated: #1E1E1E;
-  --color-brand-text-primary: #F5F5F5;
-  --color-brand-text-secondary: #A3A3A3;
-  --color-brand-text-muted: #737373;
-  --color-brand-border: #2A2A2A;
-  --color-brand-border-subtle: #1D1D1D;
-  --color-brand-luxury: #B69B5E;
-  --color-brand-luxury-hover: #C7AC6F;
-  --color-brand-gemstone: #B6D94C;
+  --color-brand-text-primary: #F5F5F0;
+  --color-brand-text-muted: #D8D8D2;
+  --color-brand-text-gray: #9A9A94;
+  --color-brand-border: #262626;
+  --color-brand-border-subtle: #1A1A1A;
 
-  --color-feedback-success: #2E7D32;
+  /* Luxury Light Green Palette */
+  --color-brand-green-light: #B7D98B;
+  --color-brand-green: #9CCB63;
+  --color-brand-green-soft: #CFE7AA;
+  --color-brand-green-deep: #294D2C;
+
+  --color-feedback-success: #294D2C;
   --color-feedback-warning: #D97706;
   --color-feedback-error: #DC2626;
 
@@ -23,28 +27,30 @@
 }
 
 :root {
-  /* Surface & Background */
+  /* Surfaces & Backgrounds */
   --background: #050505;
-  --background-secondary: #101010;
-  --surface: #171717;
+  --background-deep: #0A0A0A;
+  --surface: #111111;
+  --surface-secondary: #171717;
   --surface-elevated: #1E1E1E;
 
   /* Typography Colors */
-  --text-primary: #F5F5F5;
-  --text-secondary: #A3A3A3;
-  --text-muted: #737373;
+  --text-primary: #F5F5F0;
+  --text-muted: #D8D8D2;
+  --text-gray: #9A9A94;
 
   /* Borders & Dividers */
-  --border: #2A2A2A;
-  --border-subtle: #1D1D1D;
+  --border: #262626;
+  --border-subtle: #1A1A1A;
 
-  /* Accents */
-  --accent-luxury: #B69B5E;
-  --accent-luxury-hover: #C7AC6F;
-  --accent-gemstone: #B6D94C;
+  /* Signature Gemstone Light Green Accents */
+  --accent-light-green: #B7D98B;
+  --accent-brand-green: #9CCB63;
+  --accent-soft-green: #CFE7AA;
+  --accent-deep-green: #294D2C;
 
   /* Restrained Feedback */
-  --success: #2E7D32;
+  --success: #294D2C;
   --warning: #D97706;
   --error: #DC2626;
 
@@ -162,17 +168,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A2A;
+  background: #262626;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3A3A3A;
+  background: #363636;
 }
 
 /* Focus Visible Accessible Styling */
 :focus-visible {
-  outline: 2px solid #B69B5E;
+  outline: 2px solid #9CCB63;
   outline-offset: 3px;
 }
 

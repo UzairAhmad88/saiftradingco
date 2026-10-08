@@ -89,7 +89,7 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="admin@saiftradingco.com"
           disabled={isPending}
-          className="bg-[#0D0D0D]"
+          className="bg-[#0A0A0A]"
         />
       </FormField>
 
@@ -106,13 +106,13 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••••••"
             disabled={isPending}
-            className="pr-12 bg-[#0D0D0D]"
+            className="pr-12 bg-[#0A0A0A]"
           />
           <button
             type="button"
             onClick={() => setShowPassword((prev) => !prev)}
             aria-label={showPassword ? "Hide password" : "Show password"}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#737373] hover:text-[#F5F5F5] p-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9A9A94] hover:text-[#F5F5F0] p-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63] rounded-[4px]"
             title={showPassword ? "Hide password" : "Show password"}
             tabIndex={0}
           >
@@ -129,8 +129,8 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
       <input type="hidden" name="next" value={safeNext} />
 
       {/* Security Assurance Pill */}
-      <div className="flex items-center gap-2 text-[11px] text-[#737373] pt-1">
-        <Lock className="w-3.5 h-3.5 text-[#B69B5E]" aria-hidden="true" />
+      <div className="flex items-center gap-2 text-[11px] text-[#9A9A94] pt-1">
+        <Lock className="w-3.5 h-3.5 text-[#9CCB63]" aria-hidden="true" />
         <span>End-to-end encrypted administrative credentials</span>
       </div>
 

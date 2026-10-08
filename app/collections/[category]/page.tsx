@@ -138,7 +138,7 @@ export default async function CategoryPage({
         className="w-full bg-[#050505] focus:outline-none"
       >
         {/* Breadcrumb Navigation */}
-        <div className="border-b border-[#2A2A2A] bg-[#080808]">
+        <div className="border-b border-[#262626] bg-[#0A0A0A]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs items={breadcrumbs} />
           </div>

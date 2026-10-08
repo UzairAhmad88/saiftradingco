@@ -43,11 +43,11 @@ export default async function AdminEditGemstonePage({
   return (
     <div className="space-y-8">
       {/* Page Header */}
-      <div className="pb-5 border-b border-[#2A2A2A] space-y-2">
+      <div className="pb-5 border-b border-[#262626] space-y-2">
         <div className="flex items-center justify-between">
           <Link
             href="/admin/gemstones"
-            className="inline-flex items-center gap-1.5 text-xs text-[#A3A3A3] hover:text-[#B69B5E] transition-colors uppercase tracking-wider font-mono"
+            className="inline-flex items-center gap-1.5 text-xs text-[#9A9A94] hover:text-[#9CCB63] transition-colors uppercase tracking-wider font-mono"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to Gemstones Catalogue</span>
@@ -58,7 +58,7 @@ export default async function AdminEditGemstonePage({
               href={`/gemstones/${gemstone.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-[#B69B5E] hover:underline uppercase tracking-wider font-mono"
+              className="inline-flex items-center gap-1.5 text-xs text-[#9CCB63] hover:underline uppercase tracking-wider font-mono"
             >
               <span>View Public Specimen Page</span>
               <ExternalLink className="w-3.5 h-3.5" />
@@ -68,21 +68,21 @@ export default async function AdminEditGemstonePage({
 
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#B69B5E] font-medium">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] font-medium">
               Editing Specimen Record
             </span>
             {gemstone.sku && (
-              <span className="text-[10px] font-mono text-[#737373] bg-[#141414] px-1.5 py-0.5 border border-[#2A2A2A]">
+              <span className="text-[10px] font-mono text-[#9A9A94] bg-[#111111] px-1.5 py-0.5 border border-[#262626] rounded-[4px]">
                 {gemstone.sku}
               </span>
             )}
           </div>
-          <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal tracking-tight mt-1">
+          <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal tracking-tight mt-1">
             {gemstone.name}
           </h1>
-          <p className="text-xs text-[#A3A3A3] font-light mt-1">
+          <p className="text-xs text-[#9A9A94] font-light mt-1">
             Category: {gemstone.category?.name || "Uncategorized"} · Status:{" "}
-            <span className="font-mono uppercase text-[#F5F5F5]">{gemstone.status}</span>
+            <span className="font-mono uppercase text-[#F5F5F0]">{gemstone.status}</span>
           </p>
         </div>
       </div>

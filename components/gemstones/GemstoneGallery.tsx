@@ -111,22 +111,22 @@ export function GemstoneGallery({
   return (
     <div className="w-full space-y-4">
       {/* Primary Display Frame */}
-      <div className="relative aspect-[4/3] sm:aspect-[1/1] lg:aspect-[4/3] w-full bg-[#080808] border border-[#2A2A2A] overflow-hidden group shadow-2xl">
+      <div className="relative aspect-[4/3] sm:aspect-[1/1] lg:aspect-[4/3] w-full bg-[#080808] border border-[#262626] rounded-[4px] overflow-hidden group shadow-2xl">
         {/* Corner Accents */}
         <div
-          className="absolute top-3 left-3 w-3 h-3 border-t border-l border-[#B69B5E]/40 z-10 pointer-events-none"
+          className="absolute top-3 left-3 w-3 h-3 border-t border-l border-[#9CCB63]/40 z-10 pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute top-3 right-3 w-3 h-3 border-t border-r border-[#B69B5E]/40 z-10 pointer-events-none"
+          className="absolute top-3 right-3 w-3 h-3 border-t border-r border-[#9CCB63]/40 z-10 pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-[#B69B5E]/40 z-10 pointer-events-none"
+          className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-[#9CCB63]/40 z-10 pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-[#B69B5E]/40 z-10 pointer-events-none"
+          className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-[#9CCB63]/40 z-10 pointer-events-none"
           aria-hidden="true"
         />
 
@@ -150,7 +150,7 @@ export function GemstoneGallery({
           ref={triggerRef}
           type="button"
           onClick={() => setIsLightboxOpen(true)}
-          className="absolute top-4 right-4 z-20 p-2.5 bg-[#050505]/80 hover:bg-[#141414] border border-[#2A2A2A] hover:border-[#B69B5E] text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B69B5E]"
+          className="absolute top-4 right-4 z-20 p-2.5 bg-[#050505]/80 hover:bg-[#111111] border border-[#262626] hover:border-[#9CCB63] text-[#9A9A94] hover:text-[#F5F5F0] transition-colors rounded-[4px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCB63]"
           aria-label={`Open full-resolution view of ${gemstoneName}`}
         >
           <Maximize2 className="w-4 h-4" />
@@ -158,7 +158,7 @@ export function GemstoneGallery({
 
         {/* Bottom Image Position Badge */}
         {hasMultipleImages && (
-          <div className="absolute bottom-4 left-4 z-20 px-2.5 py-1 bg-[#050505]/85 border border-[#2A2A2A] text-[10px] uppercase tracking-widest text-[#B69B5E] font-mono">
+          <div className="absolute bottom-4 left-4 z-20 px-2.5 py-1 bg-[#050505]/85 border border-[#262626] rounded-[2px] text-[10px] uppercase tracking-widest text-[#9CCB63] font-mono">
             {selectedIndex + 1} / {displayImages.length}
           </div>
         )}
@@ -184,10 +184,10 @@ export function GemstoneGallery({
                 type="button"
                 onClick={() => setSelectedIndex(idx)}
                 className={cn(
-                  "relative w-20 sm:w-24 aspect-[4/3] shrink-0 bg-[#0A0A0A] border transition-all overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B69B5E]",
+                  "relative w-20 sm:w-24 aspect-[4/3] shrink-0 bg-[#0A0A0A] border rounded-[4px] transition-all overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCB63]",
                   isSelected
-                    ? "border-[#B69B5E] ring-1 ring-[#B69B5E] opacity-100"
-                    : "border-[#2A2A2A] opacity-60 hover:opacity-100 hover:border-[#3A3A3A]"
+                    ? "border-[#9CCB63] ring-1 ring-[#9CCB63] opacity-100"
+                    : "border-[#262626] opacity-60 hover:opacity-100 hover:border-[#3A3A3A]"
                 )}
                 aria-label={`View image ${idx + 1} of ${displayImages.length}`}
                 aria-current={isSelected ? "true" : undefined}
@@ -216,7 +216,7 @@ export function GemstoneGallery({
         >
           {/* Top Bar with Counter and Close Button */}
           <div className="absolute top-4 inset-x-4 sm:inset-x-8 flex items-center justify-between z-30">
-            <div className="text-xs uppercase tracking-[0.2em] text-[#B69B5E] font-mono">
+            <div className="text-xs uppercase tracking-[0.2em] text-[#9CCB63] font-mono">
               <span>{gemstoneName}</span>
               <span className="mx-2 text-[#404040]">·</span>
               <span>
@@ -231,7 +231,7 @@ export function GemstoneGallery({
                 setIsLightboxOpen(false);
                 triggerRef.current?.focus();
               }}
-              className="p-2.5 bg-[#101010] border border-[#2A2A2A] hover:border-[#B69B5E] text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B69B5E]"
+              className="p-2.5 bg-[#111111] border border-[#262626] hover:border-[#9CCB63] text-[#9A9A94] hover:text-[#F5F5F0] transition-colors rounded-[4px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCB63]"
               aria-label="Close fullscreen view"
             >
               <X className="w-5 h-5" />
@@ -243,7 +243,7 @@ export function GemstoneGallery({
             <button
               type="button"
               onClick={handlePrev}
-              className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 p-3 bg-[#101010]/80 border border-[#2A2A2A] hover:border-[#B69B5E] text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors"
+              className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 p-3 bg-[#111111]/90 border border-[#262626] hover:border-[#9CCB63] text-[#9A9A94] hover:text-[#F5F5F0] transition-colors rounded-[4px]"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -266,7 +266,7 @@ export function GemstoneGallery({
             <button
               type="button"
               onClick={handleNext}
-              className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 p-3 bg-[#101010]/80 border border-[#2A2A2A] hover:border-[#B69B5E] text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors"
+              className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 p-3 bg-[#111111]/90 border border-[#262626] hover:border-[#9CCB63] text-[#9A9A94] hover:text-[#F5F5F0] transition-colors rounded-[4px]"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6" />
@@ -275,7 +275,7 @@ export function GemstoneGallery({
 
           {/* Bottom Caption */}
           <div className="absolute bottom-4 inset-x-4 text-center">
-            <p className="text-xs text-[#A3A3A3] font-light max-w-xl mx-auto truncate">
+            <p className="text-xs text-[#9A9A94] font-light max-w-xl mx-auto truncate">
               {currentImage.alt_text || gemstoneName}
             </p>
           </div>

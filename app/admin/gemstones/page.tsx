@@ -65,15 +65,15 @@ export default async function AdminGemstonesPage({
   return (
     <div className="space-y-6">
       {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-5 border-b border-[#2A2A2A]">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-5 border-b border-[#262626]">
         <div>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#B69B5E] font-medium">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] font-medium">
             Catalogue Database
           </span>
-          <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal tracking-tight mt-1">
+          <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal tracking-tight mt-1">
             Gemstone Management
           </h1>
-          <p className="text-xs text-[#A3A3A3] mt-1 font-light">
+          <p className="text-xs text-[#9A9A94] mt-1 font-light">
             Search, filter, edit, and publish rough gemstone inventory.
           </p>
         </div>
@@ -100,24 +100,24 @@ export default async function AdminGemstonesPage({
 
       {/* Gemstones Content */}
       {gemstones.length === 0 ? (
-        <div className="bg-[#101010] border border-[#2A2A2A] p-12 text-center space-y-4">
-          <div className="w-12 h-12 bg-[#0A0A0A] border border-[#2A2A2A] flex items-center justify-center mx-auto text-[#737373]">
+        <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-12 text-center space-y-4">
+          <div className="w-12 h-12 bg-[#0A0A0A] border border-[#262626] rounded-[4px] flex items-center justify-center mx-auto text-[#9A9A94]">
             {resolvedParams.search || resolvedParams.status ? (
-              <AlertCircle className="w-6 h-6 text-[#B69B5E]" />
+              <AlertCircle className="w-6 h-6 text-[#9CCB63]" />
             ) : (
               <Gem className="w-6 h-6" />
             )}
           </div>
 
           <div className="space-y-1">
-            <h2 className="text-base font-serif text-[#F5F5F5]">
+            <h2 className="text-base font-serif text-[#F5F5F0]">
               {resolvedParams.search ||
               resolvedParams.status ||
               resolvedParams.category
                 ? "No matching gemstones found"
                 : "Your catalogue is empty"}
             </h2>
-            <p className="text-xs text-[#A3A3A3] max-w-sm mx-auto font-light leading-relaxed">
+            <p className="text-xs text-[#9A9A94] max-w-sm mx-auto font-light leading-relaxed">
               {resolvedParams.search ||
               resolvedParams.status ||
               resolvedParams.category

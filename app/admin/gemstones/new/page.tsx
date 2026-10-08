@@ -22,24 +22,24 @@ export default async function AdminNewGemstonePage() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="pb-5 border-b border-[#2A2A2A] space-y-2">
+      <div className="pb-5 border-b border-[#262626] space-y-2">
         <Link
           href="/admin/gemstones"
-          className="inline-flex items-center gap-1.5 text-xs text-[#A3A3A3] hover:text-[#B69B5E] transition-colors uppercase tracking-wider font-mono"
+          className="inline-flex items-center gap-1.5 text-xs text-[#9A9A94] hover:text-[#9CCB63] transition-colors uppercase tracking-wider font-mono"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to Gemstones Catalogue</span>
         </Link>
         <div>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#B69B5E] font-medium">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] font-medium">
             New Specimen Registration
           </span>
-          <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal tracking-tight mt-1">
+          <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal tracking-tight mt-1">
             Create Gemstone Specimen
           </h1>
-          <p className="text-xs text-[#A3A3A3] font-light mt-1">
+          <p className="text-xs text-[#9A9A94] font-light mt-1">
             Specify physical metrics and details. The specimen will default to{" "}
-            <strong className="text-[#F5F5F5]">Draft</strong> until you explicitly choose to publish.
+            <strong className="text-[#F5F5F0]">Draft</strong> until you explicitly choose to publish.
           </p>
         </div>
       </div>

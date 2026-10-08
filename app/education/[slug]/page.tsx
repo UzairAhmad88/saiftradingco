@@ -130,40 +130,40 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
         className="w-full bg-[#050505] focus:outline-none"
       >
         {/* Breadcrumb Header */}
-        <div className="border-b border-[#2A2A2A] bg-[#080808]">
+        <div className="border-b border-[#262626] bg-[#0A0A0A]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs items={breadcrumbs} />
           </div>
         </div>
 
         {/* Article Header & Hero */}
-        <article className="border-b border-[#2A2A2A] bg-[#070707] py-16 sm:py-20 lg:py-24">
+        <article className="border-b border-[#262626] bg-[#0A0A0A] py-16 sm:py-20 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             {/* Metadata Badges */}
             <div className="flex flex-wrap items-center justify-between gap-4 text-xs">
-              <span className="text-[#B69B5E] px-3 py-1 border border-[#B69B5E]/30 bg-[#0E0E0E] text-[10px] sm:text-[11px] uppercase tracking-[0.2em]">
+              <span className="text-[#9CCB63] px-3 py-1 border border-[#9CCB63]/30 bg-[#111111] text-[10px] sm:text-[11px] uppercase tracking-[0.2em] rounded-[2px]">
                 {article.category}
               </span>
 
-              <div className="flex items-center gap-1.5 text-[#737373]">
+              <div className="flex items-center gap-1.5 text-[#9A9A94]">
                 <Clock className="w-3.5 h-3.5" />
                 <span>{article.readingTime}</span>
               </div>
             </div>
 
             {/* Single Semantic H1 */}
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F5F5F5] tracking-tight leading-[1.1] text-balance">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F5F5F0] tracking-tight leading-[1.1] text-balance">
               {article.title}
             </h1>
 
             {/* Lead Paragraph */}
-            <p className="text-base sm:text-lg text-[#A3A3A3] font-light leading-relaxed border-l-2 border-[#B69B5E] pl-6 py-1">
+            <p className="text-base sm:text-lg text-[#9A9A94] font-light leading-relaxed border-l-2 border-[#9CCB63] pl-6 py-1">
               {article.shortDescription}
             </p>
 
             {/* Hero Image Frame */}
             {article.heroImage && (
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#0A0A0A] border border-[#2A2A2A] shadow-2xl">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#0A0A0A] border border-[#262626] rounded-[4px] shadow-2xl">
                 <Image
                   src={article.heroImage}
                   alt={article.title}
@@ -186,11 +186,11 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
                   id={section.id}
                   className="space-y-4 scroll-mt-24"
                 >
-                  <h2 className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal tracking-tight pt-4 border-t border-[#1C1C1C]">
+                  <h2 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal tracking-tight pt-4 border-t border-[#1A1A1A]">
                     {section.heading}
                   </h2>
 
-                  <div className="space-y-4 text-sm sm:text-base text-[#A3A3A3] font-light leading-relaxed">
+                  <div className="space-y-4 text-sm sm:text-base text-[#9A9A94] font-light leading-relaxed">
                     {section.paragraphs.map((p, pIdx) => (
                       <p key={pIdx}>{p}</p>
                     ))}
@@ -200,10 +200,10 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
                     <div className="space-y-6 pt-4">
                       {section.subSections.map((sub, sIdx) => (
                         <div key={sIdx} className="space-y-2">
-                          <h3 className="font-serif text-lg sm:text-xl text-[#E5E5E5] font-normal">
+                          <h3 className="font-serif text-lg sm:text-xl text-[#D8D8D2] font-normal">
                             {sub.heading}
                           </h3>
-                          <div className="space-y-2 text-xs sm:text-sm text-[#A3A3A3] font-light leading-relaxed">
+                          <div className="space-y-2 text-xs sm:text-sm text-[#9A9A94] font-light leading-relaxed">
                             {sub.paragraphs.map((subP, subPIdx) => (
                               <p key={subPIdx}>{subP}</p>
                             ))}
@@ -217,14 +217,14 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
             </div>
 
             {/* Contextual Link to Collection */}
-            <div className="mt-12 p-6 bg-[#0A0A0A] border border-[#222] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="mt-12 p-6 bg-[#0A0A0A] border border-[#262626] rounded-[4px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="space-y-1">
-                <h3 className="font-serif text-lg text-[#F5F5F5]">
+                <h3 className="font-serif text-lg text-[#F5F5F0]">
                   {article.relatedCollectionSlug
                     ? `Explore Rough ${article.mineralFamily} Specimens`
                     : "Explore Our Rough Gemstone Catalogue"}
                 </h3>
-                <p className="text-xs text-[#A3A3A3] font-light">
+                <p className="text-xs text-[#9A9A94] font-light">
                   {article.relatedCollectionSlug
                     ? "Inspect physical specimens with carat weights and crystal terminations in our catalogue."
                     : "Inspect natural rough Tourmaline, Kunzite, and Morganite crystal specimens with documented physical specifications."}
@@ -232,7 +232,7 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
               </div>
               <Link
                 href={article.relatedCollectionSlug ? `/collections/${article.relatedCollectionSlug}` : "/collections"}
-                className="shrink-0 px-5 py-2.5 bg-[#141414] border border-[#2A2A2A] hover:border-[#B69B5E] text-xs uppercase tracking-wider text-[#F5F5F5] hover:text-[#B69B5E] transition-colors inline-flex items-center gap-1.5"
+                className="shrink-0 px-5 py-2.5 bg-[#111111] border border-[#262626] hover:border-[#9CCB63] rounded-[4px] text-xs uppercase tracking-wider text-[#F5F5F0] hover:text-[#9CCB63] transition-colors inline-flex items-center gap-1.5"
               >
                 <span>{article.relatedCollectionSlug ? "View Collection" : "Browse All Collections"}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -243,7 +243,7 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
 
         {/* Related Rough Gemstones */}
         {relatedGemstones.length > 0 && (
-          <section className="border-b border-[#2A2A2A] bg-[#050505] py-16 sm:py-20">
+          <section className="border-b border-[#262626] bg-[#050505] py-16 sm:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <RelatedGemstonesSection
                 relatedGemstones={relatedGemstones}
@@ -255,7 +255,7 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
         )}
 
         {/* Related Technical Articles Strip */}
-        <section className="border-b border-[#2A2A2A] bg-[#070707] py-16 sm:py-20">
+        <section className="border-b border-[#262626] bg-[#0A0A0A] py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <RelatedArticles articles={relatedArticles} />
           </div>
@@ -264,13 +264,13 @@ export default async function EducationArticlePage({ params }: ArticlePageProps)
         {/* Trade Consultation CTA */}
         <section className="bg-[#050505] py-16 sm:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <span className="type-eyebrow text-[#B69B5E] block">
+            <span className="type-eyebrow text-[#9CCB63] block">
               Trade Correspondence
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#F5F5F5]">
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#F5F5F0]">
               Questions Regarding Mineral Specifications?
             </h2>
-            <p className="text-xs sm:text-sm text-[#A3A3A3] font-light max-w-xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#9A9A94] font-light max-w-xl mx-auto leading-relaxed">
               Contact our Hong Kong trade desk to discuss crystal characteristics, specific carat weight requirements, or independent laboratory documentation.
             </p>
             <div className="pt-2 flex justify-center">

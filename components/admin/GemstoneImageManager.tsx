@@ -203,16 +203,16 @@ export function GemstoneImageManager({
             Upload high-resolution rough crystal imagery. Designate exactly one primary cover image.
           </p>
         </div>
-        <span className="text-xs font-mono text-[#B69B5E]">
+        <span className="text-xs font-mono text-[#9CCB63]">
           {images.length} {images.length === 1 ? "Image" : "Images"}
         </span>
       </div>
 
       {feedback && (
         <div
-          className={`p-3 text-xs border flex items-center justify-between ${
+          className={`p-3 text-xs border rounded-[4px] flex items-center justify-between ${
             feedback.type === "success"
-              ? "bg-[#B6D94C]/10 border-[#B6D94C]/30 text-[#B6D94C]"
+              ? "bg-[#9CCB63]/10 border-[#9CCB63]/30 text-[#9CCB63]"
               : "bg-red-950/20 border-red-800/40 text-red-300"
           }`}
         >
@@ -235,14 +235,14 @@ export function GemstoneImageManager({
       )}
 
       {/* Upload Zone */}
-      <div className="p-4 bg-[#0A0A0A] border border-dashed border-[#2A2A2A] hover:border-[#B69B5E] transition-colors space-y-3">
+      <div className="p-4 bg-[#0A0A0A] border border-dashed border-[#262626] rounded-[4px] hover:border-[#9CCB63]/60 transition-colors space-y-3">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#141414] border border-[#2A2A2A] flex items-center justify-center text-[#B69B5E]">
+            <div className="w-10 h-10 bg-[#141414] border border-[#262626] rounded-[4px] flex items-center justify-center text-[#9CCB63]">
               <Upload className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs text-[#F5F5F5] font-medium">
+              <p className="text-xs text-[#F5F5F0] font-medium">
                 Upload New Specimen Asset
               </p>
               <p className="text-[10px] text-[#737373] font-mono">
@@ -263,7 +263,7 @@ export function GemstoneImageManager({
             />
             <label
               htmlFor="gemstone-image-upload"
-              className={`w-full sm:w-auto px-4 py-2 bg-[#B69B5E] hover:bg-[#C8AE6F] text-[#050505] text-xs uppercase tracking-wider font-medium text-center cursor-pointer transition-colors flex items-center justify-center gap-2 ${
+              className={`w-full sm:w-auto px-4 py-2 bg-[#9CCB63] hover:bg-[#B7D98B] text-[#050505] text-xs uppercase tracking-wider font-medium text-center cursor-pointer rounded-[4px] transition-colors flex items-center justify-center gap-2 ${
                 isPending ? "opacity-50 pointer-events-none" : ""
               }`}
             >
@@ -278,13 +278,13 @@ export function GemstoneImageManager({
         </div>
 
         {/* Optional Alt text input for next upload */}
-        <div className="pt-2 border-t border-[#1C1C1C]">
+        <div className="pt-2 border-t border-[#1F1F1F]">
           <input
             type="text"
             value={altTextInput}
             onChange={(e) => setAltTextInput(e.target.value)}
             placeholder="Alt text / descriptive caption (e.g. 'Natural rough green tourmaline prism on matrix')"
-            className="w-full bg-[#101010] border border-[#2A2A2A] px-3 py-1.5 text-xs text-[#F5F5F5] placeholder-[#737373] focus:outline-none focus:border-[#B69B5E]"
+            className="w-full bg-[#111111] border border-[#262626] rounded-[4px] px-3 py-1.5 text-xs text-[#F5F5F0] placeholder-[#737373] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
           />
         </div>
       </div>
@@ -300,13 +300,13 @@ export function GemstoneImageManager({
           {images.map((img, index) => (
             <div
               key={img.id}
-              className={`p-3 bg-[#0A0A0A] border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-colors ${
-                img.is_primary ? "border-[#B69B5E]/60 bg-[#121210]" : "border-[#1E1E1E]"
+              className={`p-3 bg-[#0A0A0A] border rounded-[4px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-colors ${
+                img.is_primary ? "border-[#9CCB63]/60 bg-[#121411]" : "border-[#1F1F1F]"
               }`}
             >
               <div className="flex items-center gap-3 min-w-0 flex-1">
                 {/* Thumbnail */}
-                <div className="relative w-14 h-14 bg-[#050505] border border-[#2A2A2A] shrink-0 overflow-hidden">
+                <div className="relative w-14 h-14 bg-[#050505] border border-[#262626] rounded-[4px] shrink-0 overflow-hidden">
                   <Image
                     src={img.image_url}
                     alt={img.alt_text || "Gemstone specimen asset"}
@@ -315,7 +315,7 @@ export function GemstoneImageManager({
                     sizes="56px"
                   />
                   {img.is_primary && (
-                    <div className="absolute top-0 right-0 bg-[#B69B5E] text-[#050505] p-0.5">
+                    <div className="absolute top-0 right-0 bg-[#9CCB63] text-[#050505] p-0.5">
                       <Star className="w-2.5 h-2.5 fill-current" />
                     </div>
                   )}
@@ -328,7 +328,7 @@ export function GemstoneImageManager({
                       #{index + 1}
                     </span>
                     {img.is_primary && (
-                      <span className="text-[9px] uppercase tracking-wider font-mono text-[#B69B5E] bg-[#B69B5E]/10 px-1.5 py-0.5 border border-[#B69B5E]/30">
+                      <span className="text-[9px] uppercase tracking-wider font-mono text-[#9CCB63] bg-[#9CCB63]/10 px-1.5 py-0.5 border border-[#9CCB63]/30 rounded-[4px]">
                         Primary Cover
                       </span>
                     )}
@@ -340,13 +340,13 @@ export function GemstoneImageManager({
                         type="text"
                         value={currentAltVal}
                         onChange={(e) => setCurrentAltVal(e.target.value)}
-                        className="bg-[#141414] border border-[#2A2A2A] px-2 py-1 text-xs text-[#F5F5F5] w-full focus:outline-none focus:border-[#B69B5E]"
+                        className="bg-[#141414] border border-[#262626] rounded-[4px] px-2 py-1 text-xs text-[#F5F5F0] w-full focus:outline-none focus:border-[#9CCB63]"
                       />
                       <button
                         type="button"
                         onClick={() => handleSaveAltText(img.id)}
                         disabled={isPending}
-                        className="p-1 bg-[#B69B5E] text-[#050505] hover:bg-[#C8AE6F]"
+                        className="p-1 bg-[#9CCB63] text-[#050505] rounded-[4px] hover:bg-[#B7D98B]"
                         title="Save alt text"
                       >
                         <Check className="w-3.5 h-3.5" />
@@ -358,7 +358,7 @@ export function GemstoneImageManager({
                         setEditingAltId(img.id);
                         setCurrentAltVal(img.alt_text || "");
                       }}
-                      className="text-xs text-[#A3A3A3] hover:text-[#F5F5F5] cursor-pointer truncate mt-0.5 underline decoration-[#333333] hover:decoration-[#B69B5E]"
+                      className="text-xs text-[#9A9A94] hover:text-[#F5F5F0] cursor-pointer truncate mt-0.5 underline decoration-[#333333] hover:decoration-[#9CCB63]"
                       title="Click to edit alt text"
                     >
                       {img.alt_text || <span className="italic text-[#737373]">Add descriptive alt text...</span>}
@@ -374,7 +374,7 @@ export function GemstoneImageManager({
                     type="button"
                     onClick={() => handleSetPrimary(img.id)}
                     disabled={isPending}
-                    className="px-2.5 py-1 text-[10px] uppercase tracking-wider text-[#B69B5E] hover:text-[#F5F5F5] border border-[#2A2A2A] hover:border-[#B69B5E] transition-colors"
+                    className="px-2.5 py-1 text-[10px] uppercase tracking-wider text-[#9CCB63] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 transition-colors"
                   >
                     Set as Primary
                   </button>

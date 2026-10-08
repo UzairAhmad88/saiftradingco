@@ -54,7 +54,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`dark ${cormorant.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-[#050505] text-[#F5F5F5] font-sans antialiased selection:bg-[#B69B5E]/30 selection:text-[#F5F5F5]">
+      <body className="min-h-screen bg-[#050505] text-[#F5F5F0] font-sans antialiased selection:bg-[#9CCB63]/25 selection:text-[#F5F5F0]">
         <SiteShell>
           {children}
         </SiteShell>

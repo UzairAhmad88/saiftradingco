@@ -47,15 +47,15 @@ export function DesktopNavigation({ className }: DesktopNavigationProps) {
             aria-current={active ? "page" : undefined}
             className={cn(
               "relative py-2 transition-colors duration-200 select-none",
-              "hover:text-[#F5F5F5] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]",
-              active ? "text-[#F5F5F5] font-medium" : "text-[#A3A3A3]"
+              "hover:text-[#F5F5F0] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]",
+              active ? "text-[#F5F5F0] font-medium" : "text-[#9A9A94]"
             )}
           >
             <span>{item.label}</span>
-            {/* Subtle active accent indicator (accessible dual signal) */}
+            {/* Subtle light green active accent indicator */}
             {active && (
               <span
-                className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#B69B5E]"
+                className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#9CCB63]"
                 aria-hidden="true"
               />
             )}
@@ -67,10 +67,10 @@ export function DesktopNavigation({ className }: DesktopNavigationProps) {
       <Link
         href="/contact"
         className={cn(
-          "px-5 py-2.5 border transition-all duration-200 select-none font-medium",
-          "border-[#B69B5E]/60 text-[#B69B5E]",
-          "hover:border-[#B69B5E] hover:bg-[#B69B5E]/10 active:bg-[#B69B5E]/20",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B69B5E]"
+          "px-5 py-2.5 border transition-all duration-200 select-none font-medium rounded-[3px]",
+          "border-[#9CCB63]/70 text-[#9CCB63]",
+          "hover:border-[#9CCB63] hover:bg-[#9CCB63] hover:text-[#050505] active:bg-[#B7D98B]",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCB63]"
         )}
       >
         Inquire

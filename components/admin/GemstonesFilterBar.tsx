@@ -73,7 +73,7 @@ export function GemstonesFilterBar({
     currentSort !== "newest";
 
   return (
-    <div className="bg-[#101010] border border-[#2A2A2A] p-4 space-y-4">
+    <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-4 space-y-4">
       <div className="flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between">
         {/* Search Input Form */}
         <form
@@ -83,7 +83,7 @@ export function GemstonesFilterBar({
         >
           <div className="relative">
             <Search
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#737373]"
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9A9A94]"
               aria-hidden="true"
             />
             <input
@@ -91,13 +91,13 @@ export function GemstonesFilterBar({
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search by specimen name, SKU, or slug..."
-              className="w-full bg-[#050505] border border-[#2A2A2A] pl-10 pr-9 py-2 text-xs text-[#F5F5F5] placeholder-[#737373] focus:outline-none focus:border-[#B69B5E] transition-colors"
+              className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] pl-10 pr-9 py-2 text-xs text-[#F5F5F0] placeholder-[#737373] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63] transition-colors"
             />
             {searchValue && (
               <button
                 type="button"
                 onClick={handleClearSearch}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 text-[#737373] hover:text-[#F5F5F5]"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 text-[#9A9A94] hover:text-[#F5F5F0]"
                 aria-label="Clear search"
               >
                 <X className="w-3.5 h-3.5" />
@@ -110,14 +110,14 @@ export function GemstonesFilterBar({
         <div className="flex flex-wrap items-center gap-2.5">
           {/* Status Filter */}
           <div className="flex items-center gap-1.5">
-            <label htmlFor="filter-status" className="text-[10px] uppercase tracking-wider text-[#737373] font-mono">
+            <label htmlFor="filter-status" className="text-[10px] uppercase tracking-wider text-[#9A9A94] font-mono">
               Status:
             </label>
             <select
               id="filter-status"
               value={currentStatus}
               onChange={(e) => updateParam("status", e.target.value)}
-              className="bg-[#050505] border border-[#2A2A2A] text-xs text-[#F5F5F5] py-1.5 px-2.5 focus:outline-none focus:border-[#B69B5E]"
+              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-1.5 px-2.5 focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
             >
               <option value="all">All Statuses</option>
               <option value="available">Available (Public)</option>
@@ -129,14 +129,14 @@ export function GemstonesFilterBar({
 
           {/* Category Filter */}
           <div className="flex items-center gap-1.5">
-            <label htmlFor="filter-category" className="text-[10px] uppercase tracking-wider text-[#737373] font-mono">
+            <label htmlFor="filter-category" className="text-[10px] uppercase tracking-wider text-[#9A9A94] font-mono">
               Category:
             </label>
             <select
               id="filter-category"
               value={currentCategory}
               onChange={(e) => updateParam("category", e.target.value)}
-              className="bg-[#050505] border border-[#2A2A2A] text-xs text-[#F5F5F5] py-1.5 px-2.5 focus:outline-none focus:border-[#B69B5E]"
+              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-1.5 px-2.5 focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
             >
               <option value="all">All Categories</option>
               {categories.map((cat) => (
@@ -149,14 +149,14 @@ export function GemstonesFilterBar({
 
           {/* Featured Filter */}
           <div className="flex items-center gap-1.5">
-            <label htmlFor="filter-featured" className="text-[10px] uppercase tracking-wider text-[#737373] font-mono">
+            <label htmlFor="filter-featured" className="text-[10px] uppercase tracking-wider text-[#9A9A94] font-mono">
               Featured:
             </label>
             <select
               id="filter-featured"
               value={currentFeatured}
               onChange={(e) => updateParam("featured", e.target.value)}
-              className="bg-[#050505] border border-[#2A2A2A] text-xs text-[#F5F5F5] py-1.5 px-2.5 focus:outline-none focus:border-[#B69B5E]"
+              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-1.5 px-2.5 focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
             >
               <option value="all">All</option>
               <option value="featured">Featured Only</option>
@@ -166,14 +166,14 @@ export function GemstonesFilterBar({
 
           {/* Sort Control */}
           <div className="flex items-center gap-1.5">
-            <label htmlFor="filter-sort" className="text-[10px] uppercase tracking-wider text-[#737373] font-mono">
+            <label htmlFor="filter-sort" className="text-[10px] uppercase tracking-wider text-[#9A9A94] font-mono">
               Sort:
             </label>
             <select
               id="filter-sort"
               value={currentSort}
               onChange={(e) => updateParam("sort", e.target.value)}
-              className="bg-[#050505] border border-[#2A2A2A] text-xs text-[#F5F5F5] py-1.5 px-2.5 focus:outline-none focus:border-[#B69B5E]"
+              className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] text-xs text-[#F5F5F0] py-1.5 px-2.5 focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
             >
               <option value="newest">Newest Added</option>
               <option value="updated">Recently Updated</option>
@@ -191,7 +191,7 @@ export function GemstonesFilterBar({
               type="button"
               onClick={handleResetFilters}
               disabled={isPending}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs text-[#B69B5E] hover:text-[#F5F5F5] border border-[#2A2A2A] hover:border-[#B69B5E] transition-colors"
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs text-[#9CCB63] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
             >
               <RotateCcw className="w-3 h-3" />
               <span>Reset</span>
@@ -201,7 +201,7 @@ export function GemstonesFilterBar({
       </div>
 
       {isPending && (
-        <div className="text-[10px] text-[#B69B5E] font-mono animate-pulse">
+        <div className="text-[10px] text-[#9CCB63] font-mono animate-pulse">
           Applying catalogue filters...
         </div>
       )}

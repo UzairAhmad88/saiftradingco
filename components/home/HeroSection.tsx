@@ -25,8 +25,8 @@ export function HeroSection() {
           {/* Editorial Content Column */}
           <div className="lg:col-span-7 flex flex-col justify-center space-y-6 sm:space-y-8 animate-fade-in">
             {/* Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-3 py-1.5 border border-[#B69B5E]/30 bg-[#0C0C0C] text-[#B69B5E] text-[10px] sm:text-[11px] uppercase tracking-[0.22em]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#B69B5E]" aria-hidden="true" />
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1.5 border border-[#9CCB63]/30 bg-[#0E0E0E] text-[#9CCB63] text-[10px] sm:text-[11px] uppercase tracking-[0.22em] rounded-[3px]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#9CCB63]" aria-hidden="true" />
               <span>{HERO_CONTENT.eyebrow}</span>
             </div>
 
@@ -34,28 +34,28 @@ export function HeroSection() {
             <div className="space-y-3">
               <h1
                 id="hero-heading"
-                className="font-serif text-4xl sm:text-6xl md:text-7xl xl:text-[5rem] font-normal text-[#F5F5F5] tracking-tight leading-[1.06] text-balance"
+                className="font-serif text-4xl sm:text-6xl md:text-7xl xl:text-[5rem] font-normal text-[#F5F5F0] tracking-tight leading-[1.06] text-balance"
               >
                 Selected Rough{" "}
-                <span className="italic font-light text-[#B69B5E]">
+                <span className="italic font-light text-[#9CCB63]">
                   Tourmaline
                 </span>
-                , Kunzite & Morganite
+                , Kunzite &amp; Morganite
               </h1>
             </div>
 
             {/* Supporting Copy */}
-            <p className="text-sm sm:text-base lg:text-lg text-[#A3A3A3] font-light leading-relaxed max-w-2xl text-pretty">
+            <p className="text-sm sm:text-base lg:text-lg text-[#9A9A94] font-light leading-relaxed max-w-2xl text-pretty">
               {HERO_CONTENT.subheadline}
             </p>
 
             {/* Mineral Specialization Indicators */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-[11px] sm:text-xs uppercase tracking-[0.16em] text-[#737373] pt-1">
-              <span className="text-[#F5F5F5] font-medium">Tourmaline</span>
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-[11px] sm:text-xs uppercase tracking-[0.16em] text-[#9A9A94] pt-1">
+              <span className="text-[#F5F5F0] font-medium">Tourmaline</span>
               <span className="text-[#3A3A3A]" aria-hidden="true">/</span>
-              <span className="text-[#F5F5F5] font-medium">Kunzite</span>
+              <span className="text-[#F5F5F0] font-medium">Kunzite</span>
               <span className="text-[#3A3A3A]" aria-hidden="true">/</span>
-              <span className="text-[#F5F5F5] font-medium">Morganite</span>
+              <span className="text-[#F5F5F0] font-medium">Morganite</span>
               <span className="text-[#3A3A3A]" aria-hidden="true">·</span>
               <span>Hong Kong Trade Office</span>
             </div>
@@ -83,22 +83,22 @@ export function HeroSection() {
 
           {/* Focal Gemstone Imagery Column */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md lg:max-w-none aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] bg-[#0A0A0A] border border-[#2A2A2A] overflow-hidden group shadow-2xl">
+            <div className="relative w-full max-w-md lg:max-w-none aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] bg-[#0A0A0A] border border-[#262626] rounded-[4px] overflow-hidden group shadow-2xl">
               {/* Corner Fine Borders */}
               <div
-                className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#B69B5E]/40 z-20 pointer-events-none"
+                className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#9CCB63]/40 z-20 pointer-events-none"
                 aria-hidden="true"
               />
               <div
-                className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#B69B5E]/40 z-20 pointer-events-none"
+                className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#9CCB63]/40 z-20 pointer-events-none"
                 aria-hidden="true"
               />
               <div
-                className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#B69B5E]/40 z-20 pointer-events-none"
+                className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#9CCB63]/40 z-20 pointer-events-none"
                 aria-hidden="true"
               />
               <div
-                className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#B69B5E]/40 z-20 pointer-events-none"
+                className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#9CCB63]/40 z-20 pointer-events-none"
                 aria-hidden="true"
               />
 
@@ -120,16 +120,16 @@ export function HeroSection() {
 
               {/* Bottom Editorial Caption */}
               <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 z-10 space-y-1">
-                <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-[#B69B5E]">
+                <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-[#9CCB63]">
                   <span>Featured Specimen</span>
                   <span>Hong Kong Catalog</span>
                 </div>
-                <p className="font-serif text-lg sm:text-xl text-[#F5F5F5] font-normal">
+                <p className="font-serif text-lg sm:text-xl text-[#F5F5F0] font-normal">
                   Natural Green Elbaite Tourmaline
                 </p>
-                <div className="flex items-center justify-between pt-1 text-[11px] text-[#A3A3A3] font-light">
-                  <span>Fine Striations & Terminations</span>
-                  <span className="text-[#B69B5E] inline-flex items-center gap-0.5">
+                <div className="flex items-center justify-between pt-1 text-[11px] text-[#9A9A94] font-light">
+                  <span>Fine Striations &amp; Terminations</span>
+                  <span className="text-[#9CCB63] inline-flex items-center gap-0.5">
                     View <ArrowUpRight className="w-3 h-3" />
                   </span>
                 </div>

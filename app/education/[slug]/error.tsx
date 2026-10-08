@@ -18,16 +18,16 @@ export default function ArticleError({
 
   return (
     <div className="w-full bg-[#050505] min-h-[65vh] flex items-center justify-center px-4 py-16">
-      <div className="max-w-md w-full p-8 bg-[#0D0D0D] border border-[#2A2A2A] text-center space-y-6">
-        <div className="w-12 h-12 mx-auto bg-[#171717] border border-[#2A2A2A] flex items-center justify-center text-[#B69B5E]">
+      <div className="max-w-md w-full p-8 bg-[#111111] border border-[#262626] rounded-[4px] text-center space-y-6">
+        <div className="w-12 h-12 mx-auto bg-[#171717] border border-[#262626] rounded-[4px] flex items-center justify-center text-[#9CCB63]">
           <AlertTriangle className="w-6 h-6 stroke-[1.5]" />
         </div>
 
         <div className="space-y-2">
-          <h2 className="font-serif text-2xl text-[#F5F5F5]">
+          <h2 className="font-serif text-2xl text-[#F5F5F0]">
             Article Temporarily Unavailable
           </h2>
-          <p className="text-xs sm:text-sm text-[#A3A3A3] font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#9A9A94] font-light leading-relaxed">
             We encountered an issue while loading this technical mineral guide. Please try refreshing or return to the education archive.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function ArticleError({
 
           <Link
             href="/education"
-            className="w-full sm:w-auto px-6 py-3 border border-[#2A2A2A] hover:border-[#B69B5E] text-xs uppercase tracking-wider text-[#A3A3A3] hover:text-[#F5F5F5] transition-colors inline-flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 text-xs uppercase tracking-wider text-[#9A9A94] hover:text-[#F5F5F0] transition-colors inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>All Guides</span>

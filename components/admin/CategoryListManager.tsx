@@ -112,9 +112,9 @@ export function CategoryListManager({
       {feedback && (
         <div
           role="status"
-          className={`p-4 text-xs border flex items-center justify-between ${
+          className={`p-4 text-xs border rounded-[4px] flex items-center justify-between ${
             feedback.type === "success"
-              ? "bg-[#B6D94C]/10 border-[#B6D94C]/30 text-[#B6D94C]"
+              ? "bg-[#9CCB63]/10 border-[#9CCB63]/30 text-[#9CCB63]"
               : "bg-red-950/20 border-red-800/40 text-red-300"
           }`}
         >
@@ -170,9 +170,9 @@ export function CategoryListManager({
               <tr key={cat.id} className="hover:bg-[#141414] transition-colors">
                 <td className="py-3.5 px-4">
                   <div className="flex items-center gap-2.5">
-                    <Layers className="w-4 h-4 text-[#B69B5E] shrink-0" />
+                    <Layers className="w-4 h-4 text-[#9CCB63] shrink-0" />
                     <div>
-                      <span className="font-medium text-[#F5F5F5]">{cat.name}</span>
+                      <span className="font-medium text-[#F5F5F0]">{cat.name}</span>
                       {cat.description && (
                         <p className="text-[11px] text-[#737373] line-clamp-1 max-w-sm mt-0.5">
                           {cat.description}
@@ -182,14 +182,14 @@ export function CategoryListManager({
                   </div>
                 </td>
 
-                <td className="py-3.5 px-4 font-mono text-[11px] text-[#A3A3A3]">
+                <td className="py-3.5 px-4 font-mono text-[11px] text-[#9A9A94]">
                   /{cat.slug}
                 </td>
 
-                <td className="py-3.5 px-4 font-mono text-[11px] text-[#F5F5F5]">
+                <td className="py-3.5 px-4 font-mono text-[11px] text-[#F5F5F0]">
                   <Link
                     href={`/admin/gemstones?category=${cat.slug}`}
-                    className="hover:text-[#B69B5E] underline decoration-[#333333] hover:decoration-[#B69B5E]"
+                    className="hover:text-[#9CCB63] underline decoration-[#333333] hover:decoration-[#9CCB63]"
                   >
                     {cat.specimenCount} {cat.specimenCount === 1 ? "specimen" : "specimens"}
                   </Link>
@@ -197,12 +197,12 @@ export function CategoryListManager({
 
                 <td className="py-3.5 px-4">
                   {cat.is_active ? (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-mono text-[#B6D94C] bg-[#B6D94C]/10 border border-[#B6D94C]/30 px-2 py-0.5">
+                    <span className="inline-flex items-center gap-1 text-[10px] font-mono text-[#9CCB63] bg-[#9CCB63]/10 border border-[#9CCB63]/30 rounded-[4px] px-2 py-0.5">
                       <CheckCircle2 className="w-3 h-3" />
                       <span>Active</span>
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-mono text-[#737373] bg-[#171717] border border-[#262626] px-2 py-0.5">
+                    <span className="inline-flex items-center gap-1 text-[10px] font-mono text-[#737373] bg-[#171717] border border-[#262626] rounded-[4px] px-2 py-0.5">
                       <XCircle className="w-3 h-3" />
                       <span>Inactive</span>
                     </span>
@@ -214,7 +214,7 @@ export function CategoryListManager({
                     href={`/collections/${cat.slug}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-1.5 text-[#737373] hover:text-[#F5F5F5] inline-block"
+                    className="p-1.5 text-[#737373] hover:text-[#F5F5F0] inline-block"
                     title="View public category page"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -224,7 +224,7 @@ export function CategoryListManager({
                     type="button"
                     onClick={() => handleToggleActive(cat.id, cat.is_active)}
                     disabled={isPending}
-                    className="px-2.5 py-1 text-[10px] uppercase tracking-wider text-[#A3A3A3] hover:text-[#F5F5F5] border border-[#2A2A2A] hover:border-[#B69B5E] transition-colors"
+                    className="px-2.5 py-1 text-[10px] uppercase tracking-wider text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 transition-colors"
                   >
                     {cat.is_active ? "Deactivate" : "Activate"}
                   </button>
@@ -242,14 +242,14 @@ export function CategoryListManager({
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm"
         >
-          <div className="bg-[#101010] border border-[#2A2A2A] max-w-md w-full p-6 space-y-4 shadow-2xl">
-            <h3 className="text-base font-serif text-[#F5F5F5]">
+          <div className="bg-[#111111] border border-[#262626] rounded-[4px] max-w-md w-full p-6 space-y-4 shadow-2xl">
+            <h3 className="text-base font-serif text-[#F5F5F0]">
               Add Gemstone Category
             </h3>
 
             <form onSubmit={handleCreateCategory} className="space-y-4">
               <div>
-                <label className="block text-xs font-medium text-[#F5F5F5] mb-1">
+                <label className="block text-xs font-medium text-[#F5F5F0] mb-1">
                   Category Name
                 </label>
                 <input
@@ -258,12 +258,12 @@ export function CategoryListManager({
                   value={newName}
                   onChange={(e) => handleNameChange(e.target.value)}
                   placeholder="e.g. Aquamarine"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] p-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] p-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#F5F5F5] mb-1">
+                <label className="block text-xs font-medium text-[#F5F5F0] mb-1">
                   URL Slug
                 </label>
                 <input
@@ -272,12 +272,12 @@ export function CategoryListManager({
                   value={newSlug}
                   onChange={(e) => setNewSlug(e.target.value)}
                   placeholder="e.g. aquamarine"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] p-2 text-xs text-[#F5F5F5] font-mono focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] p-2 text-xs text-[#F5F5F0] font-mono focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#F5F5F5] mb-1">
+                <label className="block text-xs font-medium text-[#F5F5F0] mb-1">
                   Description
                 </label>
                 <textarea
@@ -285,12 +285,12 @@ export function CategoryListManager({
                   value={newDescription}
                   onChange={(e) => setNewDescription(e.target.value)}
                   placeholder="Mineralogical family description..."
-                  className="w-full bg-[#050505] border border-[#2A2A2A] p-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] p-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#F5F5F5] mb-1">
+                <label className="block text-xs font-medium text-[#F5F5F0] mb-1">
                   Sort Order
                 </label>
                 <input
@@ -298,15 +298,15 @@ export function CategoryListManager({
                   min="0"
                   value={newSortOrder}
                   onChange={(e) => setNewSortOrder(e.target.value)}
-                  className="w-full bg-[#050505] border border-[#2A2A2A] p-2 text-xs text-[#F5F5F5] font-mono focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#050505] border border-[#262626] rounded-[4px] p-2 text-xs text-[#F5F5F0] font-mono focus:outline-none focus:border-[#9CCB63]"
                 />
               </div>
 
-              <div className="pt-3 border-t border-[#1C1C1C] flex items-center justify-end gap-3">
+              <div className="pt-3 border-t border-[#1F1F1F] flex items-center justify-end gap-3">
                 <button
                   type="button"
                   onClick={() => setShowAddModal(false)}
-                  className="px-3.5 py-2 text-xs text-[#A3A3A3] hover:text-[#F5F5F5] border border-[#2A2A2A]"
+                  className="px-3.5 py-2 text-xs text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px]"
                 >
                   Cancel
                 </button>

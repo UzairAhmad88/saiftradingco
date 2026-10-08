@@ -45,22 +45,22 @@ export default async function AdminLoginPage({
       <div className="w-full max-w-md space-y-8">
         {/* Brand & Editorial Heading */}
         <div className="text-center space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#101010] border border-[#2A2A2A] text-[10px] uppercase tracking-[0.25em] text-[#B69B5E] font-medium">
-            <Shield className="w-3 h-3 text-[#B69B5E]" aria-hidden="true" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#111111] border border-[#262626] rounded-[4px] text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] font-medium">
+            <Shield className="w-3 h-3 text-[#9CCB63]" aria-hidden="true" />
             <span>Administration</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-4xl text-[#F5F5F5] font-normal tracking-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl text-[#F5F5F0] font-normal tracking-tight">
             Admin Sign In
           </h1>
 
-          <p className="text-xs sm:text-sm text-[#A3A3A3] font-light max-w-xs mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#9A9A94] font-light max-w-xs mx-auto leading-relaxed">
             Sign in to manage the gemstone catalogue and website content.
           </p>
         </div>
 
         {/* Login Surface Panel */}
-        <div className="p-8 sm:p-10 bg-[#101010] border border-[#2A2A2A] shadow-2xl space-y-6">
+        <div className="p-8 sm:p-10 bg-[#111111] border border-[#262626] rounded-[4px] shadow-2xl space-y-6">
           <AdminLoginForm safeNext={safeNext} />
         </div>
 
@@ -68,7 +68,7 @@ export default async function AdminLoginPage({
         <div className="text-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-xs text-[#737373] hover:text-[#F5F5F5] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E] p-1"
+            className="inline-flex items-center gap-2 text-xs text-[#737373] hover:text-[#F5F5F0] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63] p-1 rounded-[4px]"
           >
             <ArrowLeft className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Return to Public Website</span>

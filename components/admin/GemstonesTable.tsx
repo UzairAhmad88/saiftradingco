@@ -25,10 +25,10 @@ export function GemstonesTable({ gemstones }: GemstonesTableProps) {
       </div>
 
       {/* Desktop Table View (hidden on mobile, visible on lg) */}
-      <div className="hidden lg:block overflow-x-auto bg-[#101010] border border-[#2A2A2A]">
+      <div className="hidden lg:block overflow-x-auto bg-[#111111] border border-[#262626] rounded-[4px]">
         <table className="w-full text-left border-collapse" aria-label="Gemstones catalogue table">
           <thead>
-            <tr className="border-b border-[#2A2A2A] bg-[#0A0A0A] text-[10px] font-mono uppercase tracking-[0.16em] text-[#737373]">
+            <tr className="border-b border-[#262626] bg-[#0A0A0A] text-[10px] font-mono uppercase tracking-[0.16em] text-[#9A9A94]">
               <th scope="col" className="py-3 px-4 w-14">Image</th>
               <th scope="col" className="py-3 px-4">Specimen / SKU</th>
               <th scope="col" className="py-3 px-4">Category</th>
@@ -39,18 +39,18 @@ export function GemstonesTable({ gemstones }: GemstonesTableProps) {
               <th scope="col" className="py-3 px-4 text-right">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-[#1C1C1C] text-xs">
+          <tbody className="divide-y divide-[#1F1F1F] text-xs">
             {gemstones.map((gem) => {
               const primaryImg =
                 gem.images?.find((img) => img.is_primary) || gem.images?.[0];
 
               const statusColor =
                 gem.status === "available"
-                  ? "bg-[#B6D94C]/10 text-[#B6D94C] border-[#B6D94C]/30"
+                  ? "bg-[#9CCB63]/10 text-[#9CCB63] border-[#9CCB63]/30"
                   : gem.status === "sold"
-                  ? "bg-[#262626] text-[#A3A3A3] border-[#333333]"
+                  ? "bg-[#262626] text-[#9A9A94] border-[#333333]"
                   : gem.status === "draft"
-                  ? "bg-[#B69B5E]/10 text-[#B69B5E] border-[#B69B5E]/30"
+                  ? "bg-[#B7D98B]/10 text-[#B7D98B] border-[#B7D98B]/30"
                   : "bg-[#171717] text-[#737373] border-[#262626]";
 
               return (
@@ -60,7 +60,7 @@ export function GemstonesTable({ gemstones }: GemstonesTableProps) {
                 >
                   {/* Thumbnail */}
                   <td className="py-3 px-4">
-                    <div className="relative w-10 h-10 bg-[#050505] border border-[#2A2A2A] overflow-hidden">
+                    <div className="relative w-10 h-10 bg-[#050505] border border-[#262626] rounded-[4px] overflow-hidden">
                       {primaryImg?.image_url ? (
                         <Image
                           src={primaryImg.image_url}
@@ -82,7 +82,7 @@ export function GemstonesTable({ gemstones }: GemstonesTableProps) {
                     <div className="max-w-xs">
                       <Link
                         href={`/admin/gemstones/${gem.id}/edit`}
-                        className="text-xs font-medium text-[#F5F5F5] hover:text-[#B69B5E] transition-colors line-clamp-1"
+                        className="text-xs font-medium text-[#F5F5F0] hover:text-[#9CCB63] transition-colors line-clamp-1"
                       >
                         {gem.name}
                       </Link>
@@ -97,12 +97,12 @@ export function GemstonesTable({ gemstones }: GemstonesTableProps) {
                   </td>
 
                   {/* Category */}
-                  <td className="py-3 px-4 text-[#A3A3A3] text-xs">
+                  <td className="py-3 px-4 text-[#9A9A94] text-xs">
                     {gem.category?.name || "Uncategorized"}
                   </td>
 
                   {/* Carat / Dimensions */}
-                  <td className="py-3 px-4 font-mono text-[11px] text-[#A3A3A3]">
+                  <td className="py-3 px-4 font-mono text-[11px] text-[#9A9A94]">
                     {gem.carat_weight ? (
                       <span>{gem.carat_weight} ct</span>
                     ) : (
@@ -118,7 +118,7 @@ export function GemstonesTable({ gemstones }: GemstonesTableProps) {
                   {/* Status Badge */}
                   <td className="py-3 px-4">
                     <span
-                      className={`inline-block text-[9px] uppercase tracking-wider px-2 py-0.5 border font-mono ${statusColor}`}
+                      className={`inline-block text-[9px] uppercase tracking-wider px-2 py-0.5 border rounded-[4px] font-mono ${statusColor}`}
                     >
                       {gem.status}
                     </span>
@@ -128,7 +128,7 @@ export function GemstonesTable({ gemstones }: GemstonesTableProps) {
                   <td className="py-3 px-4 text-center">
                     {gem.featured ? (
                       <Star
-                        className="w-3.5 h-3.5 text-[#B69B5E] fill-[#B69B5E] mx-auto"
+                        className="w-3.5 h-3.5 text-[#9CCB63] fill-[#9CCB63] mx-auto"
                         aria-label="Featured on homepage"
                       />
                     ) : (

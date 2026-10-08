@@ -22,14 +22,14 @@ export function RelatedGemstonesSection({
       aria-labelledby="related-gemstones-heading"
       className="space-y-8"
     >
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4 border-b border-[#1F1F1F]">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4 border-b border-[#262626]">
         <div className="space-y-1">
-          <span className="type-eyebrow text-[#B69B5E] block">
+          <span className="type-eyebrow text-[#9CCB63] block">
             Comparative Specimens
           </span>
           <h2
             id="related-gemstones-heading"
-            className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal"
+            className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal"
           >
             Related Rough {categoryName} Specimens
           </h2>
@@ -38,7 +38,7 @@ export function RelatedGemstonesSection({
         {categorySlug && (
           <Link
             href={`/collections/${categorySlug}`}
-            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#B69B5E] hover:text-[#F5F5F5] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#9CCB63] hover:text-[#B7D98B] transition-colors"
           >
             <span>Explore Entire {categoryName} Collection</span>
             <ArrowRight className="w-3.5 h-3.5" />

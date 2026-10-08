@@ -72,23 +72,23 @@ export function AdminSidebar({
       {/* Sidebar Container */}
       <aside
         className={cn(
-          "fixed top-0 bottom-0 left-0 z-50 w-64 bg-[#101010] border-r border-[#2A2A2A] flex flex-col justify-between transition-transform duration-200 ease-in-out lg:translate-x-0 lg:static lg:z-auto",
+          "fixed top-0 bottom-0 left-0 z-50 w-64 bg-[#0A0A0A] border-r border-[#262626] flex flex-col justify-between transition-transform duration-200 ease-in-out lg:translate-x-0 lg:static lg:z-auto",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
         {/* Brand & Close button */}
         <div>
-          <div className="h-16 px-6 border-b border-[#2A2A2A] flex items-center justify-between">
+          <div className="h-16 px-6 border-b border-[#262626] flex items-center justify-between">
             <Link
               href="/admin/dashboard"
               onClick={onClose}
-              className="flex flex-col group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+              className="flex flex-col group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
             >
-              <span className="font-serif text-base tracking-[0.18em] uppercase text-[#F5F5F5] group-hover:text-[#B69B5E] transition-colors">
+              <span className="font-serif text-base tracking-[0.18em] uppercase text-[#F5F5F0] group-hover:text-[#9CCB63] transition-colors">
                 Saif Trading Co
               </span>
-              <span className="text-[9px] tracking-[0.25em] uppercase text-[#B69B5E] font-medium flex items-center gap-1">
-                <ShieldCheck className="w-2.5 h-2.5" aria-hidden="true" />
+              <span className="text-[9px] tracking-[0.25em] uppercase text-[#9CCB63] font-medium flex items-center gap-1">
+                <ShieldCheck className="w-2.5 h-2.5 text-[#9CCB63]" aria-hidden="true" />
                 Admin Console
               </span>
             </Link>
@@ -97,7 +97,7 @@ export function AdminSidebar({
             <button
               type="button"
               onClick={onClose}
-              className="lg:hidden p-1.5 text-[#A3A3A3] hover:text-[#F5F5F5] border border-[#2A2A2A] rounded-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+              className="lg:hidden p-1.5 text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
               aria-label="Close navigation menu"
             >
               <X className="w-4 h-4" />
@@ -118,17 +118,17 @@ export function AdminSidebar({
                   href={item.href}
                   onClick={onClose}
                   className={cn(
-                    "flex items-center gap-3 px-3.5 py-2.5 text-xs font-medium uppercase tracking-[0.14em] transition-colors rounded-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]",
+                    "flex items-center gap-3 px-3.5 py-2.5 text-xs font-medium uppercase tracking-[0.14em] transition-colors rounded-[4px] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]",
                     isActive
-                      ? "bg-[#171717] text-[#B69B5E] border-l-2 border-[#B69B5E] font-semibold"
-                      : "text-[#A3A3A3] hover:text-[#F5F5F5] hover:bg-[#151515]"
+                      ? "bg-[#171717] text-[#9CCB63] border-l-2 border-[#9CCB63] font-semibold"
+                      : "text-[#9A9A94] hover:text-[#F5F5F0] hover:bg-[#141414]"
                   )}
                   aria-current={isActive ? "page" : undefined}
                 >
                   <Icon
                     className={cn(
                       "w-4 h-4 shrink-0 transition-colors",
-                      isActive ? "text-[#B69B5E]" : "text-[#737373]"
+                      isActive ? "text-[#9CCB63]" : "text-[#737373]"
                     )}
                     aria-hidden="true"
                   />
@@ -140,25 +140,25 @@ export function AdminSidebar({
         </div>
 
         {/* Bottom utility & Session Section */}
-        <div className="p-4 border-t border-[#2A2A2A] space-y-4">
+        <div className="p-4 border-t border-[#262626] space-y-4">
           {/* Public catalogue link */}
           <Link
             href="/collections"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between px-3 py-2 text-[11px] text-[#A3A3A3] hover:text-[#B69B5E] hover:bg-[#151515] transition-colors border border-[#1E1E1E]"
+            className="flex items-center justify-between px-3 py-2 text-[11px] text-[#9A9A94] hover:text-[#9CCB63] hover:bg-[#141414] rounded-[4px] transition-colors border border-[#262626]"
           >
             <span className="uppercase tracking-wider">View Public Catalogue</span>
             <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
           </Link>
 
           {/* User badge & logout */}
-          <div className="pt-2 border-t border-[#1C1C1C] flex items-center justify-between">
+          <div className="pt-2 border-t border-[#1F1F1F] flex items-center justify-between">
             <div className="truncate pr-2">
-              <p className="text-[11px] text-[#F5F5F5] font-mono truncate" title={userEmail}>
+              <p className="text-[11px] text-[#F5F5F0] font-mono truncate" title={userEmail}>
                 {userEmail || "admin@saiftrading.co"}
               </p>
-              <span className="inline-block text-[9px] uppercase tracking-widest text-[#B6D94C] font-mono">
+              <span className="inline-block text-[9px] uppercase tracking-widest text-[#9CCB63] font-mono">
                 {role}
               </span>
             </div>
@@ -167,7 +167,7 @@ export function AdminSidebar({
               <button
                 type="submit"
                 title="Sign out of Admin Console"
-                className="p-1.5 text-[#A3A3A3] hover:text-[#F5F5F5] hover:bg-[#202020] border border-[#2A2A2A] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+                className="p-1.5 text-[#9A9A94] hover:text-[#F5F5F0] hover:bg-[#171717] border border-[#262626] rounded-[4px] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
                 aria-label="Sign out"
               >
                 <LogOut className="w-3.5 h-3.5" aria-hidden="true" />

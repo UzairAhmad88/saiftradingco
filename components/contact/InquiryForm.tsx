@@ -201,59 +201,59 @@ export function InquiryForm({
       <div
         role="status"
         aria-live="polite"
-        className="p-8 sm:p-10 bg-[#101010] border border-[#B69B5E]/50 space-y-6"
+        className="p-8 sm:p-10 bg-[#111111] border border-[#9CCB63]/40 rounded-[4px] space-y-6"
       >
         <div className="flex items-center gap-3">
           <CheckCircle2
-            className="w-7 h-7 text-[#B69B5E] shrink-0"
+            className="w-7 h-7 text-[#9CCB63] shrink-0"
             aria-hidden="true"
           />
           <div>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#B69B5E] block font-medium">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] block font-medium">
               Transmission Confirmed
             </span>
-            <h3 className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal tracking-tight">
+            <h3 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal tracking-tight">
               Inquiry Submitted
             </h3>
           </div>
         </div>
 
-        <p className="text-sm text-[#D4D4D4] leading-relaxed font-light">
+        <p className="text-sm text-[#D8D8D2] leading-relaxed font-light">
           Thank you for contacting Saif Trading Co. Your inquiry has been received by our Hong Kong trade desk.
         </p>
 
         {submissionResult.reference && (
-          <div className="p-4 bg-[#0A0A0A] border border-[#2A2A2A] space-y-1">
-            <span className="text-[10px] text-[#737373] uppercase tracking-wider block">
+          <div className="p-4 bg-[#0A0A0A] border border-[#262626] rounded-[4px] space-y-1">
+            <span className="text-[10px] text-[#9A9A94] uppercase tracking-wider block">
               Reference Identification
             </span>
-            <span className="font-mono text-sm text-[#B69B5E] tracking-wider block">
+            <span className="font-mono text-sm text-[#9CCB63] tracking-wider block">
               {submissionResult.reference}
             </span>
           </div>
         )}
 
-        <div className="space-y-2 text-xs text-[#A3A3A3] pt-2 border-t border-[#1C1C1C]">
+        <div className="space-y-2 text-xs text-[#9A9A94] pt-2 border-t border-[#1F1F1F]">
           <div className="flex justify-between py-1 border-b border-[#1A1A1A]">
             <span>Inquiry Type:</span>
-            <span className="text-[#F5F5F5]">{formData.inquiryType}</span>
+            <span className="text-[#F5F5F0]">{formData.inquiryType}</span>
           </div>
           {gemstoneContext && (
             <div className="flex justify-between py-1 border-b border-[#1A1A1A]">
               <span>Specimen:</span>
-              <span className="text-[#F5F5F5]">{gemstoneContext.name}</span>
+              <span className="text-[#F5F5F0]">{gemstoneContext.name}</span>
             </div>
           )}
           <div className="flex justify-between py-1 border-b border-[#1A1A1A]">
             <span>Contact Email:</span>
-            <span className="text-[#F5F5F5]">{formData.email}</span>
+            <span className="text-[#F5F5F0]">{formData.email}</span>
           </div>
         </div>
 
         <div className="pt-4 flex flex-col sm:flex-row items-center gap-3">
           <Link
             href="/collections"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#B69B5E] text-[#050505] font-medium text-xs uppercase tracking-wider hover:bg-[#C8AE6F] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#9CCB63] text-[#050505] font-medium text-xs uppercase tracking-wider rounded-[4px] hover:bg-[#B7D98B] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
           >
             <span>Explore Collections</span>
             <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
@@ -262,7 +262,7 @@ export function InquiryForm({
           <button
             type="button"
             onClick={handleReset}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#171717] text-[#D4D4D4] border border-[#2A2A2A] text-xs uppercase tracking-wider hover:border-[#3A3A3A] hover:text-[#F5F5F5] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#171717] text-[#D8D8D2] border border-[#262626] rounded-[4px] text-xs uppercase tracking-wider hover:border-[#9CCB63]/40 hover:text-[#F5F5F0] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
           >
             <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Submit Another Inquiry</span>
@@ -290,7 +290,7 @@ export function InquiryForm({
         <div
           role="alert"
           aria-live="assertive"
-          className="p-5 bg-[#1A0A0A] border border-[#DC2626]/60 text-sm space-y-3"
+          className="p-5 bg-[#1A0A0A] border border-[#DC2626]/60 rounded-[4px] text-sm space-y-3"
         >
           <div className="flex items-center gap-2 text-[#EF4444] font-medium">
             <AlertCircle className="w-4 h-4 shrink-0" aria-hidden="true" />
@@ -299,19 +299,19 @@ export function InquiryForm({
           <p className="text-xs text-[#E5E5E5] leading-relaxed">
             {submitError}
           </p>
-          <div className="pt-2 border-t border-[#331111] flex flex-wrap gap-4 text-xs text-[#A3A3A3]">
+          <div className="pt-2 border-t border-[#331111] flex flex-wrap gap-4 text-xs text-[#9A9A94]">
             <a
               href="tel:+85235251640"
-              className="inline-flex items-center gap-1.5 hover:text-[#B69B5E] text-[#F5F5F5]"
+              className="inline-flex items-center gap-1.5 hover:text-[#9CCB63] text-[#F5F5F0]"
             >
-              <Phone className="w-3.5 h-3.5 text-[#B69B5E]" />
+              <Phone className="w-3.5 h-3.5 text-[#9CCB63]" />
               <span>+852 3525 1640</span>
             </a>
             <a
               href="mailto:Saiftradingco@yahoo.com"
-              className="inline-flex items-center gap-1.5 hover:text-[#B69B5E] text-[#F5F5F5]"
+              className="inline-flex items-center gap-1.5 hover:text-[#9CCB63] text-[#F5F5F0]"
             >
-              <Mail className="w-3.5 h-3.5 text-[#B69B5E]" />
+              <Mail className="w-3.5 h-3.5 text-[#9CCB63]" />
               <span>Saiftradingco@yahoo.com</span>
             </a>
           </div>
@@ -322,13 +322,13 @@ export function InquiryForm({
         onSubmit={handleSubmit}
         noValidate
         aria-label="Gemstone inquiry form"
-        className="p-6 sm:p-8 bg-[#101010] border border-[#2A2A2A] space-y-6"
+        className="p-6 sm:p-8 bg-[#111111] border border-[#262626] rounded-[4px] space-y-6"
       >
-        <div className="border-b border-[#1C1C1C] pb-4">
-          <h2 className="font-serif text-xl sm:text-2xl text-[#F5F5F5] font-normal">
+        <div className="border-b border-[#1F1F1F] pb-4">
+          <h2 className="font-serif text-xl sm:text-2xl text-[#F5F5F0] font-normal">
             Trade Inquiry Form
           </h2>
-          <p className="text-xs text-[#A3A3A3] mt-1">
+          <p className="text-xs text-[#9A9A94] mt-1">
             Complete the fields below to contact our Hong Kong desk regarding specimen viewings, physical lots, or general trade queries.
           </p>
         </div>
@@ -459,11 +459,11 @@ export function InquiryForm({
 
         {/* 7. Privacy Notice */}
         <div className="pt-2">
-          <p className="text-xs text-[#737373] leading-relaxed">
+          <p className="text-xs text-[#9A9A94] leading-relaxed">
             By submitting this form, you agree that the information provided may be used to respond to your inquiry in accordance with our{" "}
             <Link
               href="/privacy"
-              className="text-[#A3A3A3] hover:text-[#B69B5E] underline underline-offset-2 transition-colors"
+              className="text-[#D8D8D2] hover:text-[#9CCB63] underline underline-offset-2 transition-colors"
             >
               Privacy Policy
             </Link>

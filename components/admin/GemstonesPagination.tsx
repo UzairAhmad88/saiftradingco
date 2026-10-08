@@ -41,11 +41,11 @@ export function GemstonesPagination({
   const endIdx = Math.min(page * pageSize, total);
 
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-4 px-2 border-t border-[#2A2A2A]">
-      <p className="text-xs text-[#737373] font-mono">
-        Showing <span className="text-[#F5F5F5]">{startIdx}</span> to{" "}
-        <span className="text-[#F5F5F5]">{endIdx}</span> of{" "}
-        <span className="text-[#F5F5F5]">{total}</span> specimens
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-4 px-2 border-t border-[#262626]">
+      <p className="text-xs text-[#9A9A94] font-mono">
+        Showing <span className="text-[#F5F5F0]">{startIdx}</span> to{" "}
+        <span className="text-[#F5F5F0]">{endIdx}</span> of{" "}
+        <span className="text-[#F5F5F0]">{total}</span> specimens
       </p>
 
       <div className="flex items-center gap-1.5 self-center sm:self-auto">
@@ -54,14 +54,14 @@ export function GemstonesPagination({
           type="button"
           onClick={() => navigateToPage(page - 1)}
           disabled={page <= 1 || isPending}
-          className="p-1.5 text-xs text-[#A3A3A3] hover:text-[#F5F5F5] border border-[#2A2A2A] hover:border-[#B69B5E] disabled:opacity-30 disabled:pointer-events-none transition-colors"
+          className="p-1.5 text-xs text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 disabled:opacity-30 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
           aria-label="Previous page"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
 
         {/* Page counter display */}
-        <div className="px-3 py-1 bg-[#101010] border border-[#2A2A2A] text-xs font-mono text-[#F5F5F5]">
+        <div className="px-3 py-1 bg-[#111111] border border-[#262626] rounded-[4px] text-xs font-mono text-[#F5F5F0]">
           Page {page} of {totalPages}
         </div>
 
@@ -70,7 +70,7 @@ export function GemstonesPagination({
           type="button"
           onClick={() => navigateToPage(page + 1)}
           disabled={page >= totalPages || isPending}
-          className="p-1.5 text-xs text-[#A3A3A3] hover:text-[#F5F5F5] border border-[#2A2A2A] hover:border-[#B69B5E] disabled:opacity-30 disabled:pointer-events-none transition-colors"
+          className="p-1.5 text-xs text-[#9A9A94] hover:text-[#F5F5F0] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 disabled:opacity-30 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
           aria-label="Next page"
         >
           <ChevronRight className="w-4 h-4" />

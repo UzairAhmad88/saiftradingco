@@ -35,7 +35,7 @@ export function getButtonClasses({
   className?: string;
 }) {
   const baseClasses =
-    "inline-flex items-center justify-center font-sans uppercase tracking-[0.18em] transition-all duration-200 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B69B5E] disabled:cursor-not-allowed disabled:opacity-40";
+    "inline-flex items-center justify-center font-sans uppercase tracking-[0.18em] transition-all duration-200 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9CCB63] disabled:cursor-not-allowed disabled:opacity-40 rounded-[4px]";
 
   const sizeClasses = {
     sm: "min-h-[36px] px-4 py-2 text-[11px]",
@@ -46,17 +46,17 @@ export function getButtonClasses({
 
   const variantClasses = {
     primary:
-      "bg-[#F5F5F5] text-[#050505] font-medium hover:bg-[#B69B5E] hover:text-[#050505] active:bg-[#C7AC6F]",
+      "bg-[#9CCB63] text-[#050505] font-medium border border-[#9CCB63] hover:bg-[#B7D98B] hover:border-[#B7D98B] active:bg-[#CFE7AA] hover:-translate-y-0.5",
     secondary:
-      "bg-transparent text-[#F5F5F5] border border-[#2A2A2A] hover:border-[#B69B5E] hover:text-[#B69B5E] active:bg-[#171717]",
+      "bg-transparent text-[#F5F5F0] border border-[#262626] hover:border-[#9CCB63] hover:text-[#9CCB63] active:bg-[#111111] hover:-translate-y-0.5",
     luxury:
-      "bg-[#171717] text-[#B69B5E] border border-[#B69B5E]/60 hover:bg-[#B69B5E] hover:text-[#050505] active:bg-[#C7AC6F]",
+      "bg-[#111111] text-[#F5F5F0] border border-[#9CCB63]/70 hover:bg-[#9CCB63] hover:text-[#050505] hover:border-[#9CCB63] active:bg-[#B7D98B] hover:-translate-y-0.5",
     ghost:
-      "bg-transparent text-[#A3A3A3] hover:text-[#F5F5F5] hover:bg-[#171717] active:bg-[#1E1E1E]",
+      "bg-transparent text-[#9A9A94] hover:text-[#F5F5F0] hover:bg-[#111111] active:bg-[#171717]",
     text:
-      "bg-transparent text-[#B69B5E] hover:text-[#F5F5F5] underline underline-offset-4 decoration-[#B69B5E]/40 hover:decoration-[#F5F5F5] px-0 min-h-0",
+      "bg-transparent text-[#9CCB63] hover:text-[#B7D98B] underline underline-offset-4 decoration-[#9CCB63]/40 hover:decoration-[#B7D98B] px-0 min-h-0",
     icon:
-      "bg-transparent text-[#A3A3A3] hover:text-[#F5F5F5] hover:bg-[#171717] border border-transparent hover:border-[#2A2A2A] rounded-none",
+      "bg-transparent text-[#9A9A94] hover:text-[#F5F5F0] hover:bg-[#111111] border border-transparent hover:border-[#262626]",
   };
 
   return cn(

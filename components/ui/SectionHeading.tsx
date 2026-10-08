@@ -28,16 +28,16 @@ export function SectionHeading({
       >
         <div className="space-y-3 max-w-2xl">
           {eyebrow && (
-            <span className="type-eyebrow text-[#B69B5E] block">
+            <span className="type-eyebrow text-[#9CCB63] block">
               {eyebrow}
             </span>
           )}
-          <HeadingTag className="type-heading-l text-[#F5F5F5]">
+          <HeadingTag className="type-heading-l text-[#F5F5F0]">
             {title}
           </HeadingTag>
         </div>
         {description && (
-          <p className="type-small text-[#A3A3A3] max-w-md font-light leading-relaxed">
+          <p className="type-small text-[#9A9A94] max-w-md font-light leading-relaxed">
             {description}
           </p>
         )}
@@ -56,15 +56,15 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <span className="type-eyebrow text-[#B69B5E] block">
+        <span className="type-eyebrow text-[#9CCB63] block">
           {eyebrow}
         </span>
       )}
-      <HeadingTag className="type-heading-l text-[#F5F5F5]">
+      <HeadingTag className="type-heading-l text-[#F5F5F0]">
         {title}
       </HeadingTag>
       {description && (
-        <p className="type-body text-[#A3A3A3] font-light leading-relaxed">
+        <p className="type-body text-[#9A9A94] font-light leading-relaxed">
           {description}
         </p>
       )}

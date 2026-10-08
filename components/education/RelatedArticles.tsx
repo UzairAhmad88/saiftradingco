@@ -14,13 +14,13 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
       aria-labelledby="related-articles-heading"
       className="space-y-8"
     >
-      <div className="space-y-1 pb-4 border-b border-[#1F1F1F]">
-        <span className="type-eyebrow text-[#B69B5E] block">
+      <div className="space-y-1 pb-4 border-b border-[#262626]">
+        <span className="type-eyebrow text-[#9CCB63] block">
           Further Reading
         </span>
         <h2
           id="related-articles-heading"
-          className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal"
+          className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal"
         >
           Related Mineral &amp; Identification Guides
         </h2>

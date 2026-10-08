@@ -18,17 +18,17 @@ export function StatusBadge({
 }: StatusBadgeProps) {
   const variantStyles: Record<BadgeVariant, string> = {
     available:
-      "border-[#B6D94C]/40 bg-[#B6D94C]/10 text-[#B6D94C]",
+      "border-[#9CCB63]/40 bg-[#9CCB63]/10 text-[#9CCB63]",
     sold:
-      "border-[#737373]/40 bg-[#171717] text-[#A3A3A3]",
+      "border-[#262626] bg-[#111111] text-[#9A9A94]",
     featured:
-      "border-[#B69B5E]/50 bg-[#B69B5E]/10 text-[#B69B5E]",
+      "border-[#B7D98B]/50 bg-[#B7D98B]/10 text-[#B7D98B]",
     new:
-      "border-[#F5F5F5]/30 bg-[#171717] text-[#F5F5F5]",
+      "border-[#F5F5F0]/30 bg-[#111111] text-[#F5F5F0]",
     certified:
-      "border-[#B69B5E]/40 bg-[#101010] text-[#F5F5F5]",
+      "border-[#9CCB63]/40 bg-[#111111] text-[#F5F5F0]",
     default:
-      "border-[#2A2A2A] bg-[#101010] text-[#A3A3A3]",
+      "border-[#262626] bg-[#111111] text-[#9A9A94]",
   };
 
   const sizeStyles = {
@@ -39,24 +39,24 @@ export function StatusBadge({
   const renderIcon = () => {
     switch (variant) {
       case "available":
-        return <Check className="w-2.5 h-2.5 text-[#B6D94C] shrink-0" aria-hidden="true" />;
+        return <Check className="w-2.5 h-2.5 text-[#9CCB63] shrink-0" aria-hidden="true" />;
       case "sold":
-        return <CircleOff className="w-2.5 h-2.5 text-[#737373] shrink-0" aria-hidden="true" />;
+        return <CircleOff className="w-2.5 h-2.5 text-[#9A9A94] shrink-0" aria-hidden="true" />;
       case "featured":
-        return <Sparkles className="w-2.5 h-2.5 text-[#B69B5E] shrink-0" aria-hidden="true" />;
+        return <Sparkles className="w-2.5 h-2.5 text-[#B7D98B] shrink-0" aria-hidden="true" />;
       case "certified":
-        return <ShieldCheck className="w-2.5 h-2.5 text-[#B69B5E] shrink-0" aria-hidden="true" />;
+        return <ShieldCheck className="w-2.5 h-2.5 text-[#9CCB63] shrink-0" aria-hidden="true" />;
       case "new":
-        return <Check className="w-2.5 h-2.5 text-[#F5F5F5] shrink-0" aria-hidden="true" />;
+        return <Check className="w-2.5 h-2.5 text-[#F5F5F0] shrink-0" aria-hidden="true" />;
       default:
-        return <Circle className="w-2 h-2 text-[#737373] shrink-0 fill-current" aria-hidden="true" />;
+        return <Circle className="w-2 h-2 text-[#9A9A94] shrink-0 fill-current" aria-hidden="true" />;
     }
   };
 
   return (
     <span
       className={cn(
-        "inline-flex items-center uppercase tracking-[0.2em] font-sans font-medium border select-none transition-colors duration-200",
+        "inline-flex items-center uppercase tracking-[0.2em] font-sans font-medium border select-none transition-colors duration-200 rounded-[3px]",
         variantStyles[variant],
         sizeStyles[size],
         className

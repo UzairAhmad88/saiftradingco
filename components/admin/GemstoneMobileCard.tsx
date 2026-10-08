@@ -15,18 +15,18 @@ export function GemstoneMobileCard({ gemstone }: GemstoneMobileCardProps) {
 
   const statusColor =
     gemstone.status === "available"
-      ? "bg-[#B6D94C]/10 text-[#B6D94C] border-[#B6D94C]/30"
+      ? "bg-[#9CCB63]/10 text-[#9CCB63] border-[#9CCB63]/30"
       : gemstone.status === "sold"
-      ? "bg-[#262626] text-[#A3A3A3] border-[#333333]"
+      ? "bg-[#262626] text-[#9A9A94] border-[#333333]"
       : gemstone.status === "draft"
-      ? "bg-[#B69B5E]/10 text-[#B69B5E] border-[#B69B5E]/30"
+      ? "bg-[#B7D98B]/10 text-[#B7D98B] border-[#B7D98B]/30"
       : "bg-[#171717] text-[#737373] border-[#262626]";
 
   return (
-    <div className="bg-[#101010] border border-[#2A2A2A] p-4 space-y-3">
+    <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-4 space-y-3">
       <div className="flex gap-3">
         {/* Thumbnail */}
-        <div className="relative w-16 h-16 bg-[#050505] border border-[#2A2A2A] shrink-0 overflow-hidden">
+        <div className="relative w-16 h-16 bg-[#050505] border border-[#262626] rounded-[4px] shrink-0 overflow-hidden">
           {primaryImg?.image_url ? (
             <Image
               src={primaryImg.image_url}
@@ -47,13 +47,13 @@ export function GemstoneMobileCard({ gemstone }: GemstoneMobileCardProps) {
           <div className="flex items-start justify-between gap-2">
             <Link
               href={`/admin/gemstones/${gemstone.id}/edit`}
-              className="text-xs font-medium text-[#F5F5F5] hover:text-[#B69B5E] transition-colors line-clamp-1"
+              className="text-xs font-medium text-[#F5F5F0] hover:text-[#9CCB63] transition-colors line-clamp-1"
             >
               {gemstone.name}
             </Link>
           </div>
 
-          <p className="text-[11px] text-[#A3A3A3] mt-0.5">
+          <p className="text-[11px] text-[#9A9A94] mt-0.5">
             {gemstone.category?.name || "Uncategorized"}
           </p>
 
@@ -72,15 +72,15 @@ export function GemstoneMobileCard({ gemstone }: GemstoneMobileCardProps) {
       </div>
 
       {/* Meta Bar & Status */}
-      <div className="pt-2 border-t border-[#1C1C1C] flex items-center justify-between">
+      <div className="pt-2 border-t border-[#1F1F1F] flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span
-            className={`text-[9px] uppercase tracking-wider px-2 py-0.5 border font-mono ${statusColor}`}
+            className={`text-[9px] uppercase tracking-wider px-2 py-0.5 border rounded-[4px] font-mono ${statusColor}`}
           >
             {gemstone.status}
           </span>
           {gemstone.price !== null && gemstone.price !== undefined && (
-            <span className="text-[11px] font-mono text-[#F5F5F5]">
+            <span className="text-[11px] font-mono text-[#F5F5F0]">
               ${gemstone.price.toLocaleString()} {gemstone.currency || "USD"}
             </span>
           )}
@@ -98,7 +98,7 @@ export function GemstoneMobileCard({ gemstone }: GemstoneMobileCardProps) {
       </div>
 
       {/* Quick Action controls */}
-      <div className="pt-2 border-t border-[#1C1C1C]">
+      <div className="pt-2 border-t border-[#1F1F1F]">
         <GemstoneQuickActions
           id={gemstone.id}
           slug={gemstone.slug}

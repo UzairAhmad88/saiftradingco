@@ -46,32 +46,32 @@ export default async function AdminDashboardPage() {
       value: stats.total,
       description: "In catalogue database",
       icon: Gem,
-      accent: "text-[#F5F5F5]",
-      border: "border-[#2A2A2A]",
+      accent: "text-[#F5F5F0]",
+      border: "border-[#262626]",
     },
     {
       label: "AVAILABLE",
       value: stats.available,
       description: "Live on public catalogue",
       icon: CheckCircle2,
-      accent: "text-[#B6D94C]",
-      border: "border-[#B6D94C]/30",
+      accent: "text-[#9CCB63]",
+      border: "border-[#9CCB63]/30",
     },
     {
       label: "SOLD",
       value: stats.sold,
       description: "Archived sales history",
       icon: AlertCircle,
-      accent: "text-[#A3A3A3]",
-      border: "border-[#2A2A2A]",
+      accent: "text-[#9A9A94]",
+      border: "border-[#262626]",
     },
     {
       label: "DRAFT",
       value: stats.draft,
       description: "Pending publication review",
       icon: Clock,
-      accent: "text-[#B69B5E]",
-      border: "border-[#B69B5E]/30",
+      accent: "text-[#B7D98B]",
+      border: "border-[#B7D98B]/30",
     },
     {
       label: "HIDDEN",
@@ -79,30 +79,30 @@ export default async function AdminDashboardPage() {
       description: "De-listed from website",
       icon: EyeOff,
       accent: "text-[#737373]",
-      border: "border-[#2A2A2A]",
+      border: "border-[#262626]",
     },
     {
       label: "FEATURED",
       value: stats.featured,
       description: "Highlighted on homepage",
       icon: Sparkles,
-      accent: "text-[#B69B5E]",
-      border: "border-[#B69B5E]/30",
+      accent: "text-[#9CCB63]",
+      border: "border-[#9CCB63]/30",
     },
   ];
 
   return (
     <div className="space-y-8">
       {/* Page Header & Quick Actions */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-[#2A2A2A]">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-[#262626]">
         <div>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#B69B5E] font-medium">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] font-medium">
             Operational Overview
           </span>
-          <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal tracking-tight mt-1">
+          <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal tracking-tight mt-1">
             Catalogue Dashboard
           </h1>
-          <p className="text-xs text-[#A3A3A3] mt-1 font-light">
+          <p className="text-xs text-[#9A9A94] mt-1 font-light">
             Manage rough gemstone specimens, inventory status, and public catalogue visibility.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default async function AdminDashboardPage() {
             <Button
               size="sm"
               variant="secondary"
-              className="text-xs border-[#2A2A2A] text-[#A3A3A3] hover:text-[#F5F5F5]"
+              className="text-xs border-[#262626] text-[#9A9A94] hover:text-[#F5F5F0] hover:border-[#9CCB63]/40"
             >
               <span>View Catalogue</span>
               <ExternalLink className="w-3.5 h-3.5 ml-1.5" aria-hidden="true" />
@@ -123,7 +123,7 @@ export default async function AdminDashboardPage() {
             <Button
               size="sm"
               variant="secondary"
-              className="text-xs border-[#2A2A2A] text-[#F5F5F5] hover:border-[#B69B5E]"
+              className="text-xs border-[#262626] text-[#F5F5F0] hover:border-[#9CCB63]"
             >
               <span>Manage All</span>
               <ArrowRight className="w-3.5 h-3.5 ml-1.5" aria-hidden="true" />
@@ -150,9 +150,9 @@ export default async function AdminDashboardPage() {
             return (
               <div
                 key={card.label}
-                className={`p-4 bg-[#101010] border ${card.border} transition-colors flex flex-col justify-between`}
+                className={`p-4 bg-[#111111] border ${card.border} rounded-[4px] transition-colors flex flex-col justify-between`}
               >
-                <div className="flex items-center justify-between text-[#737373]">
+                <div className="flex items-center justify-between text-[#9A9A94]">
                   <span className="text-[9px] uppercase tracking-[0.2em] font-medium truncate">
                     {card.label}
                   </span>
@@ -162,7 +162,7 @@ export default async function AdminDashboardPage() {
                   <span className={`text-2xl sm:text-3xl font-serif font-light ${card.accent}`}>
                     {card.value}
                   </span>
-                  <p className="text-[10px] text-[#737373] mt-1 font-mono truncate">
+                  <p className="text-[10px] text-[#9A9A94] mt-1 font-mono truncate">
                     {card.description}
                   </p>
                 </div>
@@ -175,17 +175,17 @@ export default async function AdminDashboardPage() {
       {/* Two Column Section: Recently Updated Gemstones + Operational Shortcuts */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Recently Updated Specimens (2 cols) */}
-        <div className="lg:col-span-2 bg-[#101010] border border-[#2A2A2A] p-5 sm:p-6 space-y-4">
-          <div className="flex items-center justify-between pb-3 border-b border-[#1C1C1C]">
+        <div className="lg:col-span-2 bg-[#111111] border border-[#262626] rounded-[4px] p-5 sm:p-6 space-y-4">
+          <div className="flex items-center justify-between pb-3 border-b border-[#1F1F1F]">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-[#B69B5E]" aria-hidden="true" />
-              <h2 className="text-xs uppercase tracking-[0.2em] text-[#F5F5F5] font-medium">
+              <Clock className="w-4 h-4 text-[#9CCB63]" aria-hidden="true" />
+              <h2 className="text-xs uppercase tracking-[0.2em] text-[#F5F5F0] font-medium">
                 Recently Updated Specimens
               </h2>
             </div>
             <Link
               href="/admin/gemstones"
-              className="text-[11px] uppercase tracking-wider text-[#B69B5E] hover:underline flex items-center gap-1"
+              className="text-[11px] uppercase tracking-wider text-[#9CCB63] hover:underline flex items-center gap-1 font-mono"
             >
               <span>View Table</span>
               <ArrowRight className="w-3 h-3" />
@@ -195,7 +195,7 @@ export default async function AdminDashboardPage() {
           {recentGemstones.length === 0 ? (
             <div className="py-12 text-center space-y-3">
               <Gem className="w-8 h-8 text-[#404040] mx-auto" aria-hidden="true" />
-              <p className="text-xs text-[#A3A3A3]">No gemstones have been added yet.</p>
+              <p className="text-xs text-[#9A9A94]">No gemstones have been added yet.</p>
               <Link href="/admin/gemstones/new">
                 <Button size="sm" variant="luxury" className="text-xs">
                   <Plus className="w-3.5 h-3.5 mr-1" />
@@ -204,28 +204,28 @@ export default async function AdminDashboardPage() {
               </Link>
             </div>
           ) : (
-            <div className="divide-y divide-[#1C1C1C]">
+            <div className="divide-y divide-[#1F1F1F]">
               {recentGemstones.map((gem) => {
                 const primaryImg =
                   gem.images?.find((img) => img.is_primary) || gem.images?.[0];
 
                 const statusColor =
                   gem.status === "available"
-                    ? "bg-[#B6D94C]/10 text-[#B6D94C] border-[#B6D94C]/30"
+                    ? "bg-[#9CCB63]/10 text-[#9CCB63] border-[#9CCB63]/30"
                     : gem.status === "sold"
-                    ? "bg-[#262626] text-[#A3A3A3] border-[#333333]"
+                    ? "bg-[#262626] text-[#9A9A94] border-[#333333]"
                     : gem.status === "draft"
-                    ? "bg-[#B69B5E]/10 text-[#B69B5E] border-[#B69B5E]/30"
+                    ? "bg-[#B7D98B]/10 text-[#B7D98B] border-[#B7D98B]/30"
                     : "bg-[#171717] text-[#737373] border-[#262626]";
 
                 return (
                   <div
                     key={gem.id}
-                    className="py-3 flex items-center justify-between gap-4 group hover:bg-[#141414] px-2 -mx-2 transition-colors"
+                    className="py-3 flex items-center justify-between gap-4 group hover:bg-[#171717] px-2 -mx-2 transition-colors rounded-[2px]"
                   >
                     <div className="flex items-center gap-3 min-w-0">
                       {/* Thumbnail */}
-                      <div className="relative w-11 h-11 bg-[#0A0A0A] border border-[#2A2A2A] shrink-0 overflow-hidden">
+                      <div className="relative w-11 h-11 bg-[#0A0A0A] border border-[#262626] rounded-[2px] shrink-0 overflow-hidden">
                         {primaryImg?.image_url ? (
                           <Image
                             src={primaryImg.image_url}
@@ -245,11 +245,11 @@ export default async function AdminDashboardPage() {
                       <div className="min-w-0">
                         <Link
                           href={`/admin/gemstones/${gem.id}/edit`}
-                          className="text-xs text-[#F5F5F5] font-medium hover:text-[#B69B5E] transition-colors truncate block"
+                          className="text-xs text-[#F5F5F0] font-medium hover:text-[#9CCB63] transition-colors truncate block"
                         >
                           {gem.name}
                         </Link>
-                        <div className="flex items-center gap-2 text-[10px] text-[#737373] font-mono mt-0.5 truncate">
+                        <div className="flex items-center gap-2 text-[10px] text-[#9A9A94] font-mono mt-0.5 truncate">
                           <span>{gem.category?.name || "Rough Specimen"}</span>
                           {gem.sku && (
                             <>
@@ -270,13 +270,13 @@ export default async function AdminDashboardPage() {
                     {/* Status & Edit action */}
                     <div className="flex items-center gap-2 shrink-0">
                       <span
-                        className={`text-[9px] uppercase tracking-wider px-2 py-0.5 border font-mono ${statusColor}`}
+                        className={`text-[9px] uppercase tracking-wider px-2 py-0.5 border font-mono rounded-[2px] ${statusColor}`}
                       >
                         {gem.status}
                       </span>
                       <Link
                         href={`/admin/gemstones/${gem.id}/edit`}
-                        className="p-1.5 text-[#A3A3A3] hover:text-[#F5F5F5] border border-transparent hover:border-[#2A2A2A] transition-colors"
+                        className="p-1.5 text-[#9A9A94] hover:text-[#F5F5F0] border border-transparent hover:border-[#262626] rounded-[2px] transition-colors"
                         title={`Edit ${gem.name}`}
                       >
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -290,35 +290,35 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Operational Shortcuts & Reference (1 col) */}
-        <div className="bg-[#101010] border border-[#2A2A2A] p-5 sm:p-6 space-y-5 flex flex-col justify-between">
+        <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-5 sm:p-6 space-y-5 flex flex-col justify-between">
           <div className="space-y-4">
-            <div className="flex items-center gap-2 pb-3 border-b border-[#1C1C1C]">
-              <Layers className="w-4 h-4 text-[#B69B5E]" aria-hidden="true" />
-              <h2 className="text-xs uppercase tracking-[0.2em] text-[#F5F5F5] font-medium">
+            <div className="flex items-center gap-2 pb-3 border-b border-[#1F1F1F]">
+              <Layers className="w-4 h-4 text-[#9CCB63]" aria-hidden="true" />
+              <h2 className="text-xs uppercase tracking-[0.2em] text-[#F5F5F0] font-medium">
                 Catalogue Guidelines
               </h2>
             </div>
 
-            <div className="space-y-3 text-xs text-[#A3A3A3] font-light leading-relaxed">
-              <div className="p-3 bg-[#0A0A0A] border border-[#1E1E1E] space-y-1">
-                <span className="text-[10px] font-mono uppercase text-[#B69B5E] block">
+            <div className="space-y-3 text-xs text-[#9A9A94] font-light leading-relaxed">
+              <div className="p-3 bg-[#0A0A0A] border border-[#1F1F1F] rounded-[4px] space-y-1">
+                <span className="text-[10px] font-mono uppercase text-[#9CCB63] block">
                   Publication Safety
                 </span>
                 <p className="text-[11px]">
-                  All newly created gemstones default to <strong className="text-[#F5F5F5]">Draft</strong>. Change status to <strong className="text-[#B6D94C]">Available</strong> to display on the public website.
+                  All newly created gemstones default to <strong className="text-[#F5F5F0]">Draft</strong>. Change status to <strong className="text-[#9CCB63]">Available</strong> to display on the public website.
                 </p>
               </div>
 
-              <div className="p-3 bg-[#0A0A0A] border border-[#1E1E1E] space-y-1">
-                <span className="text-[10px] font-mono uppercase text-[#A3A3A3] block">
+              <div className="p-3 bg-[#0A0A0A] border border-[#1F1F1F] rounded-[4px] space-y-1">
+                <span className="text-[10px] font-mono uppercase text-[#9A9A94] block">
                   Sold Status Preservation
                 </span>
                 <p className="text-[11px]">
-                  Marking specimens as <strong className="text-[#F5F5F5]">Sold</strong> preserves public specimen URLs and inquiries while marking the specimen as acquired.
+                  Marking specimens as <strong className="text-[#F5F5F0]">Sold</strong> preserves public specimen URLs and inquiries while marking the specimen as acquired.
                 </p>
               </div>
 
-              <div className="p-3 bg-[#0A0A0A] border border-[#1E1E1E] space-y-1">
+              <div className="p-3 bg-[#0A0A0A] border border-[#1F1F1F] rounded-[4px] space-y-1">
                 <span className="text-[10px] font-mono uppercase text-[#737373] block">
                   Image Guidelines
                 </span>
@@ -329,7 +329,7 @@ export default async function AdminDashboardPage() {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-[#1C1C1C]">
+          <div className="pt-4 border-t border-[#1F1F1F]">
             <Link href="/admin/gemstones/new" className="block w-full">
               <Button size="md" variant="luxury" className="w-full text-xs">
                 <Plus className="w-3.5 h-3.5 mr-2" />

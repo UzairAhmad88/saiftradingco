@@ -15,10 +15,10 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           ref={ref}
           aria-invalid={error ? "true" : undefined}
           className={cn(
-            "w-full h-11 pl-4 pr-10 text-sm font-sans bg-[#101010] text-[#F5F5F5]",
-            "border border-[#2A2A2A] rounded-none appearance-none transition-all duration-200 cursor-pointer",
-            "hover:border-[#3A3A3A]",
-            "focus:outline-none focus:border-[#B69B5E] focus:ring-1 focus:ring-[#B69B5E]",
+            "w-full h-11 pl-4 pr-10 text-sm font-sans bg-[#111111] text-[#F5F5F0]",
+            "border border-[#262626] rounded-[4px] appearance-none transition-all duration-200 cursor-pointer",
+            "hover:border-[#363636]",
+            "focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]",
             "disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-[#171717]",
             error && "border-[#DC2626] focus:border-[#DC2626] focus:ring-[#DC2626]",
             className

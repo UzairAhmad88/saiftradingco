@@ -6,11 +6,11 @@
   
   <!-- Stylized rough crystal prism contour -->
   <g transform="translate(140, 50)">
-    <polygon points="60,10 100,50 90,170 30,190 20,70" stroke="#2A2A2A" stroke-width="1.5" fill="#101010"/>
-    <polygon points="60,10 90,170 60,195 20,70" stroke="#B69B5E" stroke-opacity="0.35" stroke-width="1.5" fill="#141414"/>
-    <line x1="60" y1="10" x2="60" y2="195" stroke="#B69B5E" stroke-opacity="0.5" stroke-width="1.5"/>
-    <line x1="100" y1="50" x2="60" y2="10" stroke="#B6D94C" stroke-opacity="0.4" stroke-width="1.5"/>
-    <line x1="90" y1="170" x2="60" y2="195" stroke="#2A2A2A" stroke-width="1.5"/>
+    <polygon points="60,10 100,50 90,170 30,190 20,70" stroke="#262626" stroke-width="1.5" fill="#111111"/>
+    <polygon points="60,10 90,170 60,195 20,70" stroke="#9CCB63" stroke-opacity="0.35" stroke-width="1.5" fill="#141414"/>
+    <line x1="60" y1="10" x2="60" y2="195" stroke="#9CCB63" stroke-opacity="0.5" stroke-width="1.5"/>
+    <line x1="100" y1="50" x2="60" y2="10" stroke="#B7D98B" stroke-opacity="0.4" stroke-width="1.5"/>
+    <line x1="90" y1="170" x2="60" y2="195" stroke="#262626" stroke-width="1.5"/>
   </g>
-  <text x="200" y="270" text-anchor="middle" fill="#737373" font-family="system-ui, sans-serif" font-size="10" letter-spacing="3" text-transform="uppercase">Saif Trading Co Specimen</text>
+  <text x="200" y="270" text-anchor="middle" fill="#9A9A94" font-family="system-ui, sans-serif" font-size="10" letter-spacing="3" text-transform="uppercase">Saif Trading Co Specimen</text>
 </svg>

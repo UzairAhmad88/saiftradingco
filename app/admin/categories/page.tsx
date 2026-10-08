@@ -20,14 +20,14 @@ export default async function AdminCategoriesPage() {
   return (
     <div className="space-y-6">
       {/* Page Header */}
-      <div className="pb-5 border-b border-[#2A2A2A]">
-        <span className="text-[10px] uppercase tracking-[0.25em] text-[#B69B5E] font-medium">
+      <div className="pb-5 border-b border-[#262626]">
+        <span className="text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] font-medium">
           Mineralogical Classification
         </span>
-        <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F5] font-normal tracking-tight mt-1">
+        <h1 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal tracking-tight mt-1">
           Gemstone Categories
         </h1>
-        <p className="text-xs text-[#A3A3A3] mt-1 font-light">
+        <p className="text-xs text-[#9A9A94] mt-1 font-light">
           Configure mineral species and collection taxonomies for the public catalogue.
         </p>
       </div>

@@ -98,7 +98,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         className="w-full bg-[#050505] focus:outline-none"
       >
         {/* Breadcrumb Header */}
-        <div className="border-b border-[#2A2A2A] bg-[#080808]">
+        <div className="border-b border-[#262626] bg-[#0A0A0A]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs items={breadcrumbs} />
           </div>
@@ -107,20 +107,20 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         {/* Hero Section */}
         <section
           aria-labelledby="contact-heading"
-          className="border-b border-[#2A2A2A] bg-[#070707] py-16 sm:py-20 lg:py-24"
+          className="border-b border-[#262626] bg-[#0A0A0A] py-16 sm:py-20 lg:py-24"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl space-y-4">
-              <span className="text-xs uppercase tracking-[0.25em] text-[#B69B5E] block font-medium">
+              <span className="text-xs uppercase tracking-[0.25em] text-[#9CCB63] block font-medium">
                 Get in Touch
               </span>
               <h1
                 id="contact-heading"
-                className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F5F5F5] font-normal tracking-tight"
+                className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F5F5F0] font-normal tracking-tight"
               >
                 Let&apos;s Talk About Gemstones
               </h1>
-              <p className="text-base sm:text-lg text-[#A3A3A3] font-light leading-relaxed max-w-2xl pt-2">
+              <p className="text-base sm:text-lg text-[#9A9A94] font-light leading-relaxed max-w-2xl pt-2">
                 Whether you are seeking a specific rough Tourmaline crystal, a Kunzite crystal specimen, or a Morganite lot, our Hong Kong office welcomes your trade correspondence.
               </p>
             </div>
@@ -155,22 +155,22 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         {/* Bottom Contextual Navigation Strip */}
         <section
           aria-labelledby="contact-explore-heading"
-          className="border-t border-[#2A2A2A] bg-[#080808] py-14"
+          className="border-t border-[#262626] bg-[#0A0A0A] py-14"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-[#1A1A1A] pb-8 mb-8">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-[#1F1F1F] pb-8 mb-8">
               <div>
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#B69B5E] block font-medium">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] block font-medium">
                   Inventory & Education
                 </span>
                 <h2
                   id="contact-explore-heading"
-                  className="font-serif text-2xl text-[#F5F5F5] font-normal mt-1"
+                  className="font-serif text-2xl text-[#F5F5F0] font-normal mt-1"
                 >
                   Explore Further Resources
                 </h2>
               </div>
-              <p className="text-xs text-[#737373] max-w-md">
+              <p className="text-xs text-[#9A9A94] max-w-md">
                 Review available inventory specifications or research mineralogical criteria before initiating physical viewing.
               </p>
             </div>
@@ -178,57 +178,57 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <Link
                 href="/collections"
-                className="group p-5 bg-[#0D0D0D] border border-[#222222] hover:border-[#B69B5E]/50 transition-colors block"
+                className="group p-5 bg-[#111111] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 transition-colors block"
               >
-                <div className="flex items-center justify-between text-xs text-[#B69B5E] uppercase tracking-wider mb-2">
+                <div className="flex items-center justify-between text-xs text-[#9CCB63] uppercase tracking-wider mb-2">
                   <span className="flex items-center gap-1.5">
-                    <Gem className="w-3.5 h-3.5" aria-hidden="true" />
+                    <Gem className="w-3.5 h-3.5 text-[#9CCB63]" aria-hidden="true" />
                     Catalogue
                   </span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                 </div>
-                <h3 className="text-sm font-medium text-[#F5F5F5] group-hover:text-[#B69B5E] transition-colors">
+                <h3 className="text-sm font-medium text-[#F5F5F0] group-hover:text-[#9CCB63] transition-colors">
                   Rough Collections
                 </h3>
-                <p className="text-xs text-[#737373] mt-1.5 leading-relaxed">
+                <p className="text-xs text-[#9A9A94] mt-1.5 leading-relaxed">
                   Browse available Tourmaline, Kunzite, and Morganite crystal specimens.
                 </p>
               </Link>
 
               <Link
                 href="/certification"
-                className="group p-5 bg-[#0D0D0D] border border-[#222222] hover:border-[#B69B5E]/50 transition-colors block"
+                className="group p-5 bg-[#111111] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 transition-colors block"
               >
-                <div className="flex items-center justify-between text-xs text-[#B69B5E] uppercase tracking-wider mb-2">
+                <div className="flex items-center justify-between text-xs text-[#9CCB63] uppercase tracking-wider mb-2">
                   <span className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5" aria-hidden="true" />
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#9CCB63]" aria-hidden="true" />
                     Standards
                   </span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                 </div>
-                <h3 className="text-sm font-medium text-[#F5F5F5] group-hover:text-[#B69B5E] transition-colors">
+                <h3 className="text-sm font-medium text-[#F5F5F0] group-hover:text-[#9CCB63] transition-colors">
                   Certification
                 </h3>
-                <p className="text-xs text-[#737373] mt-1.5 leading-relaxed">
+                <p className="text-xs text-[#9A9A94] mt-1.5 leading-relaxed">
                   Learn how gemstone testing reports and laboratory documentation work.
                 </p>
               </Link>
 
               <Link
                 href="/education"
-                className="group p-5 bg-[#0D0D0D] border border-[#222222] hover:border-[#B69B5E]/50 transition-colors block"
+                className="group p-5 bg-[#111111] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 transition-colors block"
               >
-                <div className="flex items-center justify-between text-xs text-[#B69B5E] uppercase tracking-wider mb-2">
+                <div className="flex items-center justify-between text-xs text-[#9CCB63] uppercase tracking-wider mb-2">
                   <span className="flex items-center gap-1.5">
-                    <BookOpen className="w-3.5 h-3.5" aria-hidden="true" />
+                    <BookOpen className="w-3.5 h-3.5 text-[#9CCB63]" aria-hidden="true" />
                     Guides
                   </span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                 </div>
-                <h3 className="text-sm font-medium text-[#F5F5F5] group-hover:text-[#B69B5E] transition-colors">
+                <h3 className="text-sm font-medium text-[#F5F5F0] group-hover:text-[#9CCB63] transition-colors">
                   Educational Hub
                 </h3>
-                <p className="text-xs text-[#737373] mt-1.5 leading-relaxed">
+                <p className="text-xs text-[#9A9A94] mt-1.5 leading-relaxed">
                   Read mineral family guides on morphology, pleochroism, and crystal care.
                 </p>
               </Link>

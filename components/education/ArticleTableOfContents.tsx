@@ -13,22 +13,22 @@ export function ArticleTableOfContents({ items }: ArticleTableOfContentsProps) {
   return (
     <nav
       aria-label="Table of contents"
-      className="p-6 bg-[#0A0A0A] border border-[#222] space-y-4 my-8"
+      className="p-6 bg-[#0A0A0A] border border-[#262626] rounded-[4px] space-y-4 my-8"
     >
-      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#B69B5E]">
+      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#9CCB63]">
         <ListOrdered className="w-4 h-4" />
         <span>Table of Contents</span>
       </div>
 
-      <ol className="space-y-2.5 text-xs sm:text-sm text-[#A3A3A3]">
+      <ol className="space-y-2.5 text-xs sm:text-sm text-[#9A9A94]">
         {items.map((item, index) => (
           <li key={item.id} className="flex items-start gap-2.5 group">
-            <span className="font-mono text-xs text-[#737373] group-hover:text-[#B69B5E] transition-colors shrink-0 pt-0.5">
+            <span className="font-mono text-xs text-[#9A9A94] group-hover:text-[#9CCB63] transition-colors shrink-0 pt-0.5">
               0{index + 1}
             </span>
             <Link
               href={`#${item.id}`}
-              className="hover:text-[#F5F5F5] hover:underline underline-offset-4 decoration-[#B69B5E]/40 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+              className="hover:text-[#F5F5F0] hover:underline underline-offset-4 decoration-[#9CCB63]/40 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
             >
               {item.label}
             </Link>

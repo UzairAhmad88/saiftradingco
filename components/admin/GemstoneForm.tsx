@@ -202,7 +202,7 @@ export function GemstoneForm({
       {successMsg && (
         <div
           role="status"
-          className="p-4 bg-[#B6D94C]/10 border border-[#B6D94C]/30 text-[#B6D94C] text-xs flex items-center justify-between"
+          className="p-4 bg-[#9CCB63]/10 border border-[#9CCB63]/30 text-[#9CCB63] text-xs flex items-center justify-between rounded-[4px]"
         >
           <div className="flex items-center gap-2">
             <Check className="w-4 h-4 shrink-0" />
@@ -223,8 +223,8 @@ export function GemstoneForm({
         {/* Left Form Column */}
         <div className="lg:col-span-2 space-y-6">
           {/* Section 1: Basic Information */}
-          <div className="bg-[#101010] border border-[#2A2A2A] p-5 sm:p-6 space-y-4">
-            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#B69B5E] font-medium pb-2 border-b border-[#1C1C1C]">
+          <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-5 sm:p-6 space-y-4">
+            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#9CCB63] font-medium pb-2 border-b border-[#1F1F1F]">
               1. Basic Information
             </h3>
 
@@ -233,9 +233,9 @@ export function GemstoneForm({
               <div className="sm:col-span-2">
                 <label
                   htmlFor="gemstone-name"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
-                  Specimen Name <span className="text-[#B69B5E]">*</span>
+                  Specimen Name <span className="text-[#9CCB63]">*</span>
                 </label>
                 <input
                   id="gemstone-name"
@@ -244,7 +244,7 @@ export function GemstoneForm({
                   value={name}
                   onChange={(e) => handleNameChange(e.target.value)}
                   placeholder="e.g. Natural Rough Green Tourmaline Crystal"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3.5 py-2.5 text-xs text-[#F5F5F5] placeholder-[#737373] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3.5 py-2.5 text-xs text-[#F5F5F0] placeholder-[#737373] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
@@ -252,16 +252,16 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="gemstone-category"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
-                  Category <span className="text-[#B69B5E]">*</span>
+                  Category <span className="text-[#9CCB63]">*</span>
                 </label>
                 <select
                   id="gemstone-category"
                   value={categoryId}
                   onChange={(e) => setCategoryId(e.target.value)}
                   required
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2.5 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2.5 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 >
                   {categories.map((cat) => (
                     <option key={cat.id} value={cat.id}>
@@ -275,7 +275,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="gemstone-sku"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Stock Keeping Unit (SKU)
                 </label>
@@ -285,7 +285,7 @@ export function GemstoneForm({
                   value={sku}
                   onChange={(e) => setSku(e.target.value)}
                   placeholder="e.g. STC-TRM-001"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3.5 py-2.5 text-xs text-[#F5F5F5] placeholder-[#737373] focus:outline-none focus:border-[#B69B5E] font-mono"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3.5 py-2.5 text-xs text-[#F5F5F0] placeholder-[#737373] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63] font-mono"
                 />
               </div>
 
@@ -294,21 +294,21 @@ export function GemstoneForm({
                 <div className="flex items-center justify-between mb-1.5">
                   <label
                     htmlFor="gemstone-slug"
-                    className="text-xs font-medium text-[#F5F5F5]"
+                    className="text-xs font-medium text-[#F5F5F0]"
                   >
-                    URL Slug <span className="text-[#B69B5E]">*</span>
+                    URL Slug <span className="text-[#9CCB63]">*</span>
                   </label>
                   <button
                     type="button"
                     onClick={handleSlugRegenerate}
-                    className="text-[10px] text-[#B69B5E] hover:underline flex items-center gap-1 font-mono"
+                    className="text-[10px] text-[#9CCB63] hover:underline flex items-center gap-1 font-mono"
                   >
                     <RefreshCw className="w-2.5 h-2.5" />
                     <span>Generate from Title</span>
                   </button>
                 </div>
                 <div className="flex items-center">
-                  <span className="bg-[#141414] border border-r-0 border-[#2A2A2A] px-3 py-2.5 text-[11px] font-mono text-[#737373] select-none">
+                  <span className="bg-[#141414] border border-r-0 border-[#262626] px-3 py-2.5 text-[11px] font-mono text-[#737373] select-none rounded-l-[4px]">
                     /gemstones/
                   </span>
                   <input
@@ -321,7 +321,7 @@ export function GemstoneForm({
                       setIsSlugManuallyEdited(true);
                     }}
                     placeholder="natural-rough-green-tourmaline-crystal"
-                    className="flex-1 bg-[#050505] border border-[#2A2A2A] px-3.5 py-2.5 text-xs text-[#F5F5F5] placeholder-[#737373] focus:outline-none focus:border-[#B69B5E] font-mono"
+                    className="flex-1 bg-[#0A0A0A] border border-[#262626] rounded-r-[4px] px-3.5 py-2.5 text-xs text-[#F5F5F0] placeholder-[#737373] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63] font-mono"
                   />
                 </div>
               </div>
@@ -330,7 +330,7 @@ export function GemstoneForm({
               <div className="sm:col-span-2">
                 <label
                   htmlFor="gemstone-short-desc"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Short Summary
                 </label>
@@ -341,7 +341,7 @@ export function GemstoneForm({
                   onChange={(e) => setShortDescription(e.target.value)}
                   placeholder="One sentence overview for catalogue listings and preview cards"
                   maxLength={300}
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3.5 py-2.5 text-xs text-[#F5F5F5] placeholder-[#737373] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3.5 py-2.5 text-xs text-[#F5F5F0] placeholder-[#737373] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
@@ -349,7 +349,7 @@ export function GemstoneForm({
               <div className="sm:col-span-2">
                 <label
                   htmlFor="gemstone-desc"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Full Mineralogical Description
                 </label>
@@ -359,15 +359,15 @@ export function GemstoneForm({
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="Detailed mineralogical characteristics, crystal habit, luster, transparency, and provenance notes..."
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3.5 py-2.5 text-xs text-[#F5F5F5] placeholder-[#737373] focus:outline-none focus:border-[#B69B5E] leading-relaxed resize-y"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3.5 py-2.5 text-xs text-[#F5F5F0] placeholder-[#737373] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63] leading-relaxed resize-y"
                 />
               </div>
             </div>
           </div>
 
           {/* Section 2: Physical Specifications */}
-          <div className="bg-[#101010] border border-[#2A2A2A] p-5 sm:p-6 space-y-4">
-            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#B69B5E] font-medium pb-2 border-b border-[#1C1C1C]">
+          <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-5 sm:p-6 space-y-4">
+            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#9CCB63] font-medium pb-2 border-b border-[#1F1F1F]">
               2. Physical & Mineralogical Specifications
             </h3>
 
@@ -376,7 +376,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="spec-carat"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Carat Weight (ct)
                 </label>
@@ -388,7 +388,7 @@ export function GemstoneForm({
                   value={caratWeight}
                   onChange={(e) => setCaratWeight(e.target.value)}
                   placeholder="e.g. 54.8"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] font-mono focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] font-mono focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
@@ -396,7 +396,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="spec-dimensions"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Dimensions (L × W × D)
                 </label>
@@ -406,7 +406,7 @@ export function GemstoneForm({
                   value={dimensions}
                   onChange={(e) => setDimensions(e.target.value)}
                   placeholder="e.g. 42 × 24 × 18 mm"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] font-mono focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] font-mono focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
@@ -414,7 +414,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="spec-color"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Color Hue & Saturation
                 </label>
@@ -424,7 +424,7 @@ export function GemstoneForm({
                   value={color}
                   onChange={(e) => setColor(e.target.value)}
                   placeholder="e.g. Deep Forest Green"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
@@ -432,7 +432,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="spec-clarity"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Clarity Grade
                 </label>
@@ -442,7 +442,7 @@ export function GemstoneForm({
                   value={clarity}
                   onChange={(e) => setClarity(e.target.value)}
                   placeholder="e.g. Transparent / Eye-Clean"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
@@ -450,7 +450,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="spec-cut"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Crystal Habit / Form
                 </label>
@@ -460,7 +460,7 @@ export function GemstoneForm({
                   value={cut}
                   onChange={(e) => setCut(e.target.value)}
                   placeholder="e.g. Striated Trigonal Prism"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
@@ -468,7 +468,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="spec-origin"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Geographic Provenance
                 </label>
@@ -478,7 +478,7 @@ export function GemstoneForm({
                   value={origin}
                   onChange={(e) => setOrigin(e.target.value)}
                   placeholder="e.g. Paprok, Nuristan, Afghanistan"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
@@ -486,7 +486,7 @@ export function GemstoneForm({
               <div className="sm:col-span-2 md:col-span-3">
                 <label
                   htmlFor="spec-treatment"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Enhancement / Treatment Status
                 </label>
@@ -496,15 +496,15 @@ export function GemstoneForm({
                   value={treatment}
                   onChange={(e) => setTreatment(e.target.value)}
                   placeholder="e.g. 100% Natural / Unheated Rough"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
             </div>
           </div>
 
           {/* Section 3: Certification & Authenticity */}
-          <div className="bg-[#101010] border border-[#2A2A2A] p-5 sm:p-6 space-y-4">
-            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#B69B5E] font-medium pb-2 border-b border-[#1C1C1C]">
+          <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-5 sm:p-6 space-y-4">
+            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#9CCB63] font-medium pb-2 border-b border-[#1F1F1F]">
               3. Laboratory Certification
             </h3>
 
@@ -512,7 +512,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="cert-lab"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Testing Laboratory
                 </label>
@@ -522,14 +522,14 @@ export function GemstoneForm({
                   value={certificateLab}
                   onChange={(e) => setCertificateLab(e.target.value)}
                   placeholder="e.g. GIA / SSEF / GRS / Gübelin"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="cert-number"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Certificate Identification #
                 </label>
@@ -539,14 +539,14 @@ export function GemstoneForm({
                   value={certificateNumber}
                   onChange={(e) => setCertificateNumber(e.target.value)}
                   placeholder="e.g. 222589012"
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] font-mono focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] font-mono focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
               <div className="sm:col-span-2">
                 <label
                   htmlFor="cert-url"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Online Report Verification URL (HTTPS)
                 </label>
@@ -556,15 +556,15 @@ export function GemstoneForm({
                   value={certificateUrl}
                   onChange={(e) => setCertificateUrl(e.target.value)}
                   placeholder="https://www.gia.edu/report-check?reportno=..."
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] font-mono focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] font-mono focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
             </div>
           </div>
 
           {/* Section 4: SEO Metadata */}
-          <div className="bg-[#101010] border border-[#2A2A2A] p-5 sm:p-6 space-y-4">
-            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#B69B5E] font-medium pb-2 border-b border-[#1C1C1C]">
+          <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-5 sm:p-6 space-y-4">
+            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#9CCB63] font-medium pb-2 border-b border-[#1F1F1F]">
               4. Search Engine Optimization
             </h3>
 
@@ -572,7 +572,7 @@ export function GemstoneForm({
               <div>
                 <label
                   htmlFor="seo-title"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Meta Title Tag
                 </label>
@@ -583,14 +583,14 @@ export function GemstoneForm({
                   onChange={(e) => setSeoTitle(e.target.value)}
                   placeholder="Defaults to specimen name + Saif Trading Co"
                   maxLength={100}
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="seo-desc"
-                  className="block text-xs font-medium text-[#F5F5F5] mb-1.5"
+                  className="block text-xs font-medium text-[#F5F5F0] mb-1.5"
                 >
                   Meta Description
                 </label>
@@ -601,7 +601,7 @@ export function GemstoneForm({
                   onChange={(e) => setSeoDescription(e.target.value)}
                   placeholder="Defaults to short summary"
                   maxLength={200}
-                  className="w-full bg-[#050505] border border-[#2A2A2A] px-3 py-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] px-3 py-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
               </div>
             </div>
@@ -611,8 +611,8 @@ export function GemstoneForm({
         {/* Right Publishing Column */}
         <div className="space-y-6">
           {/* Status & Publication Box */}
-          <div className="bg-[#101010] border border-[#2A2A2A] p-5 space-y-5 sticky top-20">
-            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#F5F5F5] font-medium pb-2 border-b border-[#1C1C1C]">
+          <div className="bg-[#111111] border border-[#262626] rounded-[4px] p-5 space-y-5 sticky top-20">
+            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#F5F5F0] font-medium pb-2 border-b border-[#1F1F1F]">
               Publishing & Status
             </h3>
 
@@ -620,15 +620,15 @@ export function GemstoneForm({
             <div className="space-y-1.5">
               <label
                 htmlFor="publish-status"
-                className="block text-xs font-medium text-[#F5F5F5]"
+                className="block text-xs font-medium text-[#F5F5F0]"
               >
-                Catalogue Status <span className="text-[#B69B5E]">*</span>
+                Catalogue Status <span className="text-[#9CCB63]">*</span>
               </label>
               <select
                 id="publish-status"
                 value={status}
                 onChange={(e) => setStatus(e.target.value as GemstoneStatus)}
-                className="w-full bg-[#050505] border border-[#2A2A2A] p-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                className="w-full bg-[#0A0A0A] border border-[#262626] rounded-[4px] p-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
               >
                 <option value="draft">Draft (Private, not visible publicly)</option>
                 <option value="available">Available (Public catalogue item)</option>
@@ -644,16 +644,16 @@ export function GemstoneForm({
             </div>
 
             {/* Featured toggle */}
-            <div className="pt-3 border-t border-[#1C1C1C]">
+            <div className="pt-3 border-t border-[#1F1F1F]">
               <label className="flex items-start gap-2.5 cursor-pointer">
                 <input
                   type="checkbox"
                   checked={featured}
                   onChange={(e) => setFeatured(e.target.checked)}
-                  className="mt-0.5 accent-[#B69B5E] w-4 h-4 rounded-none bg-[#050505] border-[#2A2A2A]"
+                  className="mt-0.5 accent-[#9CCB63] w-4 h-4 rounded-[2px] bg-[#0A0A0A] border-[#262626]"
                 />
                 <div>
-                  <span className="text-xs text-[#F5F5F5] font-medium block">
+                  <span className="text-xs text-[#F5F5F0] font-medium block">
                     Featured on Homepage
                   </span>
                   <span className="text-[10px] text-[#737373] block mt-0.5">
@@ -664,8 +664,8 @@ export function GemstoneForm({
             </div>
 
             {/* Pricing Section */}
-            <div className="pt-3 border-t border-[#1C1C1C] space-y-3">
-              <label className="block text-xs font-medium text-[#F5F5F5]">
+            <div className="pt-3 border-t border-[#1F1F1F] space-y-3">
+              <label className="block text-xs font-medium text-[#F5F5F0]">
                 Pricing (Trade / B2B)
               </label>
               <div className="flex gap-2">
@@ -676,12 +676,12 @@ export function GemstoneForm({
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                   placeholder="Price (leave empty for inquiry)"
-                  className="flex-1 bg-[#050505] border border-[#2A2A2A] p-2 text-xs text-[#F5F5F5] font-mono focus:outline-none focus:border-[#B69B5E]"
+                  className="flex-1 bg-[#0A0A0A] border border-[#262626] rounded-[4px] p-2 text-xs text-[#F5F5F0] font-mono focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 />
                 <select
                   value={currency}
                   onChange={(e) => setCurrency(e.target.value)}
-                  className="bg-[#050505] border border-[#2A2A2A] p-2 text-xs text-[#F5F5F5] focus:outline-none focus:border-[#B69B5E]"
+                  className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] p-2 text-xs text-[#F5F5F0] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63]"
                 >
                   <option value="USD">USD</option>
                   <option value="HKD">HKD</option>
@@ -694,7 +694,7 @@ export function GemstoneForm({
             </div>
 
             {/* Save Buttons */}
-            <div className="pt-4 border-t border-[#1C1C1C] space-y-2.5">
+            <div className="pt-4 border-t border-[#1F1F1F] space-y-2.5">
               {mode === "create" ? (
                 <>
                   <Button
@@ -702,7 +702,7 @@ export function GemstoneForm({
                     onClick={() => handleSubmit("draft")}
                     disabled={isPending}
                     variant="secondary"
-                    className="w-full text-xs border-[#2A2A2A] hover:border-[#B69B5E]"
+                    className="w-full text-xs border-[#262626] hover:border-[#9CCB63]/40"
                   >
                     {isPending ? (
                       <Loader2 className="w-3.5 h-3.5 mr-2 animate-spin" />
@@ -750,7 +750,7 @@ export function GemstoneForm({
                       onClick={() => handleSubmit("available")}
                       disabled={isPending}
                       variant="secondary"
-                      className="w-full text-xs border-[#B6D94C]/40 text-[#B6D94C] hover:bg-[#B6D94C]/10"
+                      className="w-full text-xs border-[#9CCB63]/40 text-[#9CCB63] hover:bg-[#9CCB63]/10"
                     >
                       <span>Publish (Make Available)</span>
                     </Button>
@@ -762,7 +762,7 @@ export function GemstoneForm({
                       onClick={() => handleSubmit("sold")}
                       disabled={isPending}
                       variant="secondary"
-                      className="w-full text-xs border-[#2A2A2A] text-[#A3A3A3]"
+                      className="w-full text-xs border-[#262626] text-[#9A9A94]"
                     >
                       <span>Mark as Sold</span>
                     </Button>
@@ -771,7 +771,7 @@ export function GemstoneForm({
               )}
 
               <Link href="/admin/gemstones" className="block text-center pt-1">
-                <span className="text-[11px] text-[#737373] hover:text-[#F5F5F5] uppercase tracking-wider inline-flex items-center gap-1">
+                <span className="text-[11px] text-[#737373] hover:text-[#F5F5F0] uppercase tracking-wider inline-flex items-center gap-1">
                   <ArrowLeft className="w-3 h-3" />
                   Cancel and Return
                 </span>

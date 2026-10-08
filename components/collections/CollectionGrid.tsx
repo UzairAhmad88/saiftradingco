@@ -23,7 +23,7 @@ export function CollectionGrid({
           description="No specimens match your current filter or search criteria. Try broadening your parameters or clearing active filters."
           actionLabel="Reset All Filters"
           actionHref={resetHref || "/collections"}
-          icon={<FilterX className="w-6 h-6 text-[#B69B5E]" />}
+          icon={<FilterX className="w-6 h-6 text-[#9CCB63]" />}
         />
       </div>
     );

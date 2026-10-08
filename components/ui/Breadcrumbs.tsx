@@ -30,7 +30,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
           <Link
             href="/"
             itemProp="item"
-            className="text-[#A3A3A3] hover:text-[#B69B5E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+            className="text-[#9A9A94] hover:text-[#9CCB63] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
           >
             <span itemProp="name">Home</span>
           </Link>
@@ -57,7 +57,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
                 <Link
                   href={item.href}
                   itemProp="item"
-                  className="text-[#A3A3A3] hover:text-[#B69B5E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B69B5E]"
+                  className="text-[#9A9A94] hover:text-[#9CCB63] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
                 >
                   <span itemProp="name">{item.label}</span>
                 </Link>
@@ -65,7 +65,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
                 <span
                   itemProp="name"
                   aria-current={isLast ? "page" : undefined}
-                  className="text-[#F5F5F5] font-medium"
+                  className="text-[#F5F5F0] font-medium"
                 >
                   {item.label}
                 </span>
