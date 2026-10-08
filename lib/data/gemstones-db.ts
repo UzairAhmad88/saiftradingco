@@ -1,4 +1,4 @@
-import { createServerClientInstance } from "@/lib/supabase/server";
+import { createPublicServerClient } from "@/lib/supabase/server";
 import {
   type CategoryDetail,
   type GemstoneFilterOptions,
@@ -71,7 +71,7 @@ let categorySlugCache: CategorySlugCacheEntry | null = null;
 const CATEGORY_CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 
 async function getCategoryIdBySlug(
-  supabase: Awaited<ReturnType<typeof createServerClientInstance>>,
+  supabase: ReturnType<typeof createPublicServerClient>,
   slug: string
 ): Promise<string | null> {
   const now = Date.now();
@@ -117,7 +117,7 @@ export async function getDbCategories(): Promise<CategoryDetail[]> {
   }
 
   try {
-    const supabase = await createServerClientInstance();
+    const supabase = createPublicServerClient();
     const { data, error } = await supabase
       .from("categories")
       .select("id, name, slug, description, image, sort_order, is_active, created_at")
@@ -223,7 +223,7 @@ export async function getDbGemstones(
   }
 
   try {
-    const supabase = await createServerClientInstance();
+    const supabase = createPublicServerClient();
 
     // 1. Fetch active categories for join mapping with lean card projection
     let query = supabase
@@ -363,7 +363,7 @@ export async function getDbGemstoneBySlug(
   }
 
   try {
-    const supabase = await createServerClientInstance();
+    const supabase = createPublicServerClient();
     const { data, error } = await supabase
       .from("gemstones")
       .select(
@@ -425,7 +425,7 @@ export async function getDbFeaturedGemstones(
   }
 
   try {
-    const supabase = await createServerClientInstance();
+    const supabase = createPublicServerClient();
     const { data, error } = await supabase
       .from("gemstones")
       .select(
@@ -478,7 +478,7 @@ export async function createDbInquiry(
   }
 
   try {
-    const supabase = await createServerClientInstance();
+    const supabase = createPublicServerClient();
     const { data, error } = await supabase
       .from("inquiries")
       .insert({

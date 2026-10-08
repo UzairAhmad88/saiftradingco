@@ -1,6 +1,26 @@
 import { createServerClient } from "@supabase/ssr";
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 import type { Database } from "@/types/database";
+
+/**
+ * Creates a public server-side Supabase client for public catalogue queries.
+ * Does not read or mutate cookies, preserving static pre-rendering (SSG/ISR).
+ */
+export function createPublicServerClient() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+  const supabaseKey =
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
+    "";
+
+  return createSupabaseClient<Database>(supabaseUrl, supabaseKey, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+    },
+  });
+}
 
 /**
  * Creates a server-side Supabase client with cookie-based session management.
@@ -36,3 +56,4 @@ export async function createServerClientInstance() {
 
 // Preserve existing function signature for backward compatibility
 export const createClient = createServerClientInstance;
+
