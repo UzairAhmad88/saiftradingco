@@ -18,7 +18,7 @@ export default function AppleIcon() {
           justifyContent: "center",
           background: "linear-gradient(145deg, #141414, #050505)",
           borderRadius: "36px",
-          border: "4px solid #9CCB63",
+          border: "4px solid #B7D98B",
           position: "relative",
         }}
       >
@@ -31,7 +31,7 @@ export default function AppleIcon() {
         >
           {/* Top termination facets */}
           <polygon points="10,1 4,6 10,8" fill="#EDF8DE" />
-          <polygon points="10,1 10,8 16,6" fill="#9CCB63" />
+          <polygon points="10,1 10,8 16,6" fill="#B7D98B" />
           <polygon points="10,1 4,6 10,4" fill="#FFFFFF" opacity="0.7" />
 
           {/* Body columns */}

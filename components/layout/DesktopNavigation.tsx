@@ -47,15 +47,15 @@ export function DesktopNavigation({ className }: DesktopNavigationProps) {
             aria-current={active ? "page" : undefined}
             className={cn(
               "relative py-2 transition-colors duration-200 select-none",
-              "hover:text-[#F5F5F0] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]",
-              active ? "text-[#F5F5F0] font-medium" : "text-[#9A9A94]"
+              "hover:text-[#294D2C] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]",
+              active ? "text-[#050505] font-semibold" : "text-[#050505]/80"
             )}
           >
             <span>{item.label}</span>
-            {/* Subtle light green active accent indicator */}
+            {/* Subtle black active underline */}
             {active && (
               <span
-                className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#9CCB63]"
+                className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#050505]"
                 aria-hidden="true"
               />
             )}
@@ -63,14 +63,14 @@ export function DesktopNavigation({ className }: DesktopNavigationProps) {
         );
       })}
 
-      {/* Primary Global CTA: INQUIRE */}
+      {/* Primary Global CTA: INQUIRE (Black background + Light Green text) */}
       <Link
         href="/contact"
         className={cn(
-          "px-5 py-2.5 border transition-all duration-200 select-none font-medium rounded-[3px]",
-          "border-[#9CCB63]/70 text-[#9CCB63]",
-          "hover:border-[#9CCB63] hover:bg-[#9CCB63] hover:text-[#050505] active:bg-[#B7D98B]",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCB63]"
+          "px-5 py-2.5 transition-all duration-200 select-none font-semibold rounded-[4px]",
+          "bg-[#050505] text-[#B7D98B] border border-[#050505]",
+          "hover:bg-[#294D2C] hover:text-[#F7F7F1] active:bg-[#101010]",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#050505]"
         )}
       >
         Inquire

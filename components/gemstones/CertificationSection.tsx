@@ -11,10 +11,10 @@ export function CertificationSection({ gemstone }: CertificationSectionProps) {
   const hasCertificate = Boolean(gemstone.certificate_lab);
 
   return (
-    <div className="p-6 sm:p-8 bg-[#0A0A0A] border border-[#262626] rounded-[4px] space-y-6">
+    <div className="p-6 sm:p-8 bg-[#E5F1D2] border border-[#D4DEC5] rounded-[4px] space-y-6 shadow-xs">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-start gap-4">
-          <div className="p-2.5 bg-[#111111] border border-[#9CCB63]/30 text-[#9CCB63] shrink-0 rounded-[2px]">
+          <div className="p-2.5 bg-[#CFE7AA] border border-[#D4DEC5] text-[#294D2C] shrink-0 rounded-[4px]">
             {hasCertificate ? (
               <FileCheck className="w-5 h-5" />
             ) : (
@@ -22,10 +22,10 @@ export function CertificationSection({ gemstone }: CertificationSectionProps) {
             )}
           </div>
           <div className="space-y-1">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-[#9CCB63] block">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-[#294D2C] block font-bold">
               Documentation Disclosure
             </span>
-            <h3 className="font-serif text-xl sm:text-2xl text-[#F5F5F0] font-normal">
+            <h3 className="font-serif text-xl sm:text-2xl text-[#050505] font-semibold">
               {hasCertificate
                 ? "Independent Gemological Laboratory Report"
                 : "Laboratory Verification Protocol"}
@@ -34,20 +34,20 @@ export function CertificationSection({ gemstone }: CertificationSectionProps) {
         </div>
 
         {hasCertificate && (
-          <span className="self-start sm:self-auto inline-flex items-center px-3 py-1 bg-[#111111] border border-[#262626] rounded-[2px] text-[11px] uppercase tracking-wider text-[#9CCB63] font-mono">
+          <span className="self-start sm:self-auto inline-flex items-center px-3 py-1 bg-[#CFE7AA] border border-[#D4DEC5] rounded-[2px] text-[11px] uppercase tracking-wider text-[#294D2C] font-mono font-semibold">
             {gemstone.certificate_lab}
           </span>
         )}
       </div>
 
-      <div className="space-y-4 text-xs sm:text-sm text-[#9A9A94] font-light leading-relaxed max-w-3xl">
+      <div className="space-y-4 text-xs sm:text-sm text-[#777A70] font-normal leading-relaxed max-w-3xl">
         {hasCertificate ? (
           <>
             <p>
               This specimen has been examined by an independent gemological laboratory confirming species identification and natural mineral characteristics.
             </p>
             {gemstone.certificate_number && (
-              <div className="p-3 bg-[#050505] border border-[#262626] rounded-[2px] text-xs font-mono text-[#D8D8D2] inline-block">
+              <div className="p-3 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[2px] text-xs font-mono text-[#050505] inline-block font-semibold">
                 Report Reference: {gemstone.certificate_number}
               </div>
             )}
@@ -59,10 +59,10 @@ export function CertificationSection({ gemstone }: CertificationSectionProps) {
         )}
       </div>
 
-      <div className="pt-4 border-t border-[#1A1A1A]">
+      <div className="pt-4 border-t border-[#D4DEC5]">
         <Link
           href="/certification"
-          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-[#9CCB63] hover:text-[#B7D98B] transition-colors"
+          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-[#050505] font-bold hover:text-[#294D2C] transition-colors"
         >
           <span>Read Our Testing &amp; Verification Standards</span>
           <ArrowRight className="w-3.5 h-3.5" />

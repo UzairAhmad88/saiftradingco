@@ -30,23 +30,23 @@ export function GemstoneCard({
   return (
     <article
       className={cn(
-        "group flex flex-col bg-[#0D0D0D] border border-[#262626] rounded-[4px] transition-all duration-300",
-        "hover:border-[#9CCB63]/60 hover:bg-[#111111]",
+        "group flex flex-col bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] transition-all duration-300 shadow-xs",
+        "hover:border-[#050505]/70 hover:shadow-sm",
         className
       )}
     >
       <Link
         href={`/gemstones/${gemstone.slug}`}
-        className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCB63] rounded-[4px]"
+        className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#050505] rounded-[4px]"
         aria-label={`${gemstone.name} - ${categoryName}, ${gemstone.carat_weight ? `${gemstone.carat_weight} carats, ` : ""}${isSold ? "Status: Sold. View archive record" : "Status: Available. View specimen details"}`}
       >
-        {/* Dominant Image Container */}
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#0A0A0A] border-b border-[#262626]">
+        {/* Dominant Image Container — Black Luxury Contrast Frame */}
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#050505] border-b border-[#050505]">
           {imageUrl.endsWith(".svg") ? (
-            <div className="w-full h-full flex items-center justify-center bg-[#0D0D0D] text-[#737373]">
+            <div className="w-full h-full flex items-center justify-center bg-[#050505] text-[#777A70]">
               <div className="text-center p-6 space-y-2">
-                <Sparkles className="w-8 h-8 mx-auto text-[#9CCB63]/60" />
-                <span className="text-[11px] uppercase tracking-widest text-[#9A9A94] block">
+                <Sparkles className="w-8 h-8 mx-auto text-[#B7D98B]" />
+                <span className="text-[11px] uppercase tracking-widest text-[#F7F7F1] block">
                   Natural Rough Specimen
                 </span>
               </div>
@@ -81,10 +81,10 @@ export function GemstoneCard({
           {gemstone.certificate_lab && (
             <div className="absolute top-3 right-3 z-10">
               <span
-                className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] uppercase tracking-wider bg-[#050505]/85 border border-[#262626] text-[#F5F5F0] rounded-[2px] backdrop-blur-sm"
+                className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] uppercase tracking-wider bg-[#050505]/90 border border-[#262626] text-[#F7F7F1] rounded-[2px] backdrop-blur-sm"
                 title={`Certified by ${gemstone.certificate_lab}`}
               >
-                <FileCheck className="w-3 h-3 text-[#9CCB63]" />
+                <FileCheck className="w-3 h-3 text-[#B7D98B]" />
                 <span>{gemstone.certificate_lab}</span>
               </span>
             </div>
@@ -94,39 +94,39 @@ export function GemstoneCard({
         {/* Quiet Catalogue Metadata */}
         <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
           <div className="space-y-1.5">
-            <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#9A9A94]">
+            <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#294D2C] font-semibold">
               <span>{categoryName}</span>
-              {gemstone.sku && <span className="font-mono text-[10px]">{gemstone.sku}</span>}
+              {gemstone.sku && <span className="font-mono text-[10px] text-[#777A70]">{gemstone.sku}</span>}
             </div>
 
-            <h3 className="font-serif text-xl sm:text-2xl text-[#F5F5F0] font-normal group-hover:text-[#9CCB63] transition-colors leading-snug">
+            <h3 className="font-serif text-xl sm:text-2xl text-[#050505] font-semibold group-hover:text-[#294D2C] transition-colors leading-snug">
               {gemstone.name}
             </h3>
 
             {gemstone.short_description && (
-              <p className="text-xs text-[#9A9A94] line-clamp-2 leading-relaxed pt-1 font-light">
+              <p className="text-xs text-[#777A70] line-clamp-2 leading-relaxed pt-1 font-normal">
                 {gemstone.short_description}
               </p>
             )}
           </div>
 
           {/* Specifications Row */}
-          <div className="pt-4 border-t border-[#1A1A1A] flex items-center justify-between text-xs text-[#9A9A94]">
-            <div className="flex items-center gap-3">
+          <div className="pt-4 border-t border-[#D4DEC5] flex items-center justify-between text-xs text-[#777A70]">
+            <div className="flex items-center gap-2.5">
               {gemstone.carat_weight && (
-                <span className="font-medium text-[#F5F5F0]">
-                  {gemstone.carat_weight} <span className="font-light text-[#737373]">ct</span>
+                <span className="font-bold text-[#050505]">
+                  {gemstone.carat_weight} <span className="font-normal text-[#777A70]">ct</span>
                 </span>
               )}
               {gemstone.origin && (
                 <>
-                  <span className="text-[#3A3A3A]" aria-hidden="true">·</span>
-                  <span className="text-[#9A9A94]">{gemstone.origin}</span>
+                  <span className="text-[#D4DEC5]" aria-hidden="true">·</span>
+                  <span className="text-[#294D2C] font-medium">{gemstone.origin}</span>
                 </>
               )}
             </div>
 
-            <span className="text-[11px] uppercase tracking-[0.18em] text-[#9CCB63] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 font-medium">
+            <span className="text-[11px] uppercase tracking-[0.18em] text-[#050505] group-hover:text-[#294D2C] group-hover:translate-x-1 transition-all inline-flex items-center gap-1 font-bold">
               {isSold ? "Archive Details →" : "View Specimen →"}
             </span>
           </div>

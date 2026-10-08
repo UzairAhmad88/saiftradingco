@@ -18,8 +18,8 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
-  colorScheme: "dark",
+  themeColor: "#B7D98B",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
 };
@@ -61,8 +61,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`dark ${cormorant.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-[#050505] text-[#F5F5F0] font-sans antialiased selection:bg-[#9CCB63]/25 selection:text-[#F5F5F0]">
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+      <body className="min-h-screen bg-[#E5F1D2] text-[#050505] font-sans antialiased selection:bg-[#B7D98B] selection:text-[#050505]">
         <SiteShell>
           {children}
         </SiteShell>

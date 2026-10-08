@@ -17,17 +17,17 @@ export default function GemstoneDetailError({
   }, [error]);
 
   return (
-    <div className="w-full bg-[#050505] min-h-[65vh] flex items-center justify-center px-4 py-16">
-      <div className="max-w-md w-full p-8 bg-[#111111] border border-[#262626] rounded-[4px] text-center space-y-6">
-        <div className="w-12 h-12 mx-auto bg-[#171717] border border-[#262626] rounded-[4px] flex items-center justify-center text-[#9CCB63]">
+    <div className="w-full bg-[#E5F1D2] min-h-[65vh] flex items-center justify-center px-4 py-16">
+      <div className="max-w-md w-full p-8 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] text-center space-y-6 shadow-sm">
+        <div className="w-12 h-12 mx-auto bg-[#CFE7AA] border border-[#294D2C]/20 rounded-[4px] flex items-center justify-center text-[#294D2C]">
           <AlertTriangle className="w-6 h-6 stroke-[1.5]" />
         </div>
 
         <div className="space-y-2">
-          <h2 className="font-serif text-2xl text-[#F5F5F0]">
+          <h2 className="font-serif text-2xl text-[#050505]">
             Specimen Record Unavailable
           </h2>
-          <p className="text-xs sm:text-sm text-[#9A9A94] font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#777A70] font-light leading-relaxed">
             We were unable to load the complete physical record for this gemstone. Please try refreshing or return to collections.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function GemstoneDetailError({
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Button
             onClick={() => reset()}
-            variant="secondary"
+            variant="primary"
             size="md"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2"
           >
@@ -45,7 +45,7 @@ export default function GemstoneDetailError({
 
           <Link
             href="/collections"
-            className="w-full sm:w-auto px-6 py-3 border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/40 text-xs uppercase tracking-wider text-[#9A9A94] hover:text-[#F5F5F0] transition-colors inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+            className="w-full sm:w-auto px-6 py-3 border border-[#050505] rounded-[4px] hover:bg-[#050505] hover:text-[#B7D98B] text-xs uppercase tracking-wider text-[#050505] font-semibold transition-colors inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Collections</span>

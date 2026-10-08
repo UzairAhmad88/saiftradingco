@@ -1,58 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg-primary: #050505;
-  --color-brand-bg-deep: #0A0A0A;
-  --color-brand-surface: #111111;
-  --color-brand-surface-secondary: #171717;
-  --color-brand-surface-elevated: #1E1E1E;
-  --color-brand-text-primary: #F5F5F0;
-  --color-brand-text-muted: #D8D8D2;
-  --color-brand-text-gray: #9A9A94;
-  --color-brand-border: #262626;
-  --color-brand-border-subtle: #1A1A1A;
-
-  /* Luxury Light Green Palette */
-  --color-brand-green-light: #B7D98B;
-  --color-brand-green: #9CCB63;
-  --color-brand-green-soft: #CFE7AA;
+  /* Light Green Dominant Palette (65% Light Green, 23% Black, 10% Off-White, 2% Neutrals) */
+  --color-brand-green-primary: #B7D98B;
+  --color-brand-green-secondary: #CFE7AA;
+  --color-brand-green-soft: #E5F1D2;
   --color-brand-green-deep: #294D2C;
+  --color-brand-green-pale: #F0F6E6;
 
+  /* Black Contrast (23%) */
+  --color-brand-black: #050505;
+  --color-brand-black-secondary: #101010;
+  --color-brand-black-surface: #171717;
+
+  /* Off-White Support (10%) */
+  --color-brand-offwhite: #F7F7F1;
+  --color-brand-offwhite-subtle: #EDEDE4;
+
+  /* Neutrals (2%) */
+  --color-brand-gray-muted: #777A70;
+  --color-brand-border: #D4DEC5;
+  --color-brand-border-dark: #262626;
+
+  /* Functional Feedback */
   --color-feedback-success: #294D2C;
-  --color-feedback-warning: #D97706;
-  --color-feedback-error: #DC2626;
+  --color-feedback-warning: #B45309;
+  --color-feedback-error: #B91C1C;
 
   --font-display: var(--font-display), 'Cormorant Garamond', Georgia, serif;
   --font-body: var(--font-body), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 :root {
-  /* Surfaces & Backgrounds */
-  --background: #050505;
-  --background-deep: #0A0A0A;
-  --surface: #111111;
-  --surface-secondary: #171717;
-  --surface-elevated: #1E1E1E;
+  /* Base Environment is Light Green */
+  --background: #E5F1D2;
+  --background-secondary: #CFE7AA;
+  --background-primary-green: #B7D98B;
+  --background-dark: #050505;
+
+  /* Surfaces */
+  --surface-green: #CFE7AA;
+  --surface-green-soft: #E5F1D2;
+  --surface-offwhite: #F7F7F1;
+  --surface-dark: #050505;
+  --surface-dark-secondary: #101010;
 
   /* Typography Colors */
-  --text-primary: #F5F5F0;
-  --text-muted: #D8D8D2;
-  --text-gray: #9A9A94;
+  --text-primary: #050505;
+  --text-secondary: #294D2C;
+  --text-muted: #777A70;
+  --text-light: #F7F7F1;
 
   /* Borders & Dividers */
-  --border: #262626;
-  --border-subtle: #1A1A1A;
+  --border-light: #D4DEC5;
+  --border-dark: #262626;
 
-  /* Signature Gemstone Light Green Accents */
-  --accent-light-green: #B7D98B;
-  --accent-brand-green: #9CCB63;
-  --accent-soft-green: #CFE7AA;
-  --accent-deep-green: #294D2C;
+  /* Brand Accents */
+  --accent-green-primary: #B7D98B;
+  --accent-green-secondary: #CFE7AA;
+  --accent-green-deep: #294D2C;
 
   /* Restrained Feedback */
   --success: #294D2C;
-  --warning: #D97706;
-  --error: #DC2626;
+  --warning: #B45309;
+  --error: #B91C1C;
 
   /* Motion Timing & Curves */
   --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
@@ -157,28 +168,28 @@ body {
   font-weight: 500;
 }
 
-/* Custom Scrollbar for Luxury Dark Aesthetic */
+/* Custom Scrollbar for Luxury Light Green Aesthetic */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #E5F1D2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background: #B7D98B;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #363636;
+  background: #294D2C;
 }
 
 /* Focus Visible Accessible Styling */
 :focus-visible {
-  outline: 2px solid #9CCB63;
+  outline: 2px solid #050505;
   outline-offset: 3px;
 }
 

@@ -135,10 +135,10 @@ export default async function CategoryPage({
       <main
         id="main-content"
         tabIndex={-1}
-        className="w-full bg-[#050505] focus:outline-none"
+        className="w-full bg-[#E5F1D2] focus:outline-none"
       >
         {/* Breadcrumb Navigation */}
-        <div className="border-b border-[#262626] bg-[#0A0A0A]">
+        <div className="border-b border-[#D4DEC5] bg-[#CFE7AA]/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs items={breadcrumbs} />
           </div>

@@ -20,12 +20,12 @@ export function EducationCard({
     return (
       <article
         className={cn(
-          "group relative flex flex-col lg:flex-row bg-[#0A0A0A] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/60 transition-all duration-300 overflow-hidden",
+          "group relative flex flex-col lg:flex-row bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] hover:border-[#050505] transition-all duration-300 overflow-hidden shadow-sm",
           className
         )}
       >
-        {/* Featured Image Frame */}
-        <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[300px] lg:w-1/2 overflow-hidden bg-[#080808] border-b lg:border-b-0 lg:border-r border-[#262626]">
+        {/* Featured Image Frame in Black Container */}
+        <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[300px] lg:w-1/2 overflow-hidden bg-[#050505] border-b lg:border-b-0 lg:border-r border-[#D4DEC5]">
           <Image
             src={article.heroImage}
             alt={article.title}
@@ -33,37 +33,33 @@ export function EducationCard({
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
           />
-          <div
-            className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60 pointer-events-none"
-            aria-hidden="true"
-          />
         </div>
 
         {/* Featured Content Body */}
         <div className="p-8 lg:p-12 lg:w-1/2 flex flex-col justify-between space-y-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em]">
-              <span className="text-[#9CCB63] px-2.5 py-1 border border-[#9CCB63]/30 bg-[#111111] rounded-[2px]">
+              <span className="text-[#294D2C] px-2.5 py-1 border border-[#294D2C]/20 bg-[#CFE7AA] font-medium rounded-[3px]">
                 Featured Guide
               </span>
-              <span className="text-[#9A9A94]">{article.readingTime}</span>
+              <span className="text-[#777A70] font-medium">{article.readingTime}</span>
             </div>
 
-            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#F5F5F0] group-hover:text-[#B7D98B] transition-colors leading-tight">
+            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#050505] group-hover:text-[#294D2C] transition-colors leading-tight">
               <Link href={`/education/${article.slug}`}>
                 {article.title}
               </Link>
             </h3>
 
-            <p className="text-sm text-[#9A9A94] font-light leading-relaxed">
+            <p className="text-sm text-[#777A70] font-light leading-relaxed">
               {article.shortDescription}
             </p>
           </div>
 
-          <div className="pt-6 border-t border-[#1A1A1A]">
+          <div className="pt-6 border-t border-[#D4DEC5]">
             <Link
               href={`/education/${article.slug}`}
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#9CCB63] hover:text-[#B7D98B] transition-colors"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#050505] font-semibold hover:text-[#294D2C] transition-colors"
             >
               <span>Read Full Guide</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -77,33 +73,33 @@ export function EducationCard({
   return (
     <article
       className={cn(
-        "group p-6 sm:p-8 bg-[#0A0A0A] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/60 hover:bg-[#111111] transition-all duration-300 flex flex-col justify-between space-y-6",
+        "group p-6 sm:p-8 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] hover:border-[#050505] hover:bg-[#F2F2EB] transition-all duration-300 flex flex-col justify-between space-y-6 shadow-sm",
         className
       )}
     >
       <div className="space-y-4">
         <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em]">
-          <span className="text-[#9CCB63] px-2.5 py-0.5 border border-[#9CCB63]/30 bg-[#111111] rounded-[2px]">
+          <span className="text-[#294D2C] px-2.5 py-0.5 border border-[#294D2C]/20 bg-[#CFE7AA] font-medium rounded-[3px]">
             {article.category}
           </span>
-          <span className="text-[#9A9A94]">{article.readingTime}</span>
+          <span className="text-[#777A70] font-medium">{article.readingTime}</span>
         </div>
 
-        <h3 className="font-serif text-xl sm:text-2xl text-[#F5F5F0] group-hover:text-[#B7D98B] transition-colors leading-snug">
+        <h3 className="font-serif text-xl sm:text-2xl text-[#050505] group-hover:text-[#294D2C] transition-colors leading-snug">
           <Link href={`/education/${article.slug}`}>
             {article.title}
           </Link>
         </h3>
 
-        <p className="text-xs sm:text-sm text-[#9A9A94] font-light leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#777A70] font-light leading-relaxed">
           {article.shortDescription}
         </p>
       </div>
 
-      <div className="pt-4 border-t border-[#1A1A1A]">
+      <div className="pt-4 border-t border-[#D4DEC5]">
         <Link
           href={`/education/${article.slug}`}
-          className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#F5F5F0] group-hover:text-[#9CCB63] transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#050505] font-semibold group-hover:text-[#294D2C] transition-colors"
         >
           <span>Read Guide</span>
           <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

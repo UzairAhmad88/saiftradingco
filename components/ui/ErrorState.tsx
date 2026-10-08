@@ -22,16 +22,16 @@ export function ErrorState({
     <div
       role="alert"
       className={cn(
-        "py-12 px-6 text-center border border-[#DC2626]/40 bg-[#101010] max-w-xl mx-auto space-y-4",
+        "py-12 px-6 text-center border border-[#B91C1C]/30 bg-[#F7F7F1] max-w-xl mx-auto space-y-4 rounded-[4px]",
         className
       )}
     >
-      <div className="w-12 h-12 mx-auto border border-[#DC2626]/40 bg-[#171717] flex items-center justify-center text-[#DC2626]">
+      <div className="w-12 h-12 mx-auto border border-[#B91C1C]/40 bg-[#EDEDE4] rounded-[4px] flex items-center justify-center text-[#B91C1C]">
         <AlertCircle className="w-6 h-6 stroke-[1.5]" aria-hidden="true" />
       </div>
       <div className="space-y-1.5">
-        <h3 className="font-serif text-xl text-[#F5F5F5]">{title}</h3>
-        <p className="text-sm text-[#A3A3A3] max-w-sm mx-auto leading-relaxed">
+        <h3 className="font-serif text-xl text-[#050505]">{title}</h3>
+        <p className="text-sm text-[#777A70] max-w-sm mx-auto leading-relaxed">
           {message}
         </p>
       </div>

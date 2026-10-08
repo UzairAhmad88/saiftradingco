@@ -17,7 +17,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
   return (
     <nav aria-label="Breadcrumb" className={cn("py-4", className)}>
       <ol
-        className="flex items-center flex-wrap gap-2 text-xs uppercase tracking-[0.18em] text-[#737373]"
+        className="flex items-center flex-wrap gap-2 text-xs uppercase tracking-[0.18em] text-[#777A70]"
         itemScope
         itemType="https://schema.org/BreadcrumbList"
       >
@@ -30,7 +30,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
           <Link
             href="/"
             itemProp="item"
-            className="text-[#9A9A94] hover:text-[#9CCB63] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+            className="text-[#294D2C] hover:text-[#050505] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
           >
             <span itemProp="name">Home</span>
           </Link>
@@ -50,14 +50,14 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
               className="flex items-center gap-2"
             >
               <ChevronRight
-                className="w-3 h-3 text-[#3A3A3A] shrink-0"
+                className="w-3 h-3 text-[#777A70] shrink-0"
                 aria-hidden="true"
               />
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
                   itemProp="item"
-                  className="text-[#9A9A94] hover:text-[#9CCB63] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+                  className="text-[#294D2C] hover:text-[#050505] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
                 >
                   <span itemProp="name">{item.label}</span>
                 </Link>
@@ -65,7 +65,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
                 <span
                   itemProp="name"
                   aria-current={isLast ? "page" : undefined}
-                  className="text-[#F5F5F0] font-medium"
+                  className="text-[#050505] font-semibold"
                 >
                   {item.label}
                 </span>

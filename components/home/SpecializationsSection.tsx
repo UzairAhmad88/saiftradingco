@@ -8,23 +8,23 @@ export function SpecializationsSection() {
   return (
     <section
       aria-labelledby="specializations-heading"
-      className="border-b border-[#262626] bg-[#050505] py-20 sm:py-28"
+      className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-20 sm:py-28"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20">
           <div className="space-y-3 max-w-2xl">
-            <span className="type-eyebrow text-[#9CCB63] block">
+            <span className="type-eyebrow text-[#294D2C] block font-bold">
               Mineral Specializations
             </span>
             <h2
               id="specializations-heading"
-              className="font-serif text-3xl sm:text-5xl text-[#F5F5F0] font-normal tracking-tight"
+              className="font-serif text-3xl sm:text-5xl text-[#050505] font-semibold tracking-tight"
             >
               Three Primary Crystal Families
             </h2>
           </div>
-          <p className="text-sm text-[#9A9A94] max-w-md font-light leading-relaxed">
+          <p className="text-sm text-[#050505]/80 max-w-md font-normal leading-relaxed">
             Focused procurement and dedicated trade in rough crystalline specimens. Each variety selected for distinct morphological habit and optical quality.
           </p>
         </div>
@@ -34,10 +34,10 @@ export function SpecializationsSection() {
           {SPECIALIZATIONS_DATA.map((item) => (
             <article
               key={item.slug}
-              className="group relative flex flex-col bg-[#0A0A0A] border border-[#262626] rounded-[4px] transition-all duration-300 hover:border-[#9CCB63]/60 hover:bg-[#111111] overflow-hidden"
+              className="group relative flex flex-col bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] transition-all duration-300 hover:border-[#050505]/60 shadow-xs overflow-hidden"
             >
-              {/* Image Frame */}
-              <div className="relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] w-full overflow-hidden bg-[#070707] border-b border-[#262626]">
+              {/* Image Frame inside Black Border Container */}
+              <div className="relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] w-full overflow-hidden bg-[#050505] border-b border-[#050505]">
                 <Image
                   src={item.imageUrl}
                   alt={`Natural rough ${item.name} crystal specimen`}
@@ -47,18 +47,18 @@ export function SpecializationsSection() {
                 />
 
                 {/* Top Overlay: Editorial Number & Mineral Group */}
-                <div className="absolute top-0 inset-x-0 p-5 flex items-center justify-between z-10 bg-gradient-to-b from-[#050505]/90 via-[#050505]/40 to-transparent">
-                  <span className="font-serif text-2xl font-light text-[#9CCB63]">
+                <div className="absolute top-0 inset-x-0 p-5 flex items-center justify-between z-10 bg-gradient-to-b from-[#050505]/80 via-[#050505]/40 to-transparent">
+                  <span className="font-serif text-2xl font-light text-[#B7D98B]">
                     {item.number}
                   </span>
-                  <span className="text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 border border-[#262626] bg-[#050505]/80 text-[#9A9A94] rounded-[2px] backdrop-blur-sm">
+                  <span className="text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 border border-[#D4DEC5]/30 bg-[#050505]/80 text-[#F7F7F1] rounded-[2px] backdrop-blur-sm">
                     {item.mineralGroup}
                   </span>
                 </div>
 
                 {/* Subtle Bottom Gradient */}
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60 pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-t from-[#050505]/60 via-transparent to-transparent pointer-events-none"
                   aria-hidden="true"
                 />
               </div>
@@ -66,35 +66,35 @@ export function SpecializationsSection() {
               {/* Panel Details & Typography */}
               <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
                 <div className="space-y-3">
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal group-hover:text-[#9CCB63] transition-colors">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#050505] font-semibold group-hover:text-[#294D2C] transition-colors">
                     {item.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#9A9A94] font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#777A70] font-normal leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Characteristics Badges */}
-                <div className="space-y-4 pt-4 border-t border-[#1A1A1A]">
+                <div className="space-y-4 pt-4 border-t border-[#D4DEC5]">
                   <div className="flex flex-wrap gap-1.5">
                     {item.characteristics.map((char) => (
                       <span
                         key={char}
-                        className="text-[10px] uppercase tracking-[0.12em] px-2 py-0.5 bg-[#111111] text-[#9A9A94] border border-[#262626] rounded-[2px]"
+                        className="text-[10px] uppercase tracking-[0.12em] px-2 py-0.5 bg-[#E5F1D2] text-[#294D2C] border border-[#D4DEC5] rounded-[2px] font-medium"
                       >
                         {char}
                       </span>
                     ))}
                   </div>
 
-                  {/* Contextual Link */}
+                  {/* Contextual Link in Black Contrast */}
                   <div>
                     <Link
                       href={`/collections/${item.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#9CCB63] hover:text-[#B7D98B] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#050505] font-bold hover:text-[#294D2C] transition-colors"
                     >
                       <span>Explore {item.name}</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[#050505] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
                   </div>
                 </div>

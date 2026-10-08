@@ -18,17 +18,17 @@ export function StatusBadge({
 }: StatusBadgeProps) {
   const variantStyles: Record<BadgeVariant, string> = {
     available:
-      "border-[#9CCB63]/40 bg-[#9CCB63]/10 text-[#9CCB63]",
+      "border-[#294D2C]/30 bg-[#CFE7AA] text-[#294D2C] font-semibold",
     sold:
-      "border-[#262626] bg-[#111111] text-[#9A9A94]",
+      "border-[#D4DEC5] bg-[#E5F1D2]/80 text-[#777A70]",
     featured:
-      "border-[#B7D98B]/50 bg-[#B7D98B]/10 text-[#B7D98B]",
+      "border-[#050505] bg-[#050505] text-[#B7D98B] font-semibold shadow-xs",
     new:
-      "border-[#F5F5F0]/30 bg-[#111111] text-[#F5F5F0]",
+      "border-[#294D2C] bg-[#294D2C] text-[#F7F7F1]",
     certified:
-      "border-[#9CCB63]/40 bg-[#111111] text-[#F5F5F0]",
+      "border-[#294D2C]/40 bg-[#F7F7F1] text-[#294D2C] font-medium",
     default:
-      "border-[#262626] bg-[#111111] text-[#9A9A94]",
+      "border-[#D4DEC5] bg-[#CFE7AA]/60 text-[#050505]",
   };
 
   const sizeStyles = {
@@ -39,17 +39,17 @@ export function StatusBadge({
   const renderIcon = () => {
     switch (variant) {
       case "available":
-        return <Check className="w-2.5 h-2.5 text-[#9CCB63] shrink-0" aria-hidden="true" />;
+        return <Check className="w-2.5 h-2.5 text-[#294D2C] shrink-0" aria-hidden="true" />;
       case "sold":
-        return <CircleOff className="w-2.5 h-2.5 text-[#9A9A94] shrink-0" aria-hidden="true" />;
+        return <CircleOff className="w-2.5 h-2.5 text-[#777A70] shrink-0" aria-hidden="true" />;
       case "featured":
         return <Sparkles className="w-2.5 h-2.5 text-[#B7D98B] shrink-0" aria-hidden="true" />;
       case "certified":
-        return <ShieldCheck className="w-2.5 h-2.5 text-[#9CCB63] shrink-0" aria-hidden="true" />;
+        return <ShieldCheck className="w-2.5 h-2.5 text-[#294D2C] shrink-0" aria-hidden="true" />;
       case "new":
-        return <Check className="w-2.5 h-2.5 text-[#F5F5F0] shrink-0" aria-hidden="true" />;
+        return <Check className="w-2.5 h-2.5 text-[#F7F7F1] shrink-0" aria-hidden="true" />;
       default:
-        return <Circle className="w-2 h-2 text-[#9A9A94] shrink-0 fill-current" aria-hidden="true" />;
+        return <Circle className="w-2 h-2 text-[#777A70] shrink-0 fill-current" aria-hidden="true" />;
     }
   };
 

@@ -25,11 +25,11 @@ export function EditorialFeature() {
 
               {/* Minimal Editorial Corner Marks */}
               <div
-                className="absolute top-4 left-4 w-4 h-4 border-t border-l border-[#9CCB63]/50 pointer-events-none"
+                className="absolute top-4 left-4 w-4 h-4 border-t border-l border-[#B7D98B]/70 pointer-events-none"
                 aria-hidden="true"
               />
               <div
-                className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-[#9CCB63]/50 pointer-events-none"
+                className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-[#B7D98B]/70 pointer-events-none"
                 aria-hidden="true"
               />
 
@@ -44,25 +44,25 @@ export function EditorialFeature() {
           {/* Editorial Story Column */}
           <div className="lg:col-span-6 order-1 lg:order-2 space-y-8">
             <div className="space-y-4">
-              <span className="type-eyebrow text-[#9CCB63] block">
+              <span className="type-eyebrow text-[#B7D98B] block font-semibold">
                 {EDITORIAL_STORY_CONTENT.eyebrow}
               </span>
 
               <h2
                 id="editorial-heading"
-                className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F5F5F0] font-normal tracking-tight leading-[1.08]"
+                className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F7F7F1] font-normal tracking-tight leading-[1.08]"
               >
                 {EDITORIAL_STORY_CONTENT.title}
               </h2>
             </div>
 
             {/* Editorial Pull Quote */}
-            <blockquote className="border-l-2 border-[#9CCB63] pl-6 py-1 italic font-serif text-lg sm:text-xl text-[#F5F5F0] leading-relaxed font-light">
+            <blockquote className="border-l-2 border-[#B7D98B] pl-6 py-1 italic font-serif text-lg sm:text-xl text-[#F7F7F1] leading-relaxed font-light">
               &ldquo;{EDITORIAL_STORY_CONTENT.quote}&rdquo;
             </blockquote>
 
             {/* Editorial Paragraphs */}
-            <div className="space-y-5 text-sm sm:text-base text-[#9A9A94] font-light leading-relaxed">
+            <div className="space-y-5 text-sm sm:text-base text-[#A3A3A3] font-light leading-relaxed">
               <p>{EDITORIAL_STORY_CONTENT.paragraph1}</p>
               <p>{EDITORIAL_STORY_CONTENT.paragraph2}</p>
             </div>
@@ -71,7 +71,7 @@ export function EditorialFeature() {
             <div className="pt-2">
               <Link
                 href={EDITORIAL_STORY_CONTENT.ctaHref}
-                className="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.2em] text-[#9CCB63] hover:text-[#B7D98B] transition-colors group"
+                className="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.2em] text-[#B7D98B] hover:text-[#CFE7AA] font-semibold transition-colors group"
               >
                 <span>{EDITORIAL_STORY_CONTENT.ctaText}</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />

@@ -201,59 +201,59 @@ export function InquiryForm({
       <div
         role="status"
         aria-live="polite"
-        className="p-8 sm:p-10 bg-[#111111] border border-[#9CCB63]/40 rounded-[4px] space-y-6"
+        className="p-8 sm:p-10 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] space-y-6 text-[#050505] shadow-sm"
       >
         <div className="flex items-center gap-3">
           <CheckCircle2
-            className="w-7 h-7 text-[#9CCB63] shrink-0"
+            className="w-7 h-7 text-[#294D2C] shrink-0"
             aria-hidden="true"
           />
           <div>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] block font-medium">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#294D2C] block font-medium">
               Transmission Confirmed
             </span>
-            <h3 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal tracking-tight">
+            <h3 className="font-serif text-2xl sm:text-3xl text-[#050505] font-normal tracking-tight">
               Inquiry Submitted
             </h3>
           </div>
         </div>
 
-        <p className="text-sm text-[#D8D8D2] leading-relaxed font-light">
+        <p className="text-sm text-[#777A70] leading-relaxed font-light">
           Thank you for contacting Saif Trading Co. Your inquiry has been received by our Hong Kong trade desk.
         </p>
 
         {submissionResult.reference && (
-          <div className="p-4 bg-[#0A0A0A] border border-[#262626] rounded-[4px] space-y-1">
-            <span className="text-[10px] text-[#9A9A94] uppercase tracking-wider block">
+          <div className="p-4 bg-[#E5F1D2] border border-[#D4DEC5] rounded-[4px] space-y-1">
+            <span className="text-[10px] text-[#777A70] uppercase tracking-wider block font-medium">
               Reference Identification
             </span>
-            <span className="font-mono text-sm text-[#9CCB63] tracking-wider block">
+            <span className="font-mono text-sm text-[#294D2C] tracking-wider block font-bold">
               {submissionResult.reference}
             </span>
           </div>
         )}
 
-        <div className="space-y-2 text-xs text-[#9A9A94] pt-2 border-t border-[#1F1F1F]">
-          <div className="flex justify-between py-1 border-b border-[#1A1A1A]">
+        <div className="space-y-2 text-xs text-[#777A70] pt-2 border-t border-[#D4DEC5]">
+          <div className="flex justify-between py-1 border-b border-[#D4DEC5]/60">
             <span>Inquiry Type:</span>
-            <span className="text-[#F5F5F0]">{formData.inquiryType}</span>
+            <span className="text-[#050505] font-medium">{formData.inquiryType}</span>
           </div>
           {gemstoneContext && (
-            <div className="flex justify-between py-1 border-b border-[#1A1A1A]">
+            <div className="flex justify-between py-1 border-b border-[#D4DEC5]/60">
               <span>Specimen:</span>
-              <span className="text-[#F5F5F0]">{gemstoneContext.name}</span>
+              <span className="text-[#050505] font-medium">{gemstoneContext.name}</span>
             </div>
           )}
-          <div className="flex justify-between py-1 border-b border-[#1A1A1A]">
+          <div className="flex justify-between py-1 border-b border-[#D4DEC5]/60">
             <span>Contact Email:</span>
-            <span className="text-[#F5F5F0]">{formData.email}</span>
+            <span className="text-[#050505] font-medium">{formData.email}</span>
           </div>
         </div>
 
         <div className="pt-4 flex flex-col sm:flex-row items-center gap-3">
           <Link
             href="/collections"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#9CCB63] text-[#050505] font-medium text-xs uppercase tracking-wider rounded-[4px] hover:bg-[#B7D98B] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#050505] text-[#B7D98B] font-medium text-xs uppercase tracking-wider rounded-[4px] hover:bg-[#294D2C] hover:text-[#F7F7F1] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
           >
             <span>Explore Collections</span>
             <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
@@ -262,7 +262,7 @@ export function InquiryForm({
           <button
             type="button"
             onClick={handleReset}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#171717] text-[#D8D8D2] border border-[#262626] rounded-[4px] text-xs uppercase tracking-wider hover:border-[#9CCB63]/40 hover:text-[#F5F5F0] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#E5F1D2] text-[#050505] border border-[#D4DEC5] rounded-[4px] text-xs uppercase tracking-wider hover:border-[#050505] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
           >
             <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Submit Another Inquiry</span>
@@ -290,28 +290,28 @@ export function InquiryForm({
         <div
           role="alert"
           aria-live="assertive"
-          className="p-5 bg-[#1A0A0A] border border-[#DC2626]/60 rounded-[4px] text-sm space-y-3"
+          className="p-5 bg-[#FEE2E2] border border-[#DC2626]/40 rounded-[4px] text-sm space-y-3"
         >
-          <div className="flex items-center gap-2 text-[#EF4444] font-medium">
+          <div className="flex items-center gap-2 text-[#991B1B] font-medium">
             <AlertCircle className="w-4 h-4 shrink-0" aria-hidden="true" />
             <span>Submission Notice</span>
           </div>
-          <p className="text-xs text-[#E5E5E5] leading-relaxed">
+          <p className="text-xs text-[#7F1D1D] leading-relaxed">
             {submitError}
           </p>
-          <div className="pt-2 border-t border-[#331111] flex flex-wrap gap-4 text-xs text-[#9A9A94]">
+          <div className="pt-2 border-t border-[#FCA5A5] flex flex-wrap gap-4 text-xs text-[#991B1B]">
             <a
               href="tel:+85235251640"
-              className="inline-flex items-center gap-1.5 hover:text-[#9CCB63] text-[#F5F5F0]"
+              className="inline-flex items-center gap-1.5 hover:underline font-mono"
             >
-              <Phone className="w-3.5 h-3.5 text-[#9CCB63]" />
+              <Phone className="w-3.5 h-3.5" />
               <span>+852 3525 1640</span>
             </a>
             <a
               href="mailto:Saiftradingco@yahoo.com"
-              className="inline-flex items-center gap-1.5 hover:text-[#9CCB63] text-[#F5F5F0]"
+              className="inline-flex items-center gap-1.5 hover:underline font-mono"
             >
-              <Mail className="w-3.5 h-3.5 text-[#9CCB63]" />
+              <Mail className="w-3.5 h-3.5" />
               <span>Saiftradingco@yahoo.com</span>
             </a>
           </div>
@@ -322,13 +322,13 @@ export function InquiryForm({
         onSubmit={handleSubmit}
         noValidate
         aria-label="Gemstone inquiry form"
-        className="p-6 sm:p-8 bg-[#111111] border border-[#262626] rounded-[4px] space-y-6"
+        className="p-6 sm:p-8 sm:p-10 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] space-y-6 shadow-sm"
       >
-        <div className="border-b border-[#1F1F1F] pb-4">
-          <h2 className="font-serif text-xl sm:text-2xl text-[#F5F5F0] font-normal">
+        <div className="border-b border-[#D4DEC5] pb-4">
+          <h2 className="font-serif text-xl sm:text-2xl text-[#050505] font-normal">
             Trade Inquiry Form
           </h2>
-          <p className="text-xs text-[#9A9A94] mt-1">
+          <p className="text-xs text-[#777A70] mt-1">
             Complete the fields below to contact our Hong Kong desk regarding specimen viewings, physical lots, or general trade queries.
           </p>
         </div>

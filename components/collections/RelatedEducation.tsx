@@ -14,26 +14,26 @@ export function RelatedEducation({ categorySlug }: RelatedEducationProps) {
   return (
     <section
       aria-labelledby="related-education-heading"
-      className="border-t border-[#262626] bg-[#050505] py-16 sm:py-20"
+      className="border-t border-[#D4DEC5] bg-[#F7F7F1] py-16 sm:py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
-            <span className="type-eyebrow text-[#9CCB63] block mb-2">
+            <span className="type-eyebrow text-[#294D2C] block mb-2">
               Mineral Knowledge
             </span>
             <h2
               id="related-education-heading"
-              className="font-serif text-2xl sm:text-4xl text-[#F5F5F0] font-normal"
+              className="font-serif text-2xl sm:text-4xl text-[#050505] font-normal"
             >
               Related Technical &amp; Identification Guides
             </h2>
           </div>
           <Link
             href="/education"
-            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#9CCB63] hover:text-[#B7D98B] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#294D2C] hover:text-[#050505] font-medium transition-colors"
           >
-            <BookOpen className="w-3.5 h-3.5 text-[#9CCB63]" />
+            <BookOpen className="w-3.5 h-3.5 text-[#294D2C]" />
             <span>Browse Full Education Archive →</span>
           </Link>
         </div>
@@ -42,24 +42,24 @@ export function RelatedEducation({ categorySlug }: RelatedEducationProps) {
           {guides.map((guide) => (
             <article
               key={guide.slug}
-              className="p-6 sm:p-8 bg-[#0A0A0A] border border-[#262626] rounded-[4px] hover:border-[#9CCB63]/60 transition-all duration-300 flex flex-col justify-between space-y-6"
+              className="p-6 sm:p-8 bg-[#E5F1D2] border border-[#D4DEC5] rounded-[4px] hover:border-[#294D2C] transition-all duration-300 flex flex-col justify-between space-y-6"
             >
               <div className="space-y-3">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-[#9A9A94] block">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-[#777A70] block font-medium">
                   {guide.readingTime}
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#F5F5F0] font-normal hover:text-[#B7D98B] transition-colors leading-snug">
+                <h3 className="font-serif text-xl sm:text-2xl text-[#050505] font-normal hover:text-[#294D2C] transition-colors leading-snug">
                   <Link href={`/education/${guide.slug}`}>{guide.title}</Link>
                 </h3>
-                <p className="text-xs sm:text-sm text-[#9A9A94] font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#777A70] font-light leading-relaxed">
                   {guide.summary}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#1A1A1A]">
+              <div className="pt-4 border-t border-[#D4DEC5]">
                 <Link
                   href={`/education/${guide.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#F5F5F0] hover:text-[#9CCB63] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-[#050505] font-semibold hover:text-[#294D2C] transition-colors"
                 >
                   <span>Read Guide</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

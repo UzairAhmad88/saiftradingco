@@ -26,35 +26,35 @@ export function CollectionCard({
   return (
     <article
       className={cn(
-        "group relative flex flex-col justify-between p-6 sm:p-8 bg-[#0A0A0A] border border-[#262626] rounded-[4px] transition-all duration-300",
-        "hover:border-[#9CCB63]/60 hover:bg-[#111111]",
+        "group relative flex flex-col justify-between p-6 sm:p-8 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] transition-all duration-300 shadow-xs",
+        "hover:border-[#050505]/70 hover:shadow-sm",
         className
       )}
     >
       <div>
         {/* Eyebrow Label */}
-        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-[#9CCB63] mb-3">
+        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-[#294D2C] font-semibold mb-3">
           <span>{featured ? "Core Specialization" : "Mineral Collection"}</span>
           {typeof specimenCount === "number" && (
-            <span className="text-[#9A9A94] tracking-normal">
+            <span className="text-[#777A70] tracking-normal font-normal">
               {specimenCount} {specimenCount === 1 ? "specimen" : "specimens"}
             </span>
           )}
         </div>
 
         {/* Title */}
-        <h3 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] group-hover:text-[#B7D98B] transition-colors mb-3">
+        <h3 className="font-serif text-2xl sm:text-3xl text-[#050505] font-semibold group-hover:text-[#294D2C] transition-colors mb-3">
           {title}
         </h3>
 
         {/* Editorial Description */}
-        <p className="text-sm text-[#9A9A94] font-light leading-relaxed mb-6">
+        <p className="text-sm text-[#777A70] font-normal leading-relaxed mb-6">
           {description}
         </p>
 
-        {/* Specimen Preview Image Frame */}
+        {/* Specimen Preview Image Frame — Black Luxury Visual Frame */}
         {imageUrl ? (
-          <div className="relative aspect-[16/10] w-full overflow-hidden border border-[#262626] rounded-[4px] bg-[#050505] mb-6">
+          <div className="relative aspect-[16/10] w-full overflow-hidden border border-[#050505] rounded-[4px] bg-[#050505] mb-6">
             <Image
               src={imageUrl}
               alt={`${title} rough gemstone specimen collection`}
@@ -64,17 +64,17 @@ export function CollectionCard({
             />
           </div>
         ) : (
-          <div className="aspect-[16/10] w-full overflow-hidden border border-[#262626] rounded-[4px] bg-[#070707] mb-6 flex items-center justify-center text-[#9A9A94]">
-            <Sparkles className="w-6 h-6 text-[#9CCB63]/40" />
+          <div className="aspect-[16/10] w-full overflow-hidden border border-[#050505] rounded-[4px] bg-[#050505] mb-6 flex items-center justify-center text-[#777A70]">
+            <Sparkles className="w-6 h-6 text-[#B7D98B]" />
           </div>
         )}
       </div>
 
       {/* Action Footer */}
-      <div className="pt-4 border-t border-[#1A1A1A] flex items-center justify-between">
+      <div className="pt-4 border-t border-[#D4DEC5] flex items-center justify-between">
         <Link
           href={`/collections/${slug}`}
-          className="text-xs uppercase tracking-[0.2em] text-[#F5F5F0] group-hover:text-[#9CCB63] transition-colors inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+          className="text-xs uppercase tracking-[0.2em] text-[#050505] font-bold group-hover:text-[#294D2C] transition-colors inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
           aria-label={`Explore ${title} collection`}
         >
           <span>Explore Collection</span>

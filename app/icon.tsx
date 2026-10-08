@@ -18,7 +18,7 @@ export default function Icon() {
           justifyContent: "center",
           background: "linear-gradient(145deg, #141414, #050505)",
           borderRadius: "7px",
-          border: "1.5px solid #9CCB63",
+          border: "1.5px solid #B7D98B",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.8)",
           position: "relative",
         }}
@@ -32,7 +32,7 @@ export default function Icon() {
         >
           {/* Top termination facets */}
           <polygon points="10,1 4,6 10,8" fill="#EDF8DE" />
-          <polygon points="10,1 10,8 16,6" fill="#9CCB63" />
+          <polygon points="10,1 10,8 16,6" fill="#B7D98B" />
           <polygon points="10,1 4,6 10,4" fill="#FFFFFF" opacity="0.7" />
 
           {/* Body columns */}

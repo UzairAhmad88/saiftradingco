@@ -37,10 +37,10 @@ export function ImageFrame({
   };
 
   return (
-    <figure className={cn("group overflow-hidden bg-[#101010] relative", className)}>
+    <figure className={cn("group overflow-hidden bg-[#050505] relative rounded-[4px]", className)}>
       <div
         className={cn(
-          "relative w-full overflow-hidden border border-[#2A2A2A] bg-[#101010]",
+          "relative w-full overflow-hidden border border-[#050505] bg-[#050505]",
           aspectClasses[aspectRatio]
         )}
       >
@@ -56,11 +56,11 @@ export function ImageFrame({
             zoomOnHover && "group-hover:scale-[1.02]"
           )}
         />
-        {/* Subtle dark vignette on top/bottom to blend seamlessly with dark canvas */}
-        <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-[#2A2A2A]/40" />
+        {/* Subtle dark frame border */}
+        <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-[#262626]/40" />
       </div>
       {caption && (
-        <figcaption className="mt-2 text-xs text-[#737373] font-light italic">
+        <figcaption className="mt-2 text-xs text-[#777A70] font-light italic">
           {caption}
         </figcaption>
       )}

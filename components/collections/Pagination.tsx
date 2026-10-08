@@ -46,7 +46,7 @@ export function Pagination({
       {currentPage > 1 ? (
         <Link
           href={createPageUrl(currentPage - 1)}
-          className="inline-flex items-center gap-1 px-3 py-2 border border-[#262626] rounded-[4px] bg-[#0A0A0A] text-xs uppercase tracking-wider text-[#9A9A94] hover:text-[#9CCB63] hover:border-[#9CCB63]/60 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+          className="inline-flex items-center gap-1 px-3 py-2 border border-[#D4DEC5] rounded-[4px] bg-[#F7F7F1] text-xs uppercase tracking-wider text-[#050505] hover:border-[#050505] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
           aria-label="Previous page"
         >
           <ChevronLeft className="w-4 h-4" />
@@ -54,7 +54,7 @@ export function Pagination({
         </Link>
       ) : (
         <span
-          className="inline-flex items-center gap-1 px-3 py-2 border border-[#1A1A1A] rounded-[4px] bg-[#070707] text-xs uppercase tracking-wider text-[#404040] cursor-not-allowed select-none"
+          className="inline-flex items-center gap-1 px-3 py-2 border border-[#D4DEC5]/50 rounded-[4px] bg-[#E5F1D2] text-xs uppercase tracking-wider text-[#777A70]/60 cursor-not-allowed select-none"
           aria-disabled="true"
         >
           <ChevronLeft className="w-4 h-4" />
@@ -72,10 +72,10 @@ export function Pagination({
               href={createPageUrl(p)}
               aria-current={isActive ? "page" : undefined}
               className={cn(
-                "min-w-[36px] h-9 px-3 flex items-center justify-center text-xs font-mono border rounded-[4px] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]",
+                "min-w-[36px] h-9 px-3 flex items-center justify-center text-xs font-mono border rounded-[4px] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]",
                 isActive
-                  ? "border-[#9CCB63] bg-[#111111] text-[#9CCB63] font-bold"
-                  : "border-[#262626] bg-[#0A0A0A] text-[#9A9A94] hover:text-[#F5F5F0] hover:border-[#3A3A3A]"
+                  ? "border-[#050505] bg-[#050505] text-[#B7D98B] font-bold"
+                  : "border-[#D4DEC5] bg-[#F7F7F1] text-[#050505] hover:border-[#050505]"
               )}
             >
               {p}
@@ -88,7 +88,7 @@ export function Pagination({
       {currentPage < totalPages ? (
         <Link
           href={createPageUrl(currentPage + 1)}
-          className="inline-flex items-center gap-1 px-3 py-2 border border-[#262626] rounded-[4px] bg-[#0A0A0A] text-xs uppercase tracking-wider text-[#9A9A94] hover:text-[#9CCB63] hover:border-[#9CCB63]/60 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+          className="inline-flex items-center gap-1 px-3 py-2 border border-[#D4DEC5] rounded-[4px] bg-[#F7F7F1] text-xs uppercase tracking-wider text-[#050505] hover:border-[#050505] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
           aria-label="Next page"
         >
           <span className="hidden sm:inline">Next</span>
@@ -96,7 +96,7 @@ export function Pagination({
         </Link>
       ) : (
         <span
-          className="inline-flex items-center gap-1 px-3 py-2 border border-[#1A1A1A] rounded-[4px] bg-[#070707] text-xs uppercase tracking-wider text-[#404040] cursor-not-allowed select-none"
+          className="inline-flex items-center gap-1 px-3 py-2 border border-[#D4DEC5]/50 rounded-[4px] bg-[#E5F1D2] text-xs uppercase tracking-wider text-[#777A70]/60 cursor-not-allowed select-none"
           aria-disabled="true"
         >
           <span className="hidden sm:inline">Next</span>

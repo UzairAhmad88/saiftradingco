@@ -9,16 +9,16 @@ export function GemstoneDescription({ gemstone }: GemstoneDescriptionProps) {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <span className="type-eyebrow text-[#9CCB63] block">
+        <span className="type-eyebrow text-[#294D2C] block font-bold">
           Mineralogical Observation
         </span>
-        <h2 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal">
+        <h2 className="font-serif text-2xl sm:text-3xl text-[#050505] font-semibold">
           Specimen Character &amp; Notes
         </h2>
       </div>
 
-      <div className="space-y-4 text-sm sm:text-base text-[#9A9A94] font-light leading-relaxed max-w-3xl">
-        <p className="text-[#F5F5F0] text-base sm:text-lg leading-relaxed">
+      <div className="space-y-4 text-sm sm:text-base text-[#777A70] font-normal leading-relaxed max-w-3xl">
+        <p className="text-[#050505] text-base sm:text-lg leading-relaxed font-medium">
           {gemstone.description || gemstone.short_description}
         </p>
 
@@ -26,7 +26,7 @@ export function GemstoneDescription({ gemstone }: GemstoneDescriptionProps) {
           This specimen retains its original, unworked crystalline geometry as formed under natural geological conditions. Vertical striations, natural termination planes, and internal crystalline inclusions remain undisturbed, offering authentic character for fine mineral specimen collections or specialty lapidary evaluation.
         </p>
 
-        <p className="text-xs text-[#9A9A94] pt-2 border-t border-[#1A1A1A]">
+        <p className="text-xs text-[#777A70] pt-2 border-t border-[#D4DEC5]">
           All dimensions and physical parameters are measured directly from the physical specimen. Prospective buyers and trade clients may request high-resolution video documentation under balanced daylight illumination or arrange an in-person inspection at our Hong Kong office.
         </p>
       </div>

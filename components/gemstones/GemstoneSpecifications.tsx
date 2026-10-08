@@ -51,24 +51,24 @@ export function GemstoneSpecifications({ gemstone }: GemstoneSpecificationsProps
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <span className="type-eyebrow text-[#9CCB63] block">
+        <span className="type-eyebrow text-[#294D2C] block font-bold">
           Documented Parameters
         </span>
-        <h2 className="font-serif text-2xl sm:text-3xl text-[#F5F5F0] font-normal">
+        <h2 className="font-serif text-2xl sm:text-3xl text-[#050505] font-semibold">
           Physical &amp; Mineralogical Specifications
         </h2>
       </div>
 
-      <div className="bg-[#0A0A0A] border border-[#262626] rounded-[4px] divide-y divide-[#1A1A1A]">
+      <div className="bg-[#E5F1D2] border border-[#D4DEC5] rounded-[4px] divide-y divide-[#D4DEC5] shadow-xs">
         {specs.map((item) => (
           <div
             key={item.label}
             className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2"
           >
-            <span className="text-xs uppercase tracking-wider text-[#9A9A94] font-medium">
+            <span className="text-xs uppercase tracking-wider text-[#294D2C] font-semibold">
               {item.label}
             </span>
-            <span className="text-xs sm:text-sm font-mono text-[#F5F5F0]">
+            <span className="text-xs sm:text-sm font-mono text-[#050505] font-medium">
               {item.value}
             </span>
           </div>

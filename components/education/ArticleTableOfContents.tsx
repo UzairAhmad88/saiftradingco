@@ -13,22 +13,22 @@ export function ArticleTableOfContents({ items }: ArticleTableOfContentsProps) {
   return (
     <nav
       aria-label="Table of contents"
-      className="p-6 bg-[#0A0A0A] border border-[#262626] rounded-[4px] space-y-4 my-8"
+      className="p-6 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] space-y-4 my-8 shadow-sm"
     >
-      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#9CCB63]">
+      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#294D2C] font-medium">
         <ListOrdered className="w-4 h-4" />
         <span>Table of Contents</span>
       </div>
 
-      <ol className="space-y-2.5 text-xs sm:text-sm text-[#9A9A94]">
+      <ol className="space-y-2.5 text-xs sm:text-sm text-[#050505]">
         {items.map((item, index) => (
           <li key={item.id} className="flex items-start gap-2.5 group">
-            <span className="font-mono text-xs text-[#9A9A94] group-hover:text-[#9CCB63] transition-colors shrink-0 pt-0.5">
+            <span className="font-mono text-xs text-[#777A70] group-hover:text-[#294D2C] transition-colors shrink-0 pt-0.5">
               0{index + 1}
             </span>
             <Link
               href={`#${item.id}`}
-              className="hover:text-[#F5F5F0] hover:underline underline-offset-4 decoration-[#9CCB63]/40 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63]"
+              className="text-[#050505] hover:text-[#294D2C] hover:underline underline-offset-4 decoration-[#294D2C]/40 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
             >
               {item.label}
             </Link>
