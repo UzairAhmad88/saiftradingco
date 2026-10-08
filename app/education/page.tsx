@@ -32,46 +32,46 @@ export default function EducationPage() {
       <main
         id="main-content"
         tabIndex={-1}
-        className="w-full bg-[#E5F1D2] focus:outline-none"
+        className="w-full bg-[#050505] focus:outline-none"
       >
         {/* Breadcrumb Header */}
-        <div className="border-b border-[#D4DEC5] bg-[#CFE7AA]/30">
+        <div className="border-b border-[#242424] bg-[#050505]">
           <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <Breadcrumbs items={breadcrumbs} />
           </div>
         </div>
 
-        {/* Hero Section */}
+        {/* Hero Section — Dry Black Foundation */}
         <section
           aria-labelledby="education-hero-heading"
-          className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-16 sm:py-24"
+          className="border-b border-[#242424] bg-[#050505] py-16 sm:py-24"
         >
           <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="max-w-3xl space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 border border-[#294D2C]/20 bg-[#CFE7AA] text-[#294D2C] text-[10px] sm:text-[11px] uppercase tracking-[0.22em] rounded-[3px]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#294D2C]" aria-hidden="true" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 border border-[#242424] bg-[#121212] text-[#B6D94C] text-[10px] sm:text-[11px] uppercase tracking-[0.22em] rounded-[3px]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B6D94C]" aria-hidden="true" />
                 <span className="font-medium">Topical Knowledge Hub</span>
               </div>
 
               <h1
                 id="education-hero-heading"
-                className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#050505] tracking-tight leading-[1.08]"
+                className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#F5F3EE] tracking-tight leading-[1.08]"
               >
                 Mineral Knowledge &amp; Guides
               </h1>
 
-              <p className="text-base sm:text-lg text-[#777A70] font-light leading-relaxed">
+              <p className="text-base sm:text-lg text-[#A5A5A0] font-light leading-relaxed">
                 Understand the crystalline structures, optical behaviors, evaluation protocols, and laboratory testing standards of rough gemstones. Our technical references are prepared for collectors, gemologists, and lapidary professionals.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Featured Editorial Article */}
+        {/* Featured Editorial Article — Off-White Editorial Breathing Space */}
         {featuredArticle && (
           <section
             aria-labelledby="featured-guide-heading"
-            className="border-b border-[#D4DEC5] bg-[#CFE7AA]/30 py-16 sm:py-20"
+            className="border-b border-[#E2DFD7] bg-[#F5F3EE] py-16 sm:py-20"
           >
             <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
               <div className="sr-only">
@@ -82,25 +82,25 @@ export default function EducationPage() {
           </section>
         )}
 
-        {/* Cluster 1: Crystalline Mineral Guides — Light Green Environment */}
+        {/* Cluster 1: Crystalline Mineral Guides — Dry Black Foundation */}
         <section
           aria-labelledby="mineral-guides-heading"
-          className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-20 sm:py-24"
+          className="border-b border-[#242424] bg-[#080808] py-20 sm:py-24"
         >
           <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
               <div className="space-y-3">
-                <span className="type-eyebrow text-[#294D2C] block">
+                <span className="type-eyebrow text-[#B6D94C] block">
                   Primary Varieties
                 </span>
                 <h2
                   id="mineral-guides-heading"
-                  className="font-serif text-3xl sm:text-4xl text-[#050505] font-normal"
+                  className="font-serif text-3xl sm:text-4xl text-[#F5F3EE] font-normal"
                 >
                   Crystalline Mineral Guides
                 </h2>
               </div>
-              <p className="text-xs sm:text-sm text-[#777A70] font-light max-w-md">
+              <p className="text-xs sm:text-sm text-[#A5A5A0] font-light max-w-md">
                 Detailed crystallography, prism geometry, and optical evaluation for Tourmaline, Kunzite, and Morganite.
               </p>
             </div>
@@ -113,16 +113,16 @@ export default function EducationPage() {
           </div>
         </section>
 
-        {/* Cluster 2: Buying & Specimen Evaluation — Off-White Rhythm */}
+        {/* Cluster 2: Buying & Specimen Evaluation — Off-White Editorial Breathing Space */}
         {buyingGuides.length > 0 && (
           <section
             aria-labelledby="buying-guides-heading"
-            className="border-b border-[#D4DEC5] bg-[#F7F7F1] py-20 sm:py-24"
+            className="border-b border-[#E2DFD7] bg-[#FAF9F5] py-20 sm:py-24"
           >
             <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
                 <div className="space-y-3">
-                  <span className="type-eyebrow text-[#294D2C] block">
+                  <span className="type-eyebrow text-[#4D6618] block">
                     Acquisition &amp; Quality Assessment
                   </span>
                   <h2
@@ -132,7 +132,7 @@ export default function EducationPage() {
                     Buying &amp; Specimen Evaluation
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-[#777A70] font-light max-w-md">
+                <p className="text-xs sm:text-sm text-[#555550] font-light max-w-md">
                   Practical guidelines for inspecting rough crystal terminations, backlighting transparency, and evaluating yield potential.
                 </p>
               </div>
@@ -146,25 +146,25 @@ export default function EducationPage() {
           </section>
         )}
 
-        {/* Cluster 3: Verification & Laboratory Standards — Light Green Environment */}
+        {/* Cluster 3: Verification & Laboratory Standards — Dry Black Foundation */}
         <section
           aria-labelledby="standards-guides-heading"
-          className="border-b border-[#D4DEC5] bg-[#E5F1D2] py-20 sm:py-24"
+          className="border-b border-[#242424] bg-[#050505] py-20 sm:py-24"
         >
           <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
               <div className="space-y-3">
-                <span className="type-eyebrow text-[#294D2C] block">
+                <span className="type-eyebrow text-[#B6D94C] block">
                   Testing &amp; Transparency
                 </span>
                 <h2
                   id="standards-guides-heading"
-                  className="font-serif text-3xl sm:text-4xl text-[#050505] font-normal"
+                  className="font-serif text-3xl sm:text-4xl text-[#F5F3EE] font-normal"
                 >
                   Certification &amp; Treatment Standards
                 </h2>
               </div>
-              <p className="text-xs sm:text-sm text-[#777A70] font-light max-w-md">
+              <p className="text-xs sm:text-sm text-[#A5A5A0] font-light max-w-md">
                 Understanding independent laboratory reports, analytical instrumentation, and industry disclosure standards.
               </p>
             </div>
@@ -177,16 +177,16 @@ export default function EducationPage() {
           </div>
         </section>
 
-        {/* Cluster 4: Specimen Care & Handling — Off-White Rhythm */}
+        {/* Cluster 4: Specimen Care & Handling — Off-White Editorial Breathing Space */}
         {careGuides.length > 0 && (
           <section
             aria-labelledby="care-guides-heading"
-            className="border-b border-[#D4DEC5] bg-[#F7F7F1] py-20 sm:py-24"
+            className="border-b border-[#E2DFD7] bg-[#F5F3EE] py-20 sm:py-24"
           >
             <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
                 <div className="space-y-3">
-                  <span className="type-eyebrow text-[#294D2C] block">
+                  <span className="type-eyebrow text-[#4D6618] block">
                     Preservation
                   </span>
                   <h2
@@ -196,7 +196,7 @@ export default function EducationPage() {
                     Specimen Handling &amp; Preservation
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-[#777A70] font-light max-w-md">
+                <p className="text-xs sm:text-sm text-[#555550] font-light max-w-md">
                   Safe handling practices for cleavage-sensitive minerals, light management, and archival display mounting.
                 </p>
               </div>
@@ -210,20 +210,20 @@ export default function EducationPage() {
           </section>
         )}
 
-        {/* Cross-Link Strip to Collections — Black Contrast Section */}
-        <section className="bg-[#050505] py-16 text-[#F7F7F1]">
+        {/* Cross-Link Strip to Collections — Dry Black Closing Section */}
+        <section className="bg-[#050505] py-16 text-[#F5F3EE]">
           <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="space-y-1">
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F7F7F1]">
+              <h3 className="font-serif text-xl sm:text-2xl text-[#F5F3EE]">
                 Explore Our Physical Gemstone Collections
               </h3>
-              <p className="text-xs text-[#EDEDE4]/70 font-light">
+              <p className="text-xs text-[#A5A5A0] font-light">
                 View catalogued specimens of rough Tourmaline, Kunzite, and Morganite with documented physical specifications.
               </p>
             </div>
             <Link
               href="/collections"
-              className="shrink-0 px-6 py-3 border border-[#262626] hover:border-[#B7D98B] bg-[#111111] text-xs uppercase tracking-[0.2em] text-[#B7D98B] hover:text-[#F7F7F1] hover:bg-[#294D2C] transition-all inline-flex items-center gap-2 rounded-[4px] font-semibold"
+              className="shrink-0 px-6 py-3 border border-[#242424] hover:border-[#B6D94C] bg-[#0C0C0C] text-xs uppercase tracking-[0.2em] text-[#B6D94C] hover:text-[#050505] hover:bg-[#B6D94C] transition-all inline-flex items-center gap-2 rounded-[4px] font-semibold"
             >
               <span>View All Collections</span>
               <ArrowRight className="w-3.5 h-3.5" />

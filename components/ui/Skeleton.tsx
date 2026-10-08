@@ -20,7 +20,7 @@ export function Skeleton({
     <div
       aria-hidden="true"
       className={cn(
-        "animate-pulse bg-[#CFE7AA]/50 border border-[#D4DEC5]",
+        "animate-pulse bg-[#1A1A1A] border border-[#242424]",
         variantStyles[variant],
         className
       )}
@@ -31,16 +31,16 @@ export function Skeleton({
 
 export function GemstoneCardSkeleton() {
   return (
-    <div className="bg-[#F7F7F1] border border-[#D4DEC5] p-4 space-y-4 rounded-[4px]">
-      <Skeleton className="w-full aspect-[4/3] bg-[#CFE7AA]" />
+    <div className="bg-[#0C0C0C] border border-[#242424] p-4 space-y-4 rounded-[4px]">
+      <Skeleton className="w-full aspect-[4/3] bg-[#141414]" />
       <div className="space-y-2 pt-2">
-        <Skeleton variant="text" className="w-1/3 h-3" />
-        <Skeleton variant="text" className="w-3/4 h-5" />
-        <Skeleton variant="text" className="w-1/2 h-3.5" />
+        <Skeleton variant="text" className="w-1/3 h-3 bg-[#1A1A1A]" />
+        <Skeleton variant="text" className="w-3/4 h-5 bg-[#1A1A1A]" />
+        <Skeleton variant="text" className="w-1/2 h-3.5 bg-[#1A1A1A]" />
       </div>
-      <div className="pt-4 border-t border-[#D4DEC5] flex justify-between items-center">
-        <Skeleton variant="text" className="w-20 h-4" />
-        <Skeleton variant="text" className="w-16 h-4" />
+      <div className="pt-4 border-t border-[#242424] flex justify-between items-center">
+        <Skeleton variant="text" className="w-20 h-4 bg-[#1A1A1A]" />
+        <Skeleton variant="text" className="w-16 h-4 bg-[#1A1A1A]" />
       </div>
     </div>
   );

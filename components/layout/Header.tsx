@@ -32,8 +32,8 @@ export function Header({ transparentAtTop: _transparentAtTop = false }: HeaderPr
   };
 
   const headerBgClass = isScrolled
-    ? "bg-[#E5F1D2]/95 backdrop-blur-md border-[#D4DEC5] shadow-xs"
-    : "bg-[#E5F1D2] border-[#D4DEC5]";
+    ? "bg-[#050505]/95 backdrop-blur-md border-[#242424] shadow-xs"
+    : "bg-[#050505] border-[#1A1A1A]";
 
   return (
     <>
@@ -44,16 +44,16 @@ export function Header({ transparentAtTop: _transparentAtTop = false }: HeaderPr
         )}
       >
         <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 h-18 sm:h-20 flex items-center justify-between">
-          {/* Logo / Wordmark in Black Contrast */}
+          {/* Logo / Wordmark in Off-White & Botanical Green */}
           <Link
             href="/"
-            className="group flex flex-col focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
+            className="group flex flex-col focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
             aria-label="Saif Trading Co Home"
           >
-            <span className="font-serif text-lg sm:text-xl lg:text-2xl tracking-[0.2em] uppercase text-[#050505] group-hover:text-[#294D2C] transition-colors duration-200 font-semibold">
+            <span className="font-serif text-lg sm:text-xl lg:text-2xl tracking-[0.2em] uppercase text-[#F5F3EE] group-hover:text-[#B6D94C] transition-colors duration-200 font-semibold">
               Saif Trading Co
             </span>
-            <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-[#294D2C] font-medium">
+            <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-[#A5A5A0] group-hover:text-[#B6D94C] transition-colors font-medium">
               Rough Gemstones · Hong Kong
             </span>
           </Link>
@@ -65,7 +65,7 @@ export function Header({ transparentAtTop: _transparentAtTop = false }: HeaderPr
           <div className="flex md:hidden items-center gap-3">
             <Link
               href="/contact"
-              className="text-[10px] uppercase tracking-[0.18em] px-3.5 py-1.5 bg-[#050505] text-[#B7D98B] hover:bg-[#294D2C] hover:text-[#F7F7F1] font-semibold transition-colors rounded-[4px]"
+              className="text-[10px] uppercase tracking-[0.18em] px-3.5 py-1.5 bg-[#B6D94C] text-[#050505] hover:bg-[#A3C73A] font-semibold transition-colors rounded-[4px]"
             >
               Inquire
             </Link>
@@ -76,9 +76,9 @@ export function Header({ transparentAtTop: _transparentAtTop = false }: HeaderPr
               aria-label="Open navigation menu"
               aria-expanded={isMobileNavOpen}
               aria-controls="mobile-navigation-dialog"
-              className="min-h-[44px] min-w-[44px] flex items-center justify-center border border-[#D4DEC5] bg-[#CFE7AA] text-[#050505] hover:bg-[#B7D98B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#050505] rounded-[4px]"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center border border-[#242424] bg-[#0C0C0C] text-[#F5F3EE] hover:border-[#B6D94C] hover:text-[#B6D94C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B6D94C] rounded-[4px] transition-colors"
             >
-              <Menu className="w-5 h-5 text-[#050505]" aria-hidden="true" />
+              <Menu className="w-5 h-5 text-[#F5F3EE]" aria-hidden="true" />
             </button>
           </div>
         </div>

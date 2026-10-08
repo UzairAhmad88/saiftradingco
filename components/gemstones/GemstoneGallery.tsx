@@ -193,10 +193,10 @@ export function GemstoneGallery({
                 setIsSpinning360(false);
               }}
               className={cn(
-                "px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-[4px] border transition-colors",
+                "px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-[2px] border transition-colors",
                 !is360Active
-                  ? "bg-[#111111] border-[#B7D98B] text-[#F5F5F0]"
-                  : "bg-transparent border-[#262626] text-[#9A9A94] hover:text-[#F5F5F0]"
+                  ? "bg-[#111111] border-[#B6D94C] text-[#F5F3EE]"
+                  : "bg-transparent border-[#242424] text-[#777772] hover:text-[#F5F3EE]"
               )}
             >
               Gallery Photos ({displayImages.length})
@@ -205,10 +205,10 @@ export function GemstoneGallery({
               type="button"
               onClick={() => setIs360Active(true)}
               className={cn(
-                "inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-[4px] border transition-colors",
+                "inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-[2px] border transition-colors",
                 is360Active
-                  ? "bg-[#111111] border-[#B7D98B] text-[#B7D98B]"
-                  : "bg-transparent border-[#262626] text-[#9A9A94] hover:text-[#B7D98B]"
+                  ? "bg-[#111111] border-[#B6D94C] text-[#B6D94C]"
+                  : "bg-transparent border-[#242424] text-[#777772] hover:text-[#B6D94C]"
               )}
             >
               <RotateCcw className="w-3.5 h-3.5" />
@@ -216,7 +216,7 @@ export function GemstoneGallery({
             </button>
           </div>
           {is360Active && (
-            <span className="text-[11px] font-mono text-[#B7D98B]">
+            <span className="text-[11px] font-mono text-[#B6D94C]">
               {TOURMALINE_360_FRAMES[frame360].label}
             </span>
           )}
@@ -267,19 +267,19 @@ export function GemstoneGallery({
       >
         {/* Corner Accents */}
         <div
-          className="absolute top-3 left-3 w-3 h-3 border-t border-l border-[#B7D98B]/40 z-10 pointer-events-none"
+          className="absolute top-3 left-3 w-3 h-3 border-t border-l border-[#B6D94C]/40 z-10 pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute top-3 right-3 w-3 h-3 border-t border-r border-[#B7D98B]/40 z-10 pointer-events-none"
+          className="absolute top-3 right-3 w-3 h-3 border-t border-r border-[#B6D94C]/40 z-10 pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-[#B7D98B]/40 z-10 pointer-events-none"
+          className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-[#B6D94C]/40 z-10 pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-[#B7D98B]/40 z-10 pointer-events-none"
+          className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-[#B6D94C]/40 z-10 pointer-events-none"
           aria-hidden="true"
         />
 
@@ -310,7 +310,7 @@ export function GemstoneGallery({
               <button
                 type="button"
                 onClick={() => setIsSpinning360((p) => !p)}
-                className="px-2.5 py-1 bg-[#050505]/85 hover:bg-[#111111] border border-[#262626] hover:border-[#B7D98B] rounded-[4px] text-[10px] font-mono uppercase tracking-wider text-[#B7D98B] inline-flex items-center gap-1 transition-colors"
+                className="px-2.5 py-1 bg-[#050505]/85 hover:bg-[#111111] border border-[#242424] hover:border-[#B6D94C] rounded-[2px] text-[10px] font-mono uppercase tracking-wider text-[#B6D94C] inline-flex items-center gap-1 transition-colors"
                 title={isSpinning360 ? "Pause spin" : "Auto 360° spin"}
               >
                 {isSpinning360 ? (
@@ -337,7 +337,7 @@ export function GemstoneGallery({
                       (prev - 1 + TOURMALINE_360_FRAMES.length) % TOURMALINE_360_FRAMES.length
                   )
                 }
-                className="p-1.5 bg-[#050505]/80 hover:bg-[#111111] border border-[#262626] hover:border-[#B7D98B] text-[#F5F5F0] rounded-[4px] pointer-events-auto transition-colors"
+                className="p-1.5 bg-[#050505]/80 hover:bg-[#111111] border border-[#242424] hover:border-[#B6D94C] text-[#F5F3EE] rounded-[2px] pointer-events-auto transition-colors"
                 aria-label="Rotate left"
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -347,7 +347,7 @@ export function GemstoneGallery({
                 onClick={() =>
                   setFrame360((prev) => (prev + 1) % TOURMALINE_360_FRAMES.length)
                 }
-                className="p-1.5 bg-[#050505]/80 hover:bg-[#111111] border border-[#262626] hover:border-[#B7D98B] text-[#F5F5F0] rounded-[4px] pointer-events-auto transition-colors"
+                className="p-1.5 bg-[#050505]/80 hover:bg-[#111111] border border-[#242424] hover:border-[#B6D94C] text-[#F5F3EE] rounded-[2px] pointer-events-auto transition-colors"
                 aria-label="Rotate right"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -356,7 +356,7 @@ export function GemstoneGallery({
 
             {/* Bottom Angle Scrub Dots */}
             <div className="absolute bottom-3 inset-x-0 flex justify-center items-center gap-1.5 z-20 pointer-events-auto">
-              <div className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#050505]/85 border border-[#262626] rounded-full backdrop-blur-xs">
+              <div className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#050505]/85 border border-[#242424] rounded-full backdrop-blur-xs">
                 {TOURMALINE_360_FRAMES.map((f, idx) => (
                   <button
                     key={f.angle}
@@ -369,8 +369,8 @@ export function GemstoneGallery({
                     className={cn(
                       "transition-all rounded-full",
                       idx === frame360
-                        ? "w-4 h-1.5 bg-[#B7D98B]"
-                        : "w-1.5 h-1.5 bg-[#262626] hover:bg-[#B7D98B]/60"
+                        ? "w-4 h-1.5 bg-[#B6D94C]"
+                        : "w-1.5 h-1.5 bg-[#242424] hover:bg-[#B6D94C]/60"
                     )}
                   />
                 ))}
@@ -399,7 +399,7 @@ export function GemstoneGallery({
               ref={triggerRef}
               type="button"
               onClick={() => setIsLightboxOpen(true)}
-              className="absolute top-4 right-4 z-20 p-2.5 bg-[#050505]/80 hover:bg-[#111111] border border-[#262626] hover:border-[#B7D98B] text-[#9A9A94] hover:text-[#F5F5F0] transition-colors rounded-[4px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7D98B]"
+              className="absolute top-4 right-4 z-20 p-2.5 bg-[#050505]/80 hover:bg-[#111111] border border-[#242424] hover:border-[#B6D94C] text-[#777772] hover:text-[#F5F3EE] transition-colors rounded-[2px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B6D94C]"
               aria-label={`Open full-resolution view of ${gemstoneName}`}
             >
               <Maximize2 className="w-4 h-4" />
@@ -407,7 +407,7 @@ export function GemstoneGallery({
 
             {/* Bottom Image Position Badge */}
             {hasMultipleImages && (
-              <div className="absolute bottom-4 left-4 z-20 px-2.5 py-1 bg-[#050505]/85 border border-[#262626] rounded-[2px] text-[10px] uppercase tracking-widest text-[#B7D98B] font-mono">
+              <div className="absolute bottom-4 left-4 z-20 px-2.5 py-1 bg-[#050505]/85 border border-[#242424] rounded-[2px] text-[10px] uppercase tracking-widest text-[#B6D94C] font-mono">
                 {selectedIndex + 1} / {displayImages.length}
               </div>
             )}
@@ -437,10 +437,10 @@ export function GemstoneGallery({
                 type="button"
                 onClick={() => setSelectedIndex(idx)}
                 className={cn(
-                  "relative w-20 sm:w-24 aspect-[4/3] shrink-0 bg-[#0A0A0A] border rounded-[4px] transition-all overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7D98B]",
+                  "relative w-20 sm:w-24 aspect-[4/3] shrink-0 bg-[#0A0A0A] border rounded-[2px] transition-all overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B6D94C]",
                   isSelected
-                    ? "border-[#B7D98B] ring-1 ring-[#B7D98B] opacity-100"
-                    : "border-[#262626] opacity-60 hover:opacity-100 hover:border-[#3A3A3A]"
+                    ? "border-[#B6D94C] ring-1 ring-[#B6D94C] opacity-100"
+                    : "border-[#242424] opacity-60 hover:opacity-100 hover:border-[#3A3A3A]"
                 )}
                 aria-label={`View image ${idx + 1} of ${displayImages.length}`}
                 aria-current={isSelected ? "true" : undefined}
@@ -469,7 +469,7 @@ export function GemstoneGallery({
         >
           {/* Top Bar with Counter and Close Button */}
           <div className="absolute top-4 inset-x-4 sm:inset-x-8 flex items-center justify-between z-30">
-            <div className="text-xs uppercase tracking-[0.2em] text-[#B7D98B] font-mono">
+            <div className="text-xs uppercase tracking-[0.2em] text-[#B6D94C] font-mono">
               <span>{gemstoneName}</span>
               <span className="mx-2 text-[#404040]">·</span>
               <span>
@@ -484,7 +484,7 @@ export function GemstoneGallery({
                 setIsLightboxOpen(false);
                 triggerRef.current?.focus();
               }}
-              className="p-2.5 bg-[#111111] border border-[#262626] hover:border-[#B7D98B] text-[#9A9A94] hover:text-[#F5F5F0] transition-colors rounded-[4px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7D98B]"
+              className="p-2.5 bg-[#111111] border border-[#242424] hover:border-[#B6D94C] text-[#777772] hover:text-[#F5F3EE] transition-colors rounded-[2px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B6D94C]"
               aria-label="Close fullscreen view"
             >
               <X className="w-5 h-5" />
@@ -496,7 +496,7 @@ export function GemstoneGallery({
             <button
               type="button"
               onClick={handlePrev}
-              className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 p-3 bg-[#111111]/90 border border-[#262626] hover:border-[#B7D98B] text-[#9A9A94] hover:text-[#F5F5F0] transition-colors rounded-[4px]"
+              className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 p-3 bg-[#111111]/90 border border-[#242424] hover:border-[#B6D94C] text-[#777772] hover:text-[#F5F3EE] transition-colors rounded-[2px]"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -519,7 +519,7 @@ export function GemstoneGallery({
             <button
               type="button"
               onClick={handleNext}
-              className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 p-3 bg-[#111111]/90 border border-[#262626] hover:border-[#B7D98B] text-[#9A9A94] hover:text-[#F5F5F0] transition-colors rounded-[4px]"
+              className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 p-3 bg-[#111111]/90 border border-[#242424] hover:border-[#B6D94C] text-[#777772] hover:text-[#F5F3EE] transition-colors rounded-[2px]"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6" />
@@ -528,7 +528,7 @@ export function GemstoneGallery({
 
           {/* Bottom Caption */}
           <div className="absolute bottom-4 inset-x-4 text-center">
-            <p className="text-xs text-[#9A9A94] font-light max-w-xl mx-auto truncate">
+            <p className="text-xs text-[#777772] font-light max-w-xl mx-auto truncate">
               {currentImage.alt_text || gemstoneName}
             </p>
           </div>

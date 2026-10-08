@@ -1,69 +1,73 @@
 @import "tailwindcss";
 
 @theme {
-  /* Light Green Dominant Palette (65% Light Green, 23% Black, 10% Off-White, 2% Neutrals) */
-  --color-brand-green-primary: #B7D98B;
-  --color-brand-green-secondary: #CFE7AA;
-  --color-brand-green-soft: #E5F1D2;
-  --color-brand-green-deep: #294D2C;
-  --color-brand-green-pale: #F0F6E6;
-
-  /* Black Contrast (23%) */
+  /* Luxury Balance: 50% Dry Black, 22% Off-White, 23% Light Green, 5% Neutrals */
   --color-brand-black: #050505;
-  --color-brand-black-secondary: #101010;
-  --color-brand-black-surface: #171717;
+  --color-brand-black-secondary: #080808;
+  --color-brand-black-surface: #0C0C0C;
+  --color-brand-black-card: #121212;
 
-  /* Off-White Support (10%) */
-  --color-brand-offwhite: #F7F7F1;
-  --color-brand-offwhite-subtle: #EDEDE4;
+  /* Off-White Editorial Breathing Space (22%) */
+  --color-brand-offwhite: #F5F3EE;
+  --color-brand-offwhite-alt: #F1EFE8;
+  --color-brand-offwhite-card: #FAF9F5;
 
-  /* Neutrals (2%) */
-  --color-brand-gray-muted: #777A70;
-  --color-brand-border: #D4DEC5;
-  --color-brand-border-dark: #262626;
+  /* Botanical Gemstone Light Green Accent (23%) */
+  --color-brand-green-primary: #B6D94C;
+  --color-brand-green-hover: #A3C73A;
+  --color-brand-green-muted: #8AA838;
+  --color-brand-green-subtle: #2A3618;
+  --color-brand-green-tint: #F3F8E4;
+
+  /* Supporting Neutrals (5%) */
+  --color-brand-gray-light: #D8D6CF;
+  --color-brand-gray-muted: #A5A5A0;
+  --color-brand-gray-dark: #777772;
+  --color-brand-border: #242424;
+  --color-brand-border-light: #E2DFD7;
 
   /* Functional Feedback */
-  --color-feedback-success: #294D2C;
-  --color-feedback-warning: #B45309;
-  --color-feedback-error: #B91C1C;
+  --color-feedback-success: #B6D94C;
+  --color-feedback-warning: #D97706;
+  --color-feedback-error: #DC2626;
 
   --font-display: var(--font-display), 'Cormorant Garamond', Georgia, serif;
   --font-body: var(--font-body), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 :root {
-  /* Base Environment is Light Green */
-  --background: #E5F1D2;
-  --background-secondary: #CFE7AA;
-  --background-primary-green: #B7D98B;
-  --background-dark: #050505;
+  /* Base Environment is Dry Black (50% Foundation) */
+  --background: #050505;
+  --background-secondary: #080808;
+  --background-surface: #0C0C0C;
+  --background-card: #121212;
 
-  /* Surfaces */
-  --surface-green: #CFE7AA;
-  --surface-green-soft: #E5F1D2;
-  --surface-offwhite: #F7F7F1;
-  --surface-dark: #050505;
-  --surface-dark-secondary: #101010;
+  /* Off-White Environment (22% Editorial Breathing Space) */
+  --surface-offwhite: #F5F3EE;
+  --surface-offwhite-alt: #F1EFE8;
+  --surface-offwhite-card: #FAF9F5;
 
   /* Typography Colors */
-  --text-primary: #050505;
-  --text-secondary: #294D2C;
-  --text-muted: #777A70;
-  --text-light: #F7F7F1;
+  --text-primary: #F5F3EE;
+  --text-secondary: #A5A5A0;
+  --text-muted: #777772;
+  --text-dark: #050505;
+  --text-dark-secondary: #404040;
 
   /* Borders & Dividers */
-  --border-light: #D4DEC5;
-  --border-dark: #262626;
+  --border-dark: #242424;
+  --border-dark-subtle: #1A1A1A;
+  --border-light: #E2DFD7;
 
-  /* Brand Accents */
-  --accent-green-primary: #B7D98B;
-  --accent-green-secondary: #CFE7AA;
-  --accent-green-deep: #294D2C;
+  /* Brand Accents (23% Botanical Gemstone Green) */
+  --accent-green-primary: #B6D94C;
+  --accent-green-hover: #A3C73A;
+  --accent-green-muted: #8AA838;
 
   /* Restrained Feedback */
-  --success: #294D2C;
-  --warning: #B45309;
-  --error: #B91C1C;
+  --success: #B6D94C;
+  --warning: #D97706;
+  --error: #DC2626;
 
   /* Motion Timing & Curves */
   --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
@@ -168,28 +172,28 @@ body {
   font-weight: 500;
 }
 
-/* Custom Scrollbar for Luxury Light Green Aesthetic */
+/* Custom Scrollbar for Luxury Dry Black & Botanical Green Aesthetic */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #E5F1D2;
+  background: #080808;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B7D98B;
+  background: #242424;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #294D2C;
+  background: #B6D94C;
 }
 
 /* Focus Visible Accessible Styling */
 :focus-visible {
-  outline: 2px solid #050505;
+  outline: 2px solid #B6D94C;
   outline-offset: 3px;
 }
 

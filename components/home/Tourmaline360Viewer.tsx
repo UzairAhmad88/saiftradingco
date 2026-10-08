@@ -157,25 +157,25 @@ export function Tourmaline360Viewer() {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      className={`relative w-full max-w-md lg:max-w-none aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] bg-[#0A0A0A] border border-[#262626] rounded-[4px] overflow-hidden select-none outline-none focus-visible:ring-2 focus-visible:ring-[#B7D98B] transition-all shadow-2xl group ${
+      className={`relative w-full max-w-md lg:max-w-none aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] bg-[#0A0A0A] border border-[#242424] rounded-[2px] overflow-hidden select-none outline-none focus-visible:ring-2 focus-visible:ring-[#B6D94C] transition-all shadow-2xl group ${
         isDragging ? "cursor-grabbing" : "cursor-grab"
       }`}
     >
       {/* Editorial Corner Brackets */}
       <div
-        className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#B7D98B]/60 z-30 pointer-events-none"
+        className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#B6D94C]/60 z-30 pointer-events-none"
         aria-hidden="true"
       />
       <div
-        className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#B7D98B]/60 z-30 pointer-events-none"
+        className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#B6D94C]/60 z-30 pointer-events-none"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#B7D98B]/60 z-30 pointer-events-none"
+        className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#B6D94C]/60 z-30 pointer-events-none"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#B7D98B]/60 z-30 pointer-events-none"
+        className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#B6D94C]/60 z-30 pointer-events-none"
         aria-hidden="true"
       />
 
@@ -207,9 +207,9 @@ export function Tourmaline360Viewer() {
       {/* TOP HEADER CONTROLS */}
       <div className="absolute top-3 inset-x-3 sm:top-4 sm:inset-x-4 flex items-center justify-between z-30 pointer-events-auto">
         {/* Angle Badge */}
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#050505]/85 border border-[#262626] rounded-[4px] backdrop-blur-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#B7D98B] animate-pulse" />
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#F5F5F0]">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#050505]/85 border border-[#242424] rounded-[2px] backdrop-blur-sm">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#B6D94C] animate-pulse" />
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#F5F3EE]">
             {current.label}
           </span>
         </div>
@@ -223,17 +223,17 @@ export function Tourmaline360Viewer() {
               setHasInteracted(true);
               setIsPlaying((p) => !p);
             }}
-            className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#050505]/85 hover:bg-[#171717] border border-[#262626] hover:border-[#B7D98B]/60 rounded-[4px] text-[10px] uppercase font-mono tracking-wider text-[#B7D98B] transition-colors"
+            className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#050505]/85 hover:bg-[#121212] border border-[#242424] hover:border-[#B6D94C]/60 rounded-[2px] text-[10px] uppercase font-mono tracking-wider text-[#B6D94C] transition-colors"
             title={isPlaying ? "Pause auto-rotation" : "Start 360° auto-rotation"}
           >
             {isPlaying ? (
               <>
-                <Pause className="w-3 h-3 text-[#B7D98B]" />
+                <Pause className="w-3 h-3 text-[#B6D94C]" />
                 <span className="hidden sm:inline">Pause</span>
               </>
             ) : (
               <>
-                <RotateCcw className="w-3 h-3 text-[#B7D98B]" />
+                <RotateCcw className="w-3 h-3 text-[#B6D94C]" />
                 <span>360° Spin</span>
               </>
             )}
@@ -250,7 +250,7 @@ export function Tourmaline360Viewer() {
             stepPrev();
           }}
           aria-label="Rotate specimen left"
-          className="p-1.5 bg-[#050505]/70 hover:bg-[#171717] border border-[#262626] hover:border-[#B7D98B]/60 rounded-[4px] text-[#F5F5F0] transition-opacity opacity-0 group-hover:opacity-100 pointer-events-auto shadow-lg"
+          className="p-1.5 bg-[#050505]/70 hover:bg-[#121212] border border-[#242424] hover:border-[#B6D94C]/60 rounded-[2px] text-[#F5F3EE] transition-opacity opacity-0 group-hover:opacity-100 pointer-events-auto shadow-lg"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
@@ -262,7 +262,7 @@ export function Tourmaline360Viewer() {
             stepNext();
           }}
           aria-label="Rotate specimen right"
-          className="p-1.5 bg-[#050505]/70 hover:bg-[#171717] border border-[#262626] hover:border-[#B7D98B]/60 rounded-[4px] text-[#F5F5F0] transition-opacity opacity-0 group-hover:opacity-100 pointer-events-auto shadow-lg"
+          className="p-1.5 bg-[#050505]/70 hover:bg-[#121212] border border-[#242424] hover:border-[#B6D94C]/60 rounded-[2px] text-[#F5F3EE] transition-opacity opacity-0 group-hover:opacity-100 pointer-events-auto shadow-lg"
         >
           <ChevronRight className="w-4 h-4" />
         </button>
@@ -271,9 +271,9 @@ export function Tourmaline360Viewer() {
       {/* Initial Drag Hint Overlay (fades once user interacts) */}
       {!hasInteracted && !isPlaying && (
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-center z-30 pointer-events-none">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#050505]/90 border border-[#B7D98B]/50 rounded-[4px] shadow-xl animate-pulse">
-            <RotateCcw className="w-3.5 h-3.5 text-[#B7D98B]" />
-            <span className="text-[10px] uppercase font-mono tracking-widest text-[#F5F5F0]">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#050505]/90 border border-[#B6D94C]/50 rounded-[2px] shadow-xl animate-pulse">
+            <RotateCcw className="w-3.5 h-3.5 text-[#B6D94C]" />
+            <span className="text-[10px] uppercase font-mono tracking-widest text-[#F5F3EE]">
               Drag to Rotate 360°
             </span>
           </div>
@@ -282,7 +282,7 @@ export function Tourmaline360Viewer() {
 
       {/* Angle Scrub Bar (8 discreet angle dots) */}
       <div className="absolute bottom-20 sm:bottom-22 inset-x-0 flex justify-center items-center gap-1.5 z-30 pointer-events-auto">
-        <div className="inline-flex items-center gap-1 px-2 py-1 bg-[#050505]/80 border border-[#262626] rounded-full backdrop-blur-xs">
+        <div className="inline-flex items-center gap-1 px-2 py-1 bg-[#050505]/80 border border-[#242424] rounded-full backdrop-blur-xs">
           {ROTATION_FRAMES.map((f, idx) => (
             <button
               key={f.angle}
@@ -296,8 +296,8 @@ export function Tourmaline360Viewer() {
               title={`Jump to ${f.label}`}
               className={`transition-all rounded-full ${
                 idx === currentFrame
-                  ? "w-4 h-1.5 bg-[#B7D98B]"
-                  : "w-1.5 h-1.5 bg-[#262626] hover:bg-[#B7D98B]/50"
+                  ? "w-4 h-1.5 bg-[#B6D94C]"
+                  : "w-1.5 h-1.5 bg-[#242424] hover:bg-[#B6D94C]/50"
               }`}
             />
           ))}
@@ -306,12 +306,12 @@ export function Tourmaline360Viewer() {
 
       {/* Bottom Editorial Caption & Link */}
       <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 z-30 space-y-1 bg-gradient-to-t from-[#050505] via-[#050505]/90 to-transparent">
-        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-[#B7D98B]">
+        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-[#B6D94C]">
           <span className="inline-flex items-center gap-1 font-medium">
-            <Sparkles className="w-3 h-3 text-[#B7D98B]" />
+            <Sparkles className="w-3 h-3 text-[#B6D94C]" />
             Interactive 360° Specimen
           </span>
-          <span className="text-[#9A9A94] font-mono">HK-ELB-01</span>
+          <span className="text-[#A5A5A0] font-mono">HK-ELB-01</span>
         </div>
 
         <Link
@@ -320,16 +320,16 @@ export function Tourmaline360Viewer() {
           title="Inspect full laboratory metrics and provenance"
         >
           <div className="flex items-center justify-between">
-            <p className="font-serif text-lg sm:text-xl text-[#F5F5F0] font-normal group-hover/link:text-[#B7D98B] transition-colors">
+            <p className="font-serif text-lg sm:text-xl text-[#F5F3EE] font-normal group-hover/link:text-[#B6D94C] transition-colors">
               Natural Green Elbaite Tourmaline
             </p>
-            <span className="text-[#B7D98B] inline-flex items-center gap-0.5 text-xs font-mono group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">
+            <span className="text-[#B6D94C] inline-flex items-center gap-0.5 text-xs font-mono group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">
               View <ArrowUpRight className="w-3.5 h-3.5" />
             </span>
           </div>
-          <div className="flex items-center justify-between pt-0.5 text-[11px] text-[#9A9A94] font-light">
+          <div className="flex items-center justify-between pt-0.5 text-[11px] text-[#A5A5A0] font-light">
             <span>Fine Striations &amp; Pristine Terminations</span>
-            <span className="text-[10px] font-mono text-[#9A9A94]">Drag or click dots</span>
+            <span className="text-[10px] font-mono text-[#777772]">Drag or click dots</span>
           </div>
         </Link>
       </div>

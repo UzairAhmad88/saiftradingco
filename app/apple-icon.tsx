@@ -18,7 +18,7 @@ export default function AppleIcon() {
           justifyContent: "center",
           background: "linear-gradient(145deg, #141414, #050505)",
           borderRadius: "36px",
-          border: "4px solid #B7D98B",
+          border: "4px solid #B6D94C",
           position: "relative",
         }}
       >
@@ -31,12 +31,12 @@ export default function AppleIcon() {
         >
           {/* Top termination facets */}
           <polygon points="10,1 4,6 10,8" fill="#EDF8DE" />
-          <polygon points="10,1 10,8 16,6" fill="#B7D98B" />
+          <polygon points="10,1 10,8 16,6" fill="#B6D94C" />
           <polygon points="10,1 4,6 10,4" fill="#FFFFFF" opacity="0.7" />
 
           {/* Body columns */}
           <polygon points="4,6 10,8 10,23 4,21" fill="#6F9D3B" />
-          <polygon points="10,8 13,7.5 13,22.5 10,23" fill="#B7D98B" />
+          <polygon points="10,8 13,7.5 13,22.5 10,23" fill="#B6D94C" />
           <polygon points="13,7.5 16,6 16,21 13,22.5" fill="#2E5A26" />
 
           {/* Prismatic striations */}
@@ -45,7 +45,7 @@ export default function AppleIcon() {
             y1="7"
             x2="7"
             y2="22"
-            stroke="#B7D98B"
+            stroke="#B6D94C"
             strokeWidth="0.8"
             strokeOpacity="0.5"
           />

@@ -141,10 +141,10 @@ export default async function GemstoneDetailPage({ params }: GemstonePageProps) 
       <main
         id="main-content"
         tabIndex={-1}
-        className="w-full bg-[#E5F1D2] focus:outline-none"
+        className="w-full bg-[#050505] focus:outline-none"
       >
         {/* Breadcrumb Navigation Header */}
-        <div className="border-b border-[#D4DEC5] bg-[#E5F1D2]">
+        <div className="border-b border-[#242424] bg-[#050505]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs items={breadcrumbs} />
           </div>
@@ -185,7 +185,7 @@ export default async function GemstoneDetailPage({ params }: GemstonePageProps) 
         {/* Technical Specifications & Descriptive Observation — Off-White Breathing Reading Area */}
         <section
           aria-labelledby="specifications-section-heading"
-          className="border-t border-[#D4DEC5] bg-[#F7F7F1] py-16 sm:py-20"
+          className="border-t border-[#E2DFD7] bg-[#F5F3EE] py-16 sm:py-20"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="sr-only">
@@ -209,8 +209,8 @@ export default async function GemstoneDetailPage({ params }: GemstonePageProps) 
           </div>
         </section>
 
-        {/* Focused In-Page Commercial Inquiry Banner */}
-        <section className="border-t border-[#D4DEC5] bg-[#E5F1D2] py-16 sm:py-20">
+        {/* Focused In-Page Commercial Inquiry Banner — Dry Black Luxury Container */}
+        <section className="border-t border-[#242424] bg-[#080808] py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <GemstoneInquiryCTA gemstone={gemstone} />
           </div>
@@ -218,7 +218,7 @@ export default async function GemstoneDetailPage({ params }: GemstonePageProps) 
 
         {/* Comparative Related Gemstones */}
         {relatedGemstones.length > 0 && (
-          <section className="border-t border-[#D4DEC5] bg-[#E5F1D2] py-16 sm:py-20">
+          <section className="border-t border-[#242424] bg-[#050505] py-16 sm:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <RelatedGemstonesSection
                 relatedGemstones={relatedGemstones}

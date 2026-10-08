@@ -5,16 +5,16 @@
       <stop offset="100%" stop-color="#050505"/>
     </linearGradient>
     <linearGradient id="ring" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#B7D98B"/>
+      <stop offset="0%" stop-color="#B6D94C"/>
       <stop offset="100%" stop-color="#294D2C"/>
     </linearGradient>
     <linearGradient id="facet-center" x1="16" y1="5" x2="16" y2="27" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#B7D98B"/>
-      <stop offset="45%" stop-color="#B7D98B"/>
+      <stop offset="0%" stop-color="#B6D94C"/>
+      <stop offset="45%" stop-color="#B6D94C"/>
       <stop offset="100%" stop-color="#2E5A26"/>
     </linearGradient>
     <linearGradient id="facet-left" x1="8" y1="7" x2="16" y2="27" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#B7D98B"/>
+      <stop offset="0%" stop-color="#B6D94C"/>
       <stop offset="100%" stop-color="#1E3E20"/>
     </linearGradient>
     <linearGradient id="facet-right" x1="24" y1="7" x2="16" y2="27" gradientUnits="userSpaceOnUse">
@@ -23,7 +23,7 @@
     </linearGradient>
     <linearGradient id="facet-top" x1="16" y1="4" x2="16" y2="10" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#EDF8DE"/>
-      <stop offset="100%" stop-color="#B7D98B"/>
+      <stop offset="100%" stop-color="#B6D94C"/>
     </linearGradient>
   </defs>
 
@@ -34,7 +34,7 @@
   <!-- Tourmaline Crystal Geometry (Striated Elongated Trigonal/Hexagonal Prism) -->
   <!-- Top Termination (Pointed crystal pyramid) -->
   <polygon points="16,5 10.5,9.5 16,11.5" fill="url(#facet-top)"/>
-  <polygon points="16,5 16,11.5 21.5,9.5" fill="#B7D98B" opacity="0.9"/>
+  <polygon points="16,5 16,11.5 21.5,9.5" fill="#B6D94C" opacity="0.9"/>
   <polygon points="16,5 10.5,9.5 16,7.5" fill="#FFFFFF" opacity="0.6"/>
 
   <!-- Main Prism Column - Left Facet -->
@@ -47,7 +47,7 @@
   <polygon points="18.5,10.8 18.5,25.8 21.5,24.5 21.5,9.5" fill="url(#facet-right)"/>
 
   <!-- Striation Lines (Authentic Rough Tourmaline Growth Vertical Lines) -->
-  <line x1="13.2" y1="10.5" x2="13.2" y2="25.2" stroke="#B7D98B" stroke-width="0.6" stroke-opacity="0.45"/>
+  <line x1="13.2" y1="10.5" x2="13.2" y2="25.2" stroke="#B6D94C" stroke-width="0.6" stroke-opacity="0.45"/>
   <line x1="16" y1="11.5" x2="16" y2="26.5" stroke="#FFFFFF" stroke-width="0.75" stroke-opacity="0.7"/>
   <line x1="18.5" y1="10.8" x2="18.5" y2="25.8" stroke="#0E2310" stroke-width="0.6" stroke-opacity="0.85"/>
 

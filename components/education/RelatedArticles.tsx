@@ -14,8 +14,8 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
       aria-labelledby="related-articles-heading"
       className="space-y-8"
     >
-      <div className="space-y-1 pb-4 border-b border-[#D4DEC5]">
-        <span className="type-eyebrow text-[#294D2C] block">
+      <div className="space-y-1 pb-4 border-b border-[#E2DFD7]">
+        <span className="type-eyebrow text-[#4D6618] block">
           Further Reading
         </span>
         <h2

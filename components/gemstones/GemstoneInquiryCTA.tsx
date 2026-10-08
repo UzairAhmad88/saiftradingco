@@ -14,21 +14,21 @@ export function GemstoneInquiryCTA({ gemstone }: GemstoneInquiryCTAProps) {
   return (
     <section
       aria-labelledby="specimen-inquiry-heading"
-      className="p-8 sm:p-12 bg-[#CFE7AA] border border-[#D4DEC5] rounded-[4px] text-center space-y-6 sm:space-y-8 shadow-xs"
+      className="p-8 sm:p-12 bg-[#0C0C0C] border border-[#242424] rounded-[4px] text-center space-y-6 sm:space-y-8 shadow-xl"
     >
       <div className="space-y-3 max-w-2xl mx-auto">
-        <span className="type-eyebrow text-[#294D2C] block font-bold">
+        <span className="type-eyebrow text-[#B6D94C] block font-bold">
           Commercial Correspondence
         </span>
         <h2
           id="specimen-inquiry-heading"
-          className="font-serif text-3xl sm:text-4xl text-[#050505] font-semibold leading-tight"
+          className="font-serif text-3xl sm:text-4xl text-[#F5F3EE] font-semibold leading-tight"
         >
           {isSold
             ? "Looking for Similar Rough Material?"
             : `Interested in This ${gemstone.name}?`}
         </h2>
-        <p className="text-xs sm:text-sm text-[#050505]/85 font-normal leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#A5A5A0] font-normal leading-relaxed">
           {isSold
             ? `While this specific specimen ${skuText} has been acquired, our Hong Kong office can advise on upcoming crystal arrivals or source comparable rough material in ${gemstone.category?.name || "this mineral family"}.`
             : `Contact our trade desk regarding physical viewing at our Hung Hom office, additional macro video documentation, or international courier arrangements for ${gemstone.name} ${skuText}.`}
@@ -46,23 +46,23 @@ export function GemstoneInquiryCTA({ gemstone }: GemstoneInquiryCTAProps) {
         </LinkButton>
       </div>
 
-      <div className="pt-6 border-t border-[#294D2C]/25 flex flex-wrap items-center justify-center gap-6 text-xs text-[#050505]">
+      <div className="pt-6 border-t border-[#242424] flex flex-wrap items-center justify-center gap-6 text-xs text-[#F5F3EE]">
         <a
           href="tel:+85235251640"
-          className="inline-flex items-center gap-1.5 text-[#050505] font-semibold hover:text-[#294D2C] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
+          className="inline-flex items-center gap-1.5 text-[#F5F3EE] font-semibold hover:text-[#B6D94C] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
         >
-          <Phone className="w-3.5 h-3.5 text-[#294D2C]" aria-hidden="true" />
+          <Phone className="w-3.5 h-3.5 text-[#B6D94C]" aria-hidden="true" />
           <span>+852 3525 1640</span>
         </a>
         <a
           href="mailto:Saiftradingco@yahoo.com"
-          className="inline-flex items-center gap-1.5 text-[#050505] font-semibold hover:text-[#294D2C] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
+          className="inline-flex items-center gap-1.5 text-[#F5F3EE] font-semibold hover:text-[#B6D94C] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
         >
-          <Mail className="w-3.5 h-3.5 text-[#294D2C]" aria-hidden="true" />
+          <Mail className="w-3.5 h-3.5 text-[#B6D94C]" aria-hidden="true" />
           <span>Saiftradingco@yahoo.com</span>
         </a>
-        <div className="inline-flex items-center gap-1.5 text-[#050505]/80 font-medium">
-          <MapPin className="w-3.5 h-3.5 text-[#294D2C]" />
+        <div className="inline-flex items-center gap-1.5 text-[#A5A5A0] font-medium">
+          <MapPin className="w-3.5 h-3.5 text-[#B6D94C]" />
           <span>Hung Hom, Kowloon, Hong Kong</span>
         </div>
       </div>

@@ -17,17 +17,17 @@ export default function ArticleError({
   }, [error]);
 
   return (
-    <div className="w-full bg-[#E5F1D2] min-h-[65vh] flex items-center justify-center px-4 py-16">
-      <div className="max-w-md w-full p-8 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] text-center space-y-6 shadow-sm">
-        <div className="w-12 h-12 mx-auto bg-[#E5F1D2] border border-[#D4DEC5] rounded-[4px] flex items-center justify-center text-[#294D2C]">
+    <div className="w-full bg-[#050505] min-h-[65vh] flex items-center justify-center px-4 py-16">
+      <div className="max-w-md w-full p-8 bg-[#0C0C0C] border border-[#242424] rounded-[4px] text-center space-y-6 shadow-sm">
+        <div className="w-12 h-12 mx-auto bg-[#141414] border border-[#242424] rounded-[4px] flex items-center justify-center text-[#B6D94C]">
           <AlertTriangle className="w-6 h-6 stroke-[1.5]" />
         </div>
 
         <div className="space-y-2">
-          <h2 className="font-serif text-2xl text-[#050505]">
+          <h2 className="font-serif text-2xl text-[#F5F3EE]">
             Article Temporarily Unavailable
           </h2>
-          <p className="text-xs sm:text-sm text-[#777A70] font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#A5A5A0] font-light leading-relaxed">
             We encountered an issue while loading this technical mineral guide. Please try refreshing or return to the education archive.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function ArticleError({
 
           <Link
             href="/education"
-            className="w-full sm:w-auto px-6 py-3 border border-[#050505] rounded-[4px] bg-transparent text-xs uppercase tracking-wider text-[#050505] hover:bg-[#050505] hover:text-[#B7D98B] transition-colors inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
+            className="w-full sm:w-auto px-6 py-3 border border-[#242424] rounded-[4px] bg-transparent text-xs uppercase tracking-wider text-[#F5F3EE] hover:border-[#B6D94C] hover:text-[#B6D94C] transition-colors inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>All Guides</span>

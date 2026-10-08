@@ -47,15 +47,15 @@ export function DesktopNavigation({ className }: DesktopNavigationProps) {
             aria-current={active ? "page" : undefined}
             className={cn(
               "relative py-2 transition-colors duration-200 select-none",
-              "hover:text-[#294D2C] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]",
-              active ? "text-[#050505] font-semibold" : "text-[#050505]/80"
+              "hover:text-[#B6D94C] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]",
+              active ? "text-[#F5F3EE] font-medium" : "text-[#A5A5A0]"
             )}
           >
             <span>{item.label}</span>
-            {/* Subtle black active underline */}
+            {/* Subtle botanical green active underline */}
             {active && (
               <span
-                className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#050505]"
+                className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#B6D94C]"
                 aria-hidden="true"
               />
             )}
@@ -63,14 +63,14 @@ export function DesktopNavigation({ className }: DesktopNavigationProps) {
         );
       })}
 
-      {/* Primary Global CTA: INQUIRE (Black background + Light Green text) */}
+      {/* Primary Global CTA: INQUIRE (Botanical green background + Dark text) */}
       <Link
         href="/contact"
         className={cn(
           "px-5 py-2.5 transition-all duration-200 select-none font-semibold rounded-[4px]",
-          "bg-[#050505] text-[#B7D98B] border border-[#050505]",
-          "hover:bg-[#294D2C] hover:text-[#F7F7F1] active:bg-[#101010]",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#050505]"
+          "bg-[#B6D94C] text-[#050505] border border-[#B6D94C]",
+          "hover:bg-[#A3C73A] hover:border-[#A3C73A] active:bg-[#91B32A] hover:-translate-y-0.5",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B6D94C]"
         )}
       >
         Inquire

@@ -9,14 +9,14 @@ export const metadata: Metadata = constructMetadata({
 
 export default function TermsPage() {
   return (
-    <main id="main-content" tabIndex={-1} className="w-full bg-[#E5F1D2] py-16 sm:py-24 focus:outline-none">
+    <main id="main-content" tabIndex={-1} className="w-full bg-[#050505] text-[#F5F3EE] py-16 sm:py-24 focus:outline-none">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] p-6 sm:p-8 md:p-12 shadow-sm space-y-8">
+        <div className="bg-[#FAF9F5] border border-[#E2DFD7] rounded-[2px] p-6 sm:p-8 md:p-12 space-y-8 text-[#050505]">
           <div>
             <h1 className="text-3xl sm:text-5xl font-serif text-[#050505] tracking-tight mb-3">
               Terms of Service
             </h1>
-            <p className="text-xs uppercase tracking-[0.2em] text-[#777A70] font-medium">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#777772] font-medium">
               Last updated: October 2026 · Saif Trading Co
             </p>
           </div>
@@ -66,11 +66,11 @@ export default function TermsPage() {
 
             <section className="space-y-2">
               <h2 className="text-xl font-serif text-[#050505]">7. Contact Information</h2>
-              <div className="mt-3 p-5 bg-[#050505] border border-[#262626] rounded-[4px] text-xs sm:text-sm text-[#F7F7F1] space-y-1">
-                <p><strong className="text-[#B7D98B] font-mono uppercase tracking-wider text-xs">Saif Trading Co</strong></p>
-                <p className="text-[#EDEDE4]">417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong</p>
-                <p className="text-[#EDEDE4]">Telephone: +852 3525 1640</p>
-                <p className="text-[#EDEDE4]">Email: Saiftradingco@yahoo.com</p>
+              <div className="mt-3 p-5 bg-[#050505] border border-[#242424] rounded-[2px] text-xs sm:text-sm text-[#F5F3EE] space-y-1">
+                <p><strong className="text-[#B6D94C] font-mono uppercase tracking-wider text-xs">Saif Trading Co</strong></p>
+                <p className="text-[#A5A5A0]">417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong</p>
+                <p className="text-[#A5A5A0]">Telephone: +852 3525 1640</p>
+                <p className="text-[#A5A5A0]">Email: Saiftradingco@yahoo.com</p>
               </div>
             </section>
           </div>

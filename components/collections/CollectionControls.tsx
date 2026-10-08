@@ -148,7 +148,7 @@ export function CollectionControls({
   return (
     <div className="w-full space-y-4 mb-8">
       {/* Primary Toolbar: Search + Quick Selects + Filter Trigger */}
-      <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 p-4 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] shadow-xs">
+      <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 p-4 bg-[#0C0C0C] border border-[#242424] rounded-[4px] shadow-xs">
         {/* Search Input Field */}
         <form
           onSubmit={handleSearchSubmit}
@@ -160,7 +160,7 @@ export function CollectionControls({
           </label>
           <div className="relative">
             <Search
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#294D2C] pointer-events-none"
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#B6D94C] pointer-events-none"
               aria-hidden="true"
             />
             <input
@@ -169,14 +169,14 @@ export function CollectionControls({
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search specimens by name or SKU..."
-              className="w-full pl-10 pr-10 py-2.5 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] text-xs text-[#050505] placeholder-[#777A70] focus:outline-none focus:border-[#050505] focus:ring-1 focus:ring-[#050505] transition-colors"
+              className="w-full pl-10 pr-10 py-2.5 bg-[#050505] border border-[#242424] rounded-[4px] text-xs text-[#F5F3EE] placeholder-[#777772] focus:outline-none focus:border-[#B6D94C] focus:ring-1 focus:ring-[#B6D94C] transition-colors"
             />
             {searchValue && (
               <button
                 type="button"
                 onClick={handleClearSearch}
                 aria-label="Clear search"
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#777A70] hover:text-[#050505] p-1"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#777772] hover:text-[#F5F3EE] p-1"
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -187,15 +187,15 @@ export function CollectionControls({
         {/* Desktop Quick Filters */}
         <div className="hidden lg:flex items-center gap-3">
           {/* Availability Filter */}
-          <div className="flex items-center gap-1.5 text-xs text-[#050505]">
-            <label htmlFor="filter-status" className="text-[11px] uppercase tracking-wider text-[#294D2C] font-semibold">
+          <div className="flex items-center gap-1.5 text-xs text-[#F5F3EE]">
+            <label htmlFor="filter-status" className="text-[11px] uppercase tracking-wider text-[#B6D94C] font-semibold">
               Status:
             </label>
             <select
               id="filter-status"
               value={activeStatus}
               onChange={(e) => updateQuery({ status: e.target.value })}
-              className="bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] px-3 py-2 text-xs text-[#050505] focus:outline-none focus:border-[#050505]"
+              className="bg-[#050505] border border-[#242424] rounded-[4px] px-3 py-2 text-xs text-[#F5F3EE] focus:outline-none focus:border-[#B6D94C]"
             >
               <option value="all">All Specimens</option>
               <option value="available">Available Only</option>
@@ -204,15 +204,15 @@ export function CollectionControls({
           </div>
 
           {/* Carat Weight Filter */}
-          <div className="flex items-center gap-1.5 text-xs text-[#050505]">
-            <label htmlFor="filter-carat" className="text-[11px] uppercase tracking-wider text-[#294D2C] font-semibold">
+          <div className="flex items-center gap-1.5 text-xs text-[#F5F3EE]">
+            <label htmlFor="filter-carat" className="text-[11px] uppercase tracking-wider text-[#B6D94C] font-semibold">
               Carat:
             </label>
             <select
               id="filter-carat"
               value={activeCarat}
               onChange={(e) => updateQuery({ carat: e.target.value })}
-              className="bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] px-3 py-2 text-xs text-[#050505] focus:outline-none focus:border-[#050505]"
+              className="bg-[#050505] border border-[#242424] rounded-[4px] px-3 py-2 text-xs text-[#F5F3EE] focus:outline-none focus:border-[#B6D94C]"
             >
               <option value="all">All Weights</option>
               <option value="under-50">&lt; 50 ct</option>
@@ -222,15 +222,15 @@ export function CollectionControls({
           </div>
 
           {/* Sort Control */}
-          <div className="flex items-center gap-1.5 text-xs text-[#050505]">
-            <label htmlFor="sort-select" className="text-[11px] uppercase tracking-wider text-[#294D2C] font-semibold">
+          <div className="flex items-center gap-1.5 text-xs text-[#F5F3EE]">
+            <label htmlFor="sort-select" className="text-[11px] uppercase tracking-wider text-[#B6D94C] font-semibold">
               Sort:
             </label>
             <select
               id="sort-select"
               value={activeSort}
               onChange={(e) => updateQuery({ sort: e.target.value })}
-              className="bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] px-3 py-2 text-xs text-[#050505] focus:outline-none focus:border-[#050505]"
+              className="bg-[#050505] border border-[#242424] rounded-[4px] px-3 py-2 text-xs text-[#F5F3EE] focus:outline-none focus:border-[#B6D94C]"
             >
               <option value="featured">Featured First</option>
               <option value="newest">Newest Arrivals</option>
@@ -252,10 +252,10 @@ export function CollectionControls({
             aria-expanded={isMobileFilterOpen}
             aria-controls="mobile-filter-panel"
           >
-            <SlidersHorizontal className="w-3.5 h-3.5 text-[#050505]" />
+            <SlidersHorizontal className="w-3.5 h-3.5 text-[#B6D94C]" />
             <span>Filters & Sort</span>
             {activeFilterCount > 0 && (
-              <span className="w-4 h-4 rounded-full bg-[#050505] text-[#B7D98B] text-[10px] font-mono font-bold flex items-center justify-center">
+              <span className="w-4 h-4 rounded-full bg-[#B6D94C] text-[#050505] text-[10px] font-mono font-bold flex items-center justify-center">
                 {activeFilterCount}
               </span>
             )}
@@ -266,7 +266,7 @@ export function CollectionControls({
             value={activeSort}
             onChange={(e) => updateQuery({ sort: e.target.value })}
             aria-label="Sort specimens"
-            className="bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] px-3 py-2 text-xs text-[#050505] focus:outline-none focus:border-[#050505]"
+            className="bg-[#050505] border border-[#242424] rounded-[4px] px-3 py-2 text-xs text-[#F5F3EE] focus:outline-none focus:border-[#B6D94C]"
           >
             <option value="featured">Featured</option>
             <option value="newest">Newest</option>
@@ -278,8 +278,8 @@ export function CollectionControls({
 
       {/* Active Filter Chips & Result Count */}
       <div className="flex flex-wrap items-center justify-between gap-3 px-1 text-xs">
-        <div className="flex items-center gap-2 text-[#777A70]">
-          <span className="font-mono text-xs text-[#050505] font-bold" aria-live="polite">
+        <div className="flex items-center gap-2 text-[#A5A5A0]">
+          <span className="font-mono text-xs text-[#F5F3EE] font-bold" aria-live="polite">
             {totalCount}
           </span>
           <span>{totalCount === 1 ? "specimen catalogued" : "specimens catalogued"}</span>
@@ -288,12 +288,12 @@ export function CollectionControls({
         {activeFilterCount > 0 && (
           <div className="flex flex-wrap items-center gap-2">
             {activeStatus !== "all" && (
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#CFE7AA] border border-[#D4DEC5] rounded-[2px] text-[11px] text-[#050505] font-medium">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#B6D94C]/15 border border-[#B6D94C]/30 rounded-[2px] text-[11px] text-[#F5F3EE] font-medium font-mono">
                 <span>Status: {activeStatus}</span>
                 <button
                   type="button"
                   onClick={() => updateQuery({ status: null })}
-                  className="hover:text-[#294D2C]"
+                  className="hover:text-[#B6D94C]"
                   aria-label="Remove status filter"
                 >
                   <X className="w-3 h-3" />
@@ -302,12 +302,12 @@ export function CollectionControls({
             )}
 
             {activeCarat !== "all" && (
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#CFE7AA] border border-[#D4DEC5] rounded-[2px] text-[11px] text-[#050505] font-medium">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#B6D94C]/15 border border-[#B6D94C]/30 rounded-[2px] text-[11px] text-[#F5F3EE] font-medium font-mono">
                 <span>Carat: {activeCarat}</span>
                 <button
                   type="button"
                   onClick={() => updateQuery({ carat: null })}
-                  className="hover:text-[#294D2C]"
+                  className="hover:text-[#B6D94C]"
                   aria-label="Remove carat filter"
                 >
                   <X className="w-3 h-3" />
@@ -316,12 +316,12 @@ export function CollectionControls({
             )}
 
             {searchValue && (
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#CFE7AA] border border-[#D4DEC5] rounded-[2px] text-[11px] text-[#050505] font-medium">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#B6D94C]/15 border border-[#B6D94C]/30 rounded-[2px] text-[11px] text-[#F5F3EE] font-medium font-mono">
                 <span>Keyword: &ldquo;{searchValue}&rdquo;</span>
                 <button
                   type="button"
                   onClick={handleClearSearch}
-                  className="hover:text-[#294D2C]"
+                  className="hover:text-[#B6D94C]"
                   aria-label="Remove keyword search"
                 >
                   <X className="w-3 h-3" />
@@ -332,7 +332,7 @@ export function CollectionControls({
             <button
               type="button"
               onClick={handleClearAllFilters}
-              className="inline-flex items-center gap-1 text-[11px] uppercase tracking-wider text-[#050505] font-bold hover:text-[#294D2C] hover:underline ml-2"
+              className="inline-flex items-center gap-1 text-[11px] uppercase tracking-wider text-[#B6D94C] font-bold hover:text-[#A3C73A] hover:underline ml-2"
             >
               <RotateCcw className="w-3 h-3" />
               <span>Reset</span>
@@ -346,7 +346,7 @@ export function CollectionControls({
         <div
           ref={mobileFilterPanelRef}
           id="mobile-filter-panel"
-          className="fixed inset-0 z-50 flex justify-end bg-[#050505]/70 backdrop-blur-sm lg:hidden animate-fade-in"
+          className="fixed inset-0 z-50 flex justify-end bg-[#050505]/80 backdrop-blur-sm lg:hidden animate-fade-in"
           role="dialog"
           aria-modal="true"
           aria-label="Filter specimens"
@@ -354,23 +354,23 @@ export function CollectionControls({
             if (e.target === e.currentTarget) handleCloseMobileFilter();
           }}
         >
-          <div className="w-full max-w-sm h-full bg-[#E5F1D2] border-l border-[#D4DEC5] p-6 flex flex-col justify-between overflow-y-auto">
+          <div className="w-full max-w-sm h-full bg-[#050505] border-l border-[#242424] p-6 flex flex-col justify-between overflow-y-auto">
             <div className="space-y-6">
-              <div className="flex items-center justify-between pb-4 border-b border-[#D4DEC5]">
-                <h3 className="font-serif text-xl text-[#050505] font-semibold">Filter & Refine</h3>
+              <div className="flex items-center justify-between pb-4 border-b border-[#242424]">
+                <h3 className="font-serif text-xl text-[#F5F3EE] font-semibold">Filter & Refine</h3>
                 <button
                   type="button"
                   onClick={handleCloseMobileFilter}
-                  className="text-[#050505] hover:bg-[#CFE7AA] rounded-[4px] p-2 min-w-[44px] min-h-[44px] flex items-center justify-center -mr-2"
+                  className="text-[#F5F3EE] hover:bg-[#121212] border border-[#242424] rounded-[4px] p-2 min-w-[44px] min-h-[44px] flex items-center justify-center -mr-2 transition-colors"
                   aria-label="Close filter drawer"
                 >
-                  <X className="w-5 h-5 text-[#050505]" />
+                  <X className="w-5 h-5 text-[#F5F3EE]" />
                 </button>
               </div>
 
               {/* Status Section */}
               <div className="space-y-2">
-                <span className="text-[11px] uppercase tracking-wider text-[#294D2C] block font-bold">
+                <span className="text-[11px] uppercase tracking-wider text-[#B6D94C] block font-bold font-mono">
                   Availability
                 </span>
                 <div className="grid grid-cols-3 gap-2">
@@ -385,8 +385,8 @@ export function CollectionControls({
                       onClick={() => updateQuery({ status: opt.value })}
                       className={`min-h-[44px] px-3 py-2 text-xs border rounded-[4px] transition-colors font-medium ${
                         activeStatus === opt.value
-                          ? "border-[#050505] bg-[#050505] text-[#B7D98B]"
-                          : "border-[#D4DEC5] bg-[#F7F7F1] text-[#050505]"
+                          ? "border-[#B6D94C] bg-[#B6D94C] text-[#050505] font-semibold"
+                          : "border-[#242424] bg-[#0C0C0C] text-[#F5F3EE] hover:border-[#B6D94C]/40"
                       }`}
                     >
                       {opt.label}
@@ -397,7 +397,7 @@ export function CollectionControls({
 
               {/* Carat Weight Section */}
               <div className="space-y-2">
-                <span className="text-[11px] uppercase tracking-wider text-[#294D2C] block font-bold">
+                <span className="text-[11px] uppercase tracking-wider text-[#B6D94C] block font-bold font-mono">
                   Carat Weight Range
                 </span>
                 <div className="grid grid-cols-2 gap-2">
@@ -413,8 +413,8 @@ export function CollectionControls({
                       onClick={() => updateQuery({ carat: opt.value })}
                       className={`min-h-[44px] px-3 py-2 text-xs border rounded-[4px] transition-colors font-medium ${
                         activeCarat === opt.value
-                          ? "border-[#050505] bg-[#050505] text-[#B7D98B]"
-                          : "border-[#D4DEC5] bg-[#F7F7F1] text-[#050505]"
+                          ? "border-[#B6D94C] bg-[#B6D94C] text-[#050505] font-semibold"
+                          : "border-[#242424] bg-[#0C0C0C] text-[#F5F3EE] hover:border-[#B6D94C]/40"
                       }`}
                     >
                       {opt.label}
@@ -425,13 +425,13 @@ export function CollectionControls({
 
               {/* Sort Order Section */}
               <div className="space-y-2">
-                <span className="text-[11px] uppercase tracking-wider text-[#294D2C] block font-bold">
+                <span className="text-[11px] uppercase tracking-wider text-[#B6D94C] block font-bold font-mono">
                   Sort Order
                 </span>
                 <select
                   value={activeSort}
                   onChange={(e) => updateQuery({ sort: e.target.value })}
-                  className="w-full bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] p-2.5 text-xs text-[#050505] focus:outline-none focus:border-[#050505] min-h-[44px]"
+                  className="w-full bg-[#0C0C0C] border border-[#242424] rounded-[4px] p-2.5 text-xs text-[#F5F3EE] focus:outline-none focus:border-[#B6D94C] min-h-[44px]"
                 >
                   <option value="featured">Featured First</option>
                   <option value="newest">Newest Arrivals</option>
@@ -444,7 +444,7 @@ export function CollectionControls({
               {/* Color Filter (if available) */}
               {availableColors.length > 0 && (
                 <div className="space-y-2">
-                  <span className="text-[11px] uppercase tracking-wider text-[#294D2C] block font-bold">
+                  <span className="text-[11px] uppercase tracking-wider text-[#B6D94C] block font-bold font-mono">
                     Observed Color Tone
                   </span>
                   <div className="flex flex-wrap gap-2">
@@ -453,8 +453,8 @@ export function CollectionControls({
                       onClick={() => updateQuery({ color: "all" })}
                       className={`min-h-[44px] px-3 py-2 text-xs border rounded-[4px] transition-colors font-medium ${
                         activeColor === "all"
-                          ? "border-[#050505] bg-[#050505] text-[#B7D98B]"
-                          : "border-[#D4DEC5] bg-[#F7F7F1] text-[#050505]"
+                          ? "border-[#B6D94C] bg-[#B6D94C] text-[#050505] font-semibold"
+                          : "border-[#242424] bg-[#0C0C0C] text-[#F5F3EE] hover:border-[#B6D94C]/40"
                       }`}
                     >
                       All Colors
@@ -466,8 +466,8 @@ export function CollectionControls({
                         onClick={() => updateQuery({ color: c })}
                         className={`min-h-[44px] px-3 py-2 text-xs border rounded-[4px] transition-colors font-medium ${
                           activeColor === c
-                            ? "border-[#050505] bg-[#050505] text-[#B7D98B]"
-                            : "border-[#D4DEC5] bg-[#F7F7F1] text-[#050505]"
+                            ? "border-[#B6D94C] bg-[#B6D94C] text-[#050505] font-semibold"
+                            : "border-[#242424] bg-[#0C0C0C] text-[#F5F3EE] hover:border-[#B6D94C]/40"
                         }`}
                       >
                         {c}
@@ -479,7 +479,7 @@ export function CollectionControls({
             </div>
 
             {/* Bottom Actions */}
-            <div className="pt-6 border-t border-[#D4DEC5] flex items-center gap-3">
+            <div className="pt-6 border-t border-[#242424] flex items-center gap-3">
               <Button
                 variant="secondary"
                 size="md"

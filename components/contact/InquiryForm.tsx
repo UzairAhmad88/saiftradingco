@@ -201,15 +201,15 @@ export function InquiryForm({
       <div
         role="status"
         aria-live="polite"
-        className="p-8 sm:p-10 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] space-y-6 text-[#050505] shadow-sm"
+        className="p-8 sm:p-10 bg-[#FAF9F5] border border-[#E2DFD7] rounded-[2px] space-y-6 text-[#050505]"
       >
         <div className="flex items-center gap-3">
           <CheckCircle2
-            className="w-7 h-7 text-[#294D2C] shrink-0"
+            className="w-7 h-7 text-[#4D6618] shrink-0"
             aria-hidden="true"
           />
           <div>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#294D2C] block font-medium">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#4D6618] block font-medium">
               Transmission Confirmed
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl text-[#050505] font-normal tracking-tight">
@@ -218,33 +218,33 @@ export function InquiryForm({
           </div>
         </div>
 
-        <p className="text-sm text-[#777A70] leading-relaxed font-light">
+        <p className="text-sm text-[#777772] leading-relaxed font-light">
           Thank you for contacting Saif Trading Co. Your inquiry has been received by our Hong Kong trade desk.
         </p>
 
         {submissionResult.reference && (
-          <div className="p-4 bg-[#E5F1D2] border border-[#D4DEC5] rounded-[4px] space-y-1">
-            <span className="text-[10px] text-[#777A70] uppercase tracking-wider block font-medium">
+          <div className="p-4 bg-[#F1EFE8] border border-[#E2DFD7] rounded-[2px] space-y-1">
+            <span className="text-[10px] text-[#777772] uppercase tracking-wider block font-medium">
               Reference Identification
             </span>
-            <span className="font-mono text-sm text-[#294D2C] tracking-wider block font-bold">
+            <span className="font-mono text-sm text-[#050505] tracking-wider block font-bold">
               {submissionResult.reference}
             </span>
           </div>
         )}
 
-        <div className="space-y-2 text-xs text-[#777A70] pt-2 border-t border-[#D4DEC5]">
-          <div className="flex justify-between py-1 border-b border-[#D4DEC5]/60">
+        <div className="space-y-2 text-xs text-[#777772] pt-2 border-t border-[#E2DFD7]">
+          <div className="flex justify-between py-1 border-b border-[#E2DFD7]/60">
             <span>Inquiry Type:</span>
             <span className="text-[#050505] font-medium">{formData.inquiryType}</span>
           </div>
           {gemstoneContext && (
-            <div className="flex justify-between py-1 border-b border-[#D4DEC5]/60">
+            <div className="flex justify-between py-1 border-b border-[#E2DFD7]/60">
               <span>Specimen:</span>
               <span className="text-[#050505] font-medium">{gemstoneContext.name}</span>
             </div>
           )}
-          <div className="flex justify-between py-1 border-b border-[#D4DEC5]/60">
+          <div className="flex justify-between py-1 border-b border-[#E2DFD7]/60">
             <span>Contact Email:</span>
             <span className="text-[#050505] font-medium">{formData.email}</span>
           </div>
@@ -253,7 +253,7 @@ export function InquiryForm({
         <div className="pt-4 flex flex-col sm:flex-row items-center gap-3">
           <Link
             href="/collections"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#050505] text-[#B7D98B] font-medium text-xs uppercase tracking-wider rounded-[4px] hover:bg-[#294D2C] hover:text-[#F7F7F1] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#050505] text-[#B6D94C] font-medium text-xs uppercase tracking-wider rounded-[2px] hover:bg-[#121212] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
           >
             <span>Explore Collections</span>
             <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
@@ -262,7 +262,7 @@ export function InquiryForm({
           <button
             type="button"
             onClick={handleReset}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#E5F1D2] text-[#050505] border border-[#D4DEC5] rounded-[4px] text-xs uppercase tracking-wider hover:border-[#050505] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#F1EFE8] text-[#050505] border border-[#D8D6CF] rounded-[2px] text-xs uppercase tracking-wider hover:border-[#050505] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#050505]"
           >
             <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Submit Another Inquiry</span>
@@ -290,7 +290,7 @@ export function InquiryForm({
         <div
           role="alert"
           aria-live="assertive"
-          className="p-5 bg-[#FEE2E2] border border-[#DC2626]/40 rounded-[4px] text-sm space-y-3"
+          className="p-5 bg-[#FEF2F2] border border-[#F87171]/50 rounded-[2px] text-sm space-y-3"
         >
           <div className="flex items-center gap-2 text-[#991B1B] font-medium">
             <AlertCircle className="w-4 h-4 shrink-0" aria-hidden="true" />
@@ -322,13 +322,13 @@ export function InquiryForm({
         onSubmit={handleSubmit}
         noValidate
         aria-label="Gemstone inquiry form"
-        className="p-6 sm:p-8 sm:p-10 bg-[#F7F7F1] border border-[#D4DEC5] rounded-[4px] space-y-6 shadow-sm"
+        className="p-6 sm:p-8 sm:p-10 bg-[#FAF9F5] border border-[#E2DFD7] rounded-[2px] space-y-6 text-[#050505]"
       >
-        <div className="border-b border-[#D4DEC5] pb-4">
+        <div className="border-b border-[#E2DFD7] pb-4">
           <h2 className="font-serif text-xl sm:text-2xl text-[#050505] font-normal">
             Trade Inquiry Form
           </h2>
-          <p className="text-xs text-[#777A70] mt-1">
+          <p className="text-xs text-[#777772] mt-1">
             Complete the fields below to contact our Hong Kong desk regarding specimen viewings, physical lots, or general trade queries.
           </p>
         </div>
@@ -459,11 +459,11 @@ export function InquiryForm({
 
         {/* 7. Privacy Notice */}
         <div className="pt-2">
-          <p className="text-xs text-[#777A70] leading-relaxed">
+          <p className="text-xs text-[#777772] leading-relaxed">
             By submitting this form, you agree that the information provided may be used to respond to your inquiry in accordance with our{" "}
             <Link
               href="/privacy"
-              className="text-[#050505] hover:text-[#294D2C] underline underline-offset-2 transition-colors font-medium"
+              className="text-[#050505] hover:text-[#4D6618] underline underline-offset-2 transition-colors font-medium"
             >
               Privacy Policy
             </Link>
