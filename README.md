@@ -18,6 +18,15 @@ Next.js + TypeScript + Tailwind CSS + Supabase PostgreSQL/Auth/Storage + Vercel.
 
 Read `/docs` before development.
 
+## SEO & Search Architecture
+- **Canonical Domain & Base URL:** Dynamically bound via `NEXT_PUBLIC_SITE_URL` (with Vercel production fallbacks)
+- **Robots Directives:** `/robots.txt` automatically permits public catalogue & educational content while blocking `/admin/` and `/api/`
+- **Dynamic Sitemap:** Generated at `/sitemap.xml` covering static pages, active mineral categories, published gemstones, and in-depth educational guides
+- **Structured Data:** Standards-compliant JSON-LD for `Organization`, `WebSite`, `BreadcrumbList`, `Product` (on gemstone specimen pages), and `Article` (on educational guides)
+- **Search Console:** Built-in meta tag verification support via `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
+- **Topical Clusters:** Three core commercial mineral pillars (Tourmaline, Kunzite, Morganite) interconnected with 7 technical gemological guides
+
+
 ## Business Identity
 
 **Business Name:** Saif Trading Co
