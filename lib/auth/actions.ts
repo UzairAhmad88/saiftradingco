@@ -47,10 +47,12 @@ export async function signInAction(
     });
 
     if (error || !data.user) {
-      // Do not reveal whether the email exists or password failed
+      console.error("[signInAction] Auth failed:", error);
       return {
         success: false,
-        error: "Unable to sign in. Please check your email and password and try again.",
+        error:
+          error?.message ||
+          "Unable to sign in. Please check your email and password and try again.",
       };
     }
 
