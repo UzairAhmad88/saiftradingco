@@ -1,9 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo/metadata";
-import {
-  ALL_DEMO_GEMSTONES,
-  COLLECTIONS_DATA,
-} from "@/lib/data/collections-data";
+import { COLLECTIONS_DATA } from "@/lib/data/collections-data";
 import { EDUCATION_ARTICLES } from "@/lib/data/education-data";
 import { createServerClientInstance } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/data/gemstones-db";
@@ -70,8 +67,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // 3. Published Gemstone Detail Routes (Strictly status in 'available', 'sold')
-  // Draft and hidden specimens are explicitly excluded from sitemap
-  let publishedGemstones: Array<{ slug: string; updated_at: string; status: string }>;
+  // Draft and hidden specimens are explicitly excluded from sitemap.
+  // PHASE 20 & PHASE 77 MANDATE: NEVER allow demo gemstone records in sitemap.
+  // If Supabase is unavailable, fail safely to an empty array for gemstone routes.
+  let publishedGemstones: Array<{ slug: string; updated_at?: string; status: string }> = [];
 
   if (isSupabaseConfigured()) {
     try {
@@ -83,32 +82,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
       if (!error && data && data.length > 0) {
         publishedGemstones = data;
-      } else {
-        publishedGemstones = ALL_DEMO_GEMSTONES.filter(
-          (g) => g.status === "available" || g.status === "sold"
-        ).map((g) => ({
-          slug: g.slug,
-          updated_at: g.updated_at,
-          status: g.status,
-        }));
       }
-    } catch {
-      publishedGemstones = ALL_DEMO_GEMSTONES.filter(
-        (g) => g.status === "available" || g.status === "sold"
-      ).map((g) => ({
-        slug: g.slug,
-        updated_at: g.updated_at,
-        status: g.status,
-      }));
+    } catch (err) {
+      console.warn("[sitemap] Failed to query published gemstones from Supabase:", err);
+      publishedGemstones = [];
     }
-  } else {
-    publishedGemstones = ALL_DEMO_GEMSTONES.filter(
-      (g) => g.status === "available" || g.status === "sold"
-    ).map((g) => ({
-      slug: g.slug,
-      updated_at: g.updated_at,
-      status: g.status,
-    }));
   }
 
   const gemstoneRoutes: MetadataRoute.Sitemap = publishedGemstones.map((gem) => ({

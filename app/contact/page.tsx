@@ -9,6 +9,7 @@ import {
   type SelectedGemstoneContext,
 } from "@/components/contact/InquiryForm";
 import { getDbGemstoneBySlug } from "@/lib/data/gemstones-db";
+import { FaqSection } from "@/components/ui/FaqSection";
 import { ArrowRight, BookOpen, ShieldCheck, Gem } from "lucide-react";
 
 export const metadata: Metadata = constructMetadata({
@@ -152,6 +153,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             </div>
           </div>
         </section>
+
+        {/* Trade Inquiries & Commercial FAQs with FAQPage Schema */}
+        <FaqSection theme="dark" />
 
         {/* Bottom Contextual Navigation Strip */}
         <section

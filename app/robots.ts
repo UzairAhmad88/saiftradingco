@@ -14,6 +14,26 @@ export default function robots(): MetadataRoute.Robots {
           "/api/*",
         ],
       },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+        disallow: [
+          "/admin/",
+          "/admin/*",
+          "/api/",
+          "/api/*",
+        ],
+      },
+      {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+        disallow: [
+          "/admin/",
+          "/admin/*",
+          "/api/",
+          "/api/*",
+        ],
+      },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

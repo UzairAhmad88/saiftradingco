@@ -3,16 +3,13 @@ import type { Metadata } from "next";
 /**
  * Normalized production site URL configuration.
  * Always strips trailing slashes to guarantee clean canonical and sitemap URLs.
+ * Defaults strictly to production canonical https://saiftradingco.com.
  */
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`
-    : "") ||
-  (process.env.NEXT_PUBLIC_VERCEL_URL
-    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-    : "") ||
-  "http://localhost:3000"
+  (process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://saiftradingco.com")
 ).replace(/\/+$/, "");
 
 export const siteConfig = {
@@ -165,8 +162,19 @@ export function getOrganizationSchema() {
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     url: SITE_URL,
+    description: siteConfig.description,
     email: siteConfig.email,
     telephone: siteConfig.telephone,
+    areaServed: "Worldwide",
+    knowsAbout: [
+      "Rough Tourmaline",
+      "Rough Kunzite",
+      "Rough Morganite",
+      "Rough Gemstones",
+      "Mineral Crystals",
+      "Gemstone Documentation",
+      "Gemological Testing Reports",
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.streetAddress,
@@ -209,6 +217,27 @@ export function getWebSiteSchema() {
       "@id": `${SITE_URL}#organization`,
     },
     inLanguage: "en-HK",
+  };
+}
+
+/**
+ * Verified FAQPage Schema (JSON-LD).
+ * Powers rich FAQ snippets in search results and structured QA parsing for AI agents.
+ */
+export function getFaqPageSchema(
+  faqs: Array<{ question: string; answer: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }
 

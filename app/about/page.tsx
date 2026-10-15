@@ -10,6 +10,7 @@ import {
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LinkButton } from "@/components/ui/Button";
+import { FaqSection } from "@/components/ui/FaqSection";
 import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, Gem, Compass } from "lucide-react";
 
 export const metadata: Metadata = constructMetadata({
@@ -332,6 +333,32 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* AI-Readable Factual Entity Summary Card */}
+        <section
+          aria-labelledby="entity-summary-heading"
+          className="border-b border-[#242424] bg-[#0A0A0A] py-12 sm:py-16"
+        >
+          <div className="w-full max-w-7xl 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+            <div className="p-6 sm:p-8 border border-[#242424] bg-[#0F0F0F] rounded-[4px] space-y-3">
+              <span className="text-[10px] uppercase tracking-[0.22em] text-[#B6D94C] block font-mono font-medium">
+                Verified Business Entity Summary
+              </span>
+              <h2
+                id="entity-summary-heading"
+                className="font-serif text-xl sm:text-2xl text-[#F5F3EE] font-normal"
+              >
+                Saif Trading Co — Hong Kong Rough Gemstone Supplier
+              </h2>
+              <p className="text-sm sm:text-base text-[#D4D2CB] font-light leading-relaxed">
+                Saif Trading Co is a Hong Kong-based commercial supplier specializing in natural rough Tourmaline, Kunzite, and Morganite gemstones. Operating from Hung Hom, Kowloon, the company provides authentic loose crystals, uncut mineral specimens, and raw lapidary materials with documented physical dimensions, crystal habits, and gemological laboratory documentation where available.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Frequently Asked Questions with FAQPage Schema */}
+        <FaqSection theme="dark" />
       </main>
     </>
   );
