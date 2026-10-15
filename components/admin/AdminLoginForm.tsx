@@ -2,8 +2,6 @@
 
 import React, { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { FormField } from "@/components/ui/FormField";
-import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { signInAction } from "@/lib/auth/actions";
 import { Eye, EyeOff, Lock, AlertCircle, ShieldCheck } from "lucide-react";
@@ -78,8 +76,14 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
       )}
 
       {/* Email Field */}
-      <FormField id="admin-email" label="Administrator Email" required>
-        <Input
+      <div className="space-y-2">
+        <label
+          htmlFor="admin-email"
+          className="block text-xs uppercase tracking-[0.18em] font-medium text-[#E5E5DF] select-none"
+        >
+          Administrator Email <span className="text-[#9CCB63]" aria-hidden="true">*</span>
+        </label>
+        <input
           id="admin-email"
           name="email"
           type="email"
@@ -89,14 +93,20 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="admin@saiftradingco.com"
           disabled={isPending}
-          className="bg-[#0A0A0A]"
+          className="w-full h-11 px-4 text-sm font-sans bg-[#0A0A0A] text-[#F5F5F0] placeholder-[#666660] border border-[#2A2A28] rounded-[4px] transition-all duration-200 hover:border-[#3E3E3A] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63] disabled:opacity-50 disabled:cursor-not-allowed caret-[#9CCB63]"
         />
-      </FormField>
+      </div>
 
       {/* Password Field with Accessible Show/Hide Toggle */}
-      <FormField id="admin-password" label="Password" required>
+      <div className="space-y-2">
+        <label
+          htmlFor="admin-password"
+          className="block text-xs uppercase tracking-[0.18em] font-medium text-[#E5E5DF] select-none"
+        >
+          Password <span className="text-[#9CCB63]" aria-hidden="true">*</span>
+        </label>
         <div className="relative">
-          <Input
+          <input
             id="admin-password"
             name="password"
             type={showPassword ? "text" : "password"}
@@ -106,13 +116,13 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••••••"
             disabled={isPending}
-            className="pr-12 bg-[#0A0A0A]"
+            className="w-full h-11 pl-4 pr-12 text-sm font-sans bg-[#0A0A0A] text-[#F5F5F0] placeholder-[#666660] border border-[#2A2A28] rounded-[4px] transition-all duration-200 hover:border-[#3E3E3A] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63] disabled:opacity-50 disabled:cursor-not-allowed caret-[#9CCB63]"
           />
           <button
             type="button"
             onClick={() => setShowPassword((prev) => !prev)}
             aria-label={showPassword ? "Hide password" : "Show password"}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9A9A94] hover:text-[#F5F5F0] p-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63] rounded-[4px]"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9A9A94] hover:text-[#F5F5F0] p-1.5 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9CCB63] rounded-[4px]"
             title={showPassword ? "Hide password" : "Show password"}
             tabIndex={0}
           >
@@ -123,7 +133,7 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
             )}
           </button>
         </div>
-      </FormField>
+      </div>
 
       {/* Hidden Safe Redirect Path */}
       <input type="hidden" name="next" value={safeNext} />
