@@ -65,7 +65,7 @@ begin
       created_at,
       updated_at
     ) values (
-      gen_random_uuid()::text,
+      gen_random_uuid(),
       v_user_id,
       json_build_object('sub', v_user_id::text, 'email', 'admin@saiftradingco.com')::jsonb,
       'email',
@@ -134,7 +134,7 @@ begin
       created_at,
       updated_at
     ) values (
-      gen_random_uuid()::text,
+      gen_random_uuid(),
       v_user_id,
       json_build_object('sub', v_user_id::text, 'email', 'saiftradingco@yahoo.com')::jsonb,
       'email',
