@@ -3,8 +3,17 @@ import Link from "next/link";
 import { FEATURED_GEMSTONES_DATA } from "@/lib/data/homepage-data";
 import { GemstoneCard } from "@/components/gemstones/GemstoneCard";
 import { ArrowRight, Info } from "lucide-react";
+import type { GemstoneWithDetails } from "@/types/gemstone";
 
-export function FeaturedGemstonesSection() {
+export interface FeaturedGemstonesSectionProps {
+  gemstones?: GemstoneWithDetails[];
+}
+
+export function FeaturedGemstonesSection({ gemstones }: FeaturedGemstonesSectionProps) {
+  // Use database gemstones if available and non-empty, otherwise fallback to verified baseline showcase
+  const displayGemstones =
+    gemstones && gemstones.length > 0 ? gemstones : FEATURED_GEMSTONES_DATA;
+
   return (
     <section
       aria-labelledby="featured-gemstones-heading"
@@ -39,7 +48,7 @@ export function FeaturedGemstonesSection() {
 
         {/* Gemstone Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {FEATURED_GEMSTONES_DATA.map((gemstone) => (
+          {displayGemstones.map((gemstone) => (
             <GemstoneCard
               key={gemstone.id}
               gemstone={gemstone}

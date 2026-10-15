@@ -9,6 +9,7 @@ import { EditorialFeature } from "@/components/home/EditorialFeature";
 import { TrustSection } from "@/components/home/TrustSection";
 import { EducationSection } from "@/components/home/EducationSection";
 import { InquiryCTA } from "@/components/home/InquiryCTA";
+import { getDbFeaturedGemstones } from "@/lib/data/gemstones-db";
 
 export const metadata = constructMetadata({
   title: "Saif Trading Co | Rough Tourmaline, Kunzite & Morganite",
@@ -17,9 +18,10 @@ export const metadata = constructMetadata({
   canonical: "/",
 });
 
-export default function HomePage() {
+export default async function HomePage() {
   const organizationSchema = getOrganizationSchema();
   const websiteSchema = getWebSiteSchema();
+  const featuredGemstones = await getDbFeaturedGemstones(3);
 
   return (
     <>
@@ -42,7 +44,7 @@ export default function HomePage() {
         <SpecializationsSection />
 
         {/* 04 — Curated Featured Gemstones */}
-        <FeaturedGemstonesSection />
+        <FeaturedGemstonesSection gemstones={featuredGemstones} />
 
         {/* 05 — Editorial Gemstone Story */}
         <EditorialFeature />

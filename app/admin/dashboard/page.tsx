@@ -13,6 +13,7 @@ import {
   CheckCircle2,
   AlertCircle,
   EyeOff,
+  Mail,
 } from "lucide-react";
 import { requireAdmin } from "@/lib/auth/server";
 import {
@@ -125,8 +126,19 @@ export default async function AdminDashboardPage() {
               variant="secondary"
               className="text-xs border-[#262626] text-[#F5F5F0] hover:border-[#9CCB63]"
             >
-              <span>Manage All</span>
+              <span>Manage Inventory</span>
               <ArrowRight className="w-3.5 h-3.5 ml-1.5" aria-hidden="true" />
+            </Button>
+          </Link>
+
+          <Link href="/admin/inquiries">
+            <Button
+              size="sm"
+              variant="secondary"
+              className="text-xs border-[#262626] text-[#F5F5F0] hover:border-[#9CCB63]"
+            >
+              <Mail className="w-3.5 h-3.5 mr-1.5" aria-hidden="true" />
+              <span>Inquiries</span>
             </Button>
           </Link>
 

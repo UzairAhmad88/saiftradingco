@@ -20,15 +20,22 @@ export interface MutationResult<T = unknown> {
 /**
  * Revalidate all public and admin paths influenced by catalogue changes.
  */
-function revalidateCataloguePaths(slug?: string) {
+function revalidateCataloguePaths(slug?: string, categorySlug?: string) {
   revalidatePath("/");
   revalidatePath("/collections");
   revalidatePath("/collections/[category]", "page");
+  if (categorySlug) {
+    revalidatePath(`/collections/${categorySlug}`);
+  }
+  revalidatePath("/collections/tourmaline");
+  revalidatePath("/collections/kunzite");
+  revalidatePath("/collections/morganite");
   if (slug) {
     revalidatePath(`/gemstones/${slug}`);
   }
   revalidatePath("/admin/dashboard");
   revalidatePath("/admin/gemstones");
+  revalidatePath("/admin/categories");
 }
 
 /**
@@ -725,3 +732,170 @@ export async function toggleCategoryActiveAction(
     return { success: false, error: "Unexpected error updating category." };
   }
 }
+
+/**
+ * Server Action: Update an existing Category.
+ */
+export async function updateCategoryAction(
+  id: string,
+  rawInput: AdminCategoryInput
+): Promise<MutationResult> {
+  await requireAdmin();
+
+  const parsed = adminCategorySchema.safeParse(rawInput);
+  if (!parsed.success) {
+    return {
+      success: false,
+      error: parsed.error.issues[0]?.message || "Invalid category data.",
+    };
+  }
+
+  try {
+    const supabase = await createServerClientInstance();
+
+    // Check slug uniqueness against other categories
+    const { data: existing } = await supabase
+      .from("categories")
+      .select("id")
+      .eq("slug", parsed.data.slug)
+      .neq("id", id)
+      .maybeSingle();
+
+    if (existing) {
+      return {
+        success: false,
+        error: "A category with this URL slug already exists.",
+      };
+    }
+
+    const { error } = await supabase
+      .from("categories")
+      .update({
+        name: parsed.data.name.trim(),
+        slug: parsed.data.slug.trim(),
+        description: parsed.data.description ? parsed.data.description.trim() : null,
+        is_active: parsed.data.is_active,
+        sort_order: parsed.data.sort_order,
+      })
+      .eq("id", id);
+
+    if (error) {
+      return { success: false, error: "Failed to update category record." };
+    }
+
+    revalidateCataloguePaths();
+    revalidatePath("/admin/categories");
+    return { success: true };
+  } catch (err) {
+    console.error("[updateCategoryAction] Error:", err);
+    return { success: false, error: "Unexpected error updating category." };
+  }
+}
+
+/**
+ * Server Action: Delete a category safely.
+ * Safeguard: Rejects deletion if any gemstone specimens currently reference it.
+ */
+export async function deleteCategoryAction(id: string): Promise<MutationResult> {
+  await requireAdmin();
+
+  try {
+    const supabase = await createServerClientInstance();
+
+    // Verify no gemstones are assigned to this category
+    const { count, error: countErr } = await supabase
+      .from("gemstones")
+      .select("*", { count: "exact", head: true })
+      .eq("category_id", id);
+
+    if (countErr) {
+      return { success: false, error: "Failed to verify category dependencies." };
+    }
+
+    if ((count ?? 0) > 0) {
+      return {
+        success: false,
+        error: `Cannot delete category: ${count} gemstone specimen(s) are currently categorized under it. Please reassign or delete them first.`,
+      };
+    }
+
+    const { error: deleteErr } = await supabase
+      .from("categories")
+      .delete()
+      .eq("id", id);
+
+    if (deleteErr) {
+      return { success: false, error: "Unable to delete category." };
+    }
+
+    revalidateCataloguePaths();
+    revalidatePath("/admin/categories");
+    return { success: true };
+  } catch (err) {
+    console.error("[deleteCategoryAction] Error:", err);
+    return { success: false, error: "Unexpected error deleting category." };
+  }
+}
+
+/**
+ * Server Action: Update Trade Inquiry Status.
+ */
+export async function updateInquiryStatusAction(
+  id: string,
+  status: "new" | "in_progress" | "resolved" | "archived"
+): Promise<MutationResult> {
+  await requireAdmin();
+
+  const validStatuses = ["new", "in_progress", "resolved", "archived"];
+  if (!validStatuses.includes(status)) {
+    return { success: false, error: "Invalid inquiry status." };
+  }
+
+  try {
+    const supabase = await createServerClientInstance();
+    const { error } = await supabase
+      .from("inquiries")
+      .update({ status })
+      .eq("id", id);
+
+    if (error) {
+      console.error("[updateInquiryStatusAction] Update error:", error);
+      return { success: false, error: "Failed to update inquiry status." };
+    }
+
+    revalidatePath("/admin/inquiries");
+    revalidatePath("/admin/dashboard");
+    return { success: true };
+  } catch (err) {
+    console.error("[updateInquiryStatusAction] Exception:", err);
+    return { success: false, error: "Unexpected error updating inquiry." };
+  }
+}
+
+/**
+ * Server Action: Delete Trade Inquiry.
+ */
+export async function deleteInquiryAction(id: string): Promise<MutationResult> {
+  await requireAdmin();
+
+  try {
+    const supabase = await createServerClientInstance();
+    const { error } = await supabase
+      .from("inquiries")
+      .delete()
+      .eq("id", id);
+
+    if (error) {
+      console.error("[deleteInquiryAction] Delete error:", error);
+      return { success: false, error: "Failed to delete inquiry." };
+    }
+
+    revalidatePath("/admin/inquiries");
+    revalidatePath("/admin/dashboard");
+    return { success: true };
+  } catch (err) {
+    console.error("[deleteInquiryAction] Exception:", err);
+    return { success: false, error: "Unexpected error deleting inquiry." };
+  }
+}
+

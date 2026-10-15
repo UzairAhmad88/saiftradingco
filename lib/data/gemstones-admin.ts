@@ -6,9 +6,33 @@ import {
   getCollections as getLocalCollections,
 } from "@/lib/data/collections-data";
 import type { GemstoneWithDetails, GemstoneImage } from "@/types/gemstone";
-import type { GemstoneStatus } from "@/types/database";
+import type { GemstoneStatus, InquiryStatus } from "@/types/database";
 import { requireAdmin } from "@/lib/auth/server";
 import { sanitizePostgrestSearch } from "@/lib/utils/security";
+
+export interface AdminInquiryRow {
+  id: string;
+  name: string;
+  email: string;
+  phone: string | null;
+  inquiry_type: string;
+  gemstone_id: string | null;
+  gemstone_slug: string | null;
+  gemstone_name: string | null;
+  message: string;
+  status: InquiryStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface AdminInquiriesResult {
+  inquiries: AdminInquiryRow[];
+  total: number;
+  newCount: number;
+  inProgressCount: number;
+  resolvedCount: number;
+  archivedCount: number;
+}
 
 export interface AdminCatalogueStats {
   total: number;
@@ -200,14 +224,13 @@ export async function getAdminCatalogueStats(): Promise<AdminCatalogueStats> {
     };
   } catch (err) {
     console.error("[getAdminCatalogueStats] Error fetching stats:", err);
-    const local = ALL_DEMO_GEMSTONES;
     return {
-      total: local.length,
-      available: local.filter((g) => g.status === "available").length,
-      sold: local.filter((g) => g.status === "sold").length,
+      total: 0,
+      available: 0,
+      sold: 0,
       draft: 0,
       hidden: 0,
-      featured: local.filter((g) => g.featured).length,
+      featured: 0,
     };
   }
 }
@@ -568,3 +591,96 @@ export async function getAdminCategories(): Promise<AdminCategoryRow[]> {
     return [];
   }
 }
+
+/**
+ * Fetch trade inquiries with optional status filter and search.
+ */
+export async function getAdminInquiries(options: {
+  status?: string;
+  search?: string;
+  page?: number;
+  pageSize?: number;
+} = {}): Promise<AdminInquiriesResult> {
+  const { status = "all", search = "", page = 1, pageSize = 25 } = options;
+
+  if (!isSupabaseConfigured()) {
+    return {
+      inquiries: [],
+      total: 0,
+      newCount: 0,
+      inProgressCount: 0,
+      resolvedCount: 0,
+      archivedCount: 0,
+    };
+  }
+
+  try {
+    await requireAdmin();
+    const supabase = await createServerClientInstance();
+
+    // Query status counts concurrently
+    const [totalRes, newRes, inProgRes, resRes, archRes] = await Promise.all([
+      supabase.from("inquiries").select("*", { count: "exact", head: true }),
+      supabase.from("inquiries").select("*", { count: "exact", head: true }).eq("status", "new"),
+      supabase.from("inquiries").select("*", { count: "exact", head: true }).eq("status", "in_progress"),
+      supabase.from("inquiries").select("*", { count: "exact", head: true }).eq("status", "resolved"),
+      supabase.from("inquiries").select("*", { count: "exact", head: true }).eq("status", "archived"),
+    ]);
+
+    let query = supabase
+      .from("inquiries")
+      .select("*")
+      .order("created_at", { ascending: false });
+
+    if (status && status !== "all") {
+      query = query.eq("status", status as InquiryStatus);
+    }
+
+    if (search && search.trim() !== "") {
+      const q = sanitizePostgrestSearch(search);
+      if (q) {
+        query = query.or(
+          `name.ilike.%${q}%,email.ilike.%${q}%,gemstone_name.ilike.%${q}%,message.ilike.%${q}%`
+        );
+      }
+    }
+
+    const from = (page - 1) * pageSize;
+    const to = from + pageSize - 1;
+    query = query.range(from, to);
+
+    const { data, error } = await query;
+
+    if (error || !data) {
+      console.warn("[getAdminInquiries] Query error:", error);
+      return {
+        inquiries: [],
+        total: 0,
+        newCount: newRes.count ?? 0,
+        inProgressCount: inProgRes.count ?? 0,
+        resolvedCount: resRes.count ?? 0,
+        archivedCount: archRes.count ?? 0,
+      };
+    }
+
+    return {
+      inquiries: data as AdminInquiryRow[],
+      total: totalRes.count ?? data.length,
+      newCount: newRes.count ?? 0,
+      inProgressCount: inProgRes.count ?? 0,
+      resolvedCount: resRes.count ?? 0,
+      archivedCount: archRes.count ?? 0,
+    };
+  } catch (err) {
+    console.error("[getAdminInquiries] Exception:", err);
+    return {
+      inquiries: [],
+      total: 0,
+      newCount: 0,
+      inProgressCount: 0,
+      resolvedCount: 0,
+      archivedCount: 0,
+    };
+  }
+}
+

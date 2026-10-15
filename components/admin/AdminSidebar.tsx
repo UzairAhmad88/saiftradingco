@@ -7,6 +7,7 @@ import {
   LayoutDashboard,
   Gem,
   Layers,
+  Mail,
   Settings,
   ExternalLink,
   LogOut,
@@ -40,6 +41,12 @@ const NAV_ITEMS = [
     label: "Categories",
     href: "/admin/categories",
     icon: Layers,
+    exact: false,
+  },
+  {
+    label: "Inquiries",
+    href: "/admin/inquiries",
+    icon: Mail,
     exact: false,
   },
   {
