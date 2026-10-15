@@ -479,7 +479,7 @@ export async function createDbInquiry(
 
   try {
     const supabase = createPublicServerClient();
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from("inquiries")
       .insert({
         name: inquiry.name,
@@ -491,16 +491,14 @@ export async function createDbInquiry(
         gemstone_name: inquiry.gemstone_name || null,
         message: inquiry.message,
         status: "new",
-      })
-      .select("id")
-      .single();
+      });
 
     if (error) {
       console.error("[createDbInquiry] Supabase insert error:", error);
       return { success: false, error: error.message };
     }
 
-    return { success: true, id: data?.id };
+    return { success: true };
   } catch (err) {
     const message = err instanceof Error ? err.message : "Failed to persist inquiry";
     console.error("[createDbInquiry] Unexpected insert exception:", err);
