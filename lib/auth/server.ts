@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation";
-import { headers } from "next/headers";
 import { createServerClientInstance } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/data/gemstones-db";
 import type { AdminUserContext, AdminRole } from "@/types/auth";
@@ -103,29 +102,18 @@ export async function requireAuthenticatedUser(
  * 2. Authenticated but non-admin -> Redirects to /admin/unauthorized
  * 3. Authenticated admin -> Returns AdminUserContext
  */
-export async function requireAdmin(): Promise<AdminUserContext> {
+export async function requireAdmin(
+  targetPath = "/admin/dashboard"
+): Promise<AdminUserContext> {
   const user = await getAuthenticatedUser();
 
   if (!user) {
-    // Attempt to determine the current path from request headers
-    let currentPath = "/admin/dashboard";
-    try {
-      const headerList = await headers();
-      const nextUrl = headerList.get("x-invoke-path") || headerList.get("x-url");
-      if (nextUrl && nextUrl.startsWith("/admin")) {
-        currentPath = nextUrl;
-      }
-    } catch {
-      // Fallback to default
-    }
-
-    redirect(`/admin/login?next=${encodeURIComponent(currentPath)}`);
+    redirect(`/admin/login?next=${encodeURIComponent(targetPath)}`);
   }
 
   const { isAdmin, role } = await checkUserIsAdmin(user.id);
 
   if (!isAdmin || !role) {
-    // Authenticated user lacks administrative credentials
     redirect("/admin/unauthorized");
   }
 

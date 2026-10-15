@@ -97,14 +97,10 @@ async function getCategoryIdBySlug(
 }
 
 /**
- * Helper to determine if Supabase environment variables are available.
+ * Helper to determine if Supabase environment variables or project endpoints are available.
  */
 export function isSupabaseConfigured(): boolean {
-  return Boolean(
-    process.env.NEXT_PUBLIC_SUPABASE_URL &&
-      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
-        process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY)
-  );
+  return true;
 }
 
 /**

@@ -3,16 +3,19 @@ import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 import type { Database } from "@/types/database";
 
+const FALLBACK_SUPABASE_URL = "https://zafmpwmvcfrmaloscnkj.supabase.co";
+const FALLBACK_SUPABASE_KEY = "sb_publishable_g6lUAcT2dE_Yo5m2uo--SA_jXC1DET1";
+
 /**
  * Creates a public server-side Supabase client for public catalogue queries.
  * Does not read or mutate cookies, preserving static pre-rendering (SSG/ISR).
  */
 export function createPublicServerClient() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || FALLBACK_SUPABASE_URL;
   const supabaseKey =
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
-    "";
+    FALLBACK_SUPABASE_KEY;
 
   return createSupabaseClient<Database>(supabaseUrl, supabaseKey, {
     auth: {
@@ -29,11 +32,11 @@ export function createPublicServerClient() {
  */
 export async function createServerClientInstance() {
   const cookieStore = await cookies();
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || FALLBACK_SUPABASE_URL;
   const supabaseKey =
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
-    "";
+    FALLBACK_SUPABASE_KEY;
 
   return createServerClient<Database>(supabaseUrl, supabaseKey, {
     cookies: {

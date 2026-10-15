@@ -37,22 +37,33 @@ export default function GlobalError({
             Something went wrong
           </h1>
           <p className="type-body text-[#A5A5A0] max-w-md mx-auto font-light leading-relaxed">
-            An unexpected interruption occurred while loading this page. Please try again or return to our homepage.
+            An unexpected interruption occurred while loading this page. Please try again or sign in to continue.
           </p>
+          {error?.message && (
+            <p className="text-[11px] font-mono text-[#EF4444] bg-[#140A0A] border border-[#DC2626]/30 p-2.5 rounded-[2px] max-w-md mx-auto break-all">
+              {error.message}
+            </p>
+          )}
         </div>
 
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs uppercase tracking-[0.2em]">
+        <div className="pt-4 flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-[0.2em]">
           <button
             type="button"
             onClick={() => reset()}
-            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 bg-[#B6D94C] text-[#050505] font-semibold rounded-[2px] hover:bg-[#A3C73A] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#B6D94C] text-[#050505] font-semibold rounded-[2px] hover:bg-[#A3C73A] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
           >
             <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Try Again</span>
           </button>
           <Link
+            href="/admin/login"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#9CCB63] rounded-[2px] text-[#9CCB63] hover:bg-[#9CCB63]/10 transition-colors"
+          >
+            <span>Admin Sign In</span>
+          </Link>
+          <Link
             href="/"
-            className="w-full sm:w-auto px-8 py-3.5 border border-[#242424] rounded-[2px] text-[#F5F3EE] hover:border-[#B6D94C] hover:text-[#B6D94C] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#242424] rounded-[2px] text-[#F5F3EE] hover:border-[#B6D94C] hover:text-[#B6D94C] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
           >
             Return Home
           </Link>
