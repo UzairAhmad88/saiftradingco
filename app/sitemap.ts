@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo/metadata";
 import { COLLECTIONS_DATA } from "@/lib/data/collections-data";
 import { EDUCATION_ARTICLES } from "@/lib/data/education-data";
-import { createServerClientInstance } from "@/lib/supabase/server";
+import { createPublicServerClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/data/gemstones-db";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -74,7 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   if (isSupabaseConfigured()) {
     try {
-      const supabase = await createServerClientInstance();
+      const supabase = createPublicServerClient();
       const { data, error } = await supabase
         .from("gemstones")
         .select("slug, updated_at, status")
