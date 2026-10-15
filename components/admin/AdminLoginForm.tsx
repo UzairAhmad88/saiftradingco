@@ -93,6 +93,7 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="admin@saiftradingco.com"
           disabled={isPending}
+          style={{ color: "#F5F5F0", backgroundColor: "#0A0A0A" }}
           className="w-full h-11 px-4 text-sm font-sans bg-[#0A0A0A] text-[#F5F5F0] placeholder-[#666660] border border-[#2A2A28] rounded-[4px] transition-all duration-200 hover:border-[#3E3E3A] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63] disabled:opacity-50 disabled:cursor-not-allowed caret-[#9CCB63]"
         />
       </div>
@@ -116,6 +117,7 @@ export function AdminLoginForm({ safeNext }: AdminLoginFormProps) {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••••••"
             disabled={isPending}
+            style={{ color: "#F5F5F0", backgroundColor: "#0A0A0A" }}
             className="w-full h-11 pl-4 pr-12 text-sm font-sans bg-[#0A0A0A] text-[#F5F5F0] placeholder-[#666660] border border-[#2A2A28] rounded-[4px] transition-all duration-200 hover:border-[#3E3E3A] focus:outline-none focus:border-[#9CCB63] focus:ring-1 focus:ring-[#9CCB63] disabled:opacity-50 disabled:cursor-not-allowed caret-[#9CCB63]"
           />
           <button

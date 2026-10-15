@@ -206,3 +206,21 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Ensure inputs on dark surfaces always have crisp, visible light text */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color-scheme: dark;
+}
+
+/* Chrome / Safari / Edge Autofill Fix for Dark Themes */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #0A0A0A inset !important;
+  -webkit-text-fill-color: #F5F5F0 !important;
+  caret-color: #9CCB63 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
