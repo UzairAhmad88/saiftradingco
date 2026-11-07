@@ -50,7 +50,7 @@ export const INTRO_CONTENT = {
     "Based in Hung Hom, Kowloon, Saif Trading Co operates as a specialized supplier of rough crystalline gemstones. We concentrate our procurement and trade on three distinctive natural varieties: Tourmaline, Kunzite, and Morganite.",
   bodyParagraph:
     "Every rough specimen in our portfolio is catalogued with accurate physical dimensions, carat weight, crystal habit, and available independent gemological testing reports. We prioritize transparent trade communication and direct specimen review for international buyers.",
-  locationBadge: "Focal Industrial Centre, Hung Hom, Hong Kong",
+  locationBadge: "Hung Hom, Kowloon, Hong Kong",
 };
 
 export const SPECIALIZATIONS_DATA: SpecializationItem[] = [
@@ -231,7 +231,7 @@ export const TRUST_POINTS_DATA: TrustItem[] = [
   {
     title: "Registered Hong Kong Presence",
     description:
-      "Operating from the Focal Industrial Centre in Hung Hom, Kowloon, providing a stable, verifiable commercial base.",
+      "Operating from two business addresses in Hung Hom, Kowloon, providing a stable, verifiable commercial base.",
     detail: "Direct trade communication with company principals.",
   },
   {

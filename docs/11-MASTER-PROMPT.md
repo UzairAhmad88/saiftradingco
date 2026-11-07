@@ -3,7 +3,9 @@
 
 Business name: Saif Trading Co
 
-Address: 417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong
+Addresses:
+- Address 1: 417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong
+- Address 2: 1028 Flat, 10th Floor, Block B, Focal Industrial Building, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong
 
 Telephone: +852 3525 1640
 Mobile: +852 9064 9593

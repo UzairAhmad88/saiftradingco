@@ -57,13 +57,14 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
     mainEntity: {
       "@type": "Organization",
       name: siteConfig.name,
-      address: {
+      address: siteConfig.addresses.map((addr) => ({
         "@type": "PostalAddress",
-        streetAddress: siteConfig.address.streetAddress,
-        addressLocality: siteConfig.address.addressLocality,
-        addressRegion: siteConfig.address.addressRegion,
-        addressCountry: siteConfig.address.addressCountry,
-      },
+        streetAddress: addr.streetAddress,
+        addressLocality: addr.addressLocality,
+        addressRegion: addr.addressRegion,
+        ...(addr.postalCode ? { postalCode: addr.postalCode } : {}),
+        addressCountry: addr.addressCountry,
+      })),
       telephone: siteConfig.telephone,
       email: siteConfig.email,
     },

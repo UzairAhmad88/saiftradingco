@@ -291,16 +291,24 @@ export default function AboutPage() {
               </div>
 
               <div className="lg:col-span-6 p-8 bg-[#050505] border border-[#242424] rounded-[4px] space-y-6 text-[#F5F3EE] shadow-2xl">
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#B6D94C] block font-mono font-medium">
-                    Registered Office Address
+                    Official Business Addresses
                   </span>
-                  <div className="flex items-start gap-3 text-sm text-[#A5A5A0] font-light leading-relaxed">
-                    <MapPin className="w-4 h-4 text-[#B6D94C] shrink-0 mt-1" />
-                    <span>
-                      {siteConfig.address.streetAddress},<br />
-                      {siteConfig.address.addressLocality}, Hong Kong
-                    </span>
+                  <div className="space-y-4">
+                    {siteConfig.addresses.map((addr) => (
+                      <div key={addr.id} className="flex items-start gap-3 text-sm text-[#A5A5A0] font-light leading-relaxed">
+                        <MapPin className="w-4 h-4 text-[#B6D94C] shrink-0 mt-1" />
+                        <div>
+                          <span className="text-[10px] uppercase tracking-wider text-[#B6D94C] font-mono block font-medium mb-0.5">
+                            {addr.label}
+                          </span>
+                          <span className="text-[#F5F3EE]">
+                            {addr.fullAddress}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
@@ -351,7 +359,7 @@ export default function AboutPage() {
                 Saif Trading Co — Hong Kong Rough Gemstone Supplier
               </h2>
               <p className="text-sm sm:text-base text-[#D4D2CB] font-light leading-relaxed">
-                Saif Trading Co is a Hong Kong-based commercial supplier specializing in natural rough Tourmaline, Kunzite, and Morganite gemstones. Operating from Hung Hom, Kowloon, the company provides authentic loose crystals, uncut mineral specimens, and raw lapidary materials with documented physical dimensions, crystal habits, and gemological laboratory documentation where available.
+                Saif Trading Co is a Hong Kong-based commercial supplier specializing in natural rough Tourmaline, Kunzite, and Morganite gemstones. Operating from two listed business addresses in Hung Hom, Kowloon, Hong Kong, the company provides authentic loose crystals, uncut mineral specimens, and raw lapidary materials with documented physical dimensions, crystal habits, and gemological laboratory documentation where available.
               </p>
             </div>
           </div>

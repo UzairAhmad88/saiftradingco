@@ -12,7 +12,7 @@ export const VERIFIED_FAQS: FaqItem[] = [
   {
     question: "Where is Saif Trading Co located?",
     answer:
-      "Saif Trading Co is located in Hong Kong at 417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong.",
+      "Saif Trading Co operates from two official business addresses in Hung Hom, Kowloon, Hong Kong: Address 1: 417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong; and Address 2: 1028 Flat, 10th Floor, Block B, Focal Industrial Building, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong.",
   },
   {
     question: "Does Saif Trading Co supply rough Tourmaline crystals?",

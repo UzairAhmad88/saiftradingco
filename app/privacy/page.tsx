@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { constructMetadata } from "@/lib/seo/metadata";
+import { constructMetadata, siteConfig } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = constructMetadata({
   title: "Privacy Policy",
@@ -67,11 +67,22 @@ export default function PrivacyPage() {
               <p>
                 For any inquiries regarding this policy or your personal information, contact our privacy officer at:
               </p>
-              <div className="mt-3 p-5 bg-[#050505] border border-[#242424] rounded-[2px] text-xs sm:text-sm text-[#F5F3EE] space-y-1">
+              <div className="mt-3 p-5 bg-[#050505] border border-[#242424] rounded-[2px] text-xs sm:text-sm text-[#F5F3EE] space-y-3">
                 <p><strong className="text-[#B6D94C] font-mono uppercase tracking-wider text-xs">Saif Trading Co</strong></p>
-                <p className="text-[#A5A5A0]">417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong</p>
-                <p className="text-[#A5A5A0]">Telephone: +852 3525 1640</p>
-                <p className="text-[#A5A5A0]">Email: Saiftradingco@yahoo.com</p>
+                <div className="space-y-2 text-[#A5A5A0]">
+                  {siteConfig.addresses.map((addr) => (
+                    <div key={addr.id}>
+                      <span className="text-[#B6D94C] font-mono text-[10px] uppercase tracking-wider block font-medium">
+                        {addr.label}
+                      </span>
+                      <p>{addr.fullAddress}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="pt-2 border-t border-[#242424] space-y-1 text-[#A5A5A0]">
+                  <p>Telephone: {siteConfig.telephone}</p>
+                  <p>Email: {siteConfig.email}</p>
+                </div>
               </div>
             </section>
           </div>

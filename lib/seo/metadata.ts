@@ -12,20 +12,64 @@ export const SITE_URL = (
     : "https://saiftradingco.com")
 ).replace(/\/+$/, "");
 
-export const siteConfig = {
-  name: "Saif Trading Co",
-  legalName: "Saif Trading Co",
-  description:
-    "Hong Kong supplier of natural rough Tourmaline, Kunzite, and Morganite gemstone crystals. Documented physical dimensions, crystalline habits, and transparent commercial correspondence.",
-  url: SITE_URL,
-  address: {
+export interface BusinessAddress {
+  id: string;
+  label: string;
+  streetAddress: string;
+  addressLocality: string;
+  addressRegion: string;
+  addressCountry: string;
+  postalCode?: string;
+  lines: string[];
+  fullAddress: string;
+}
+
+export const businessAddresses: BusinessAddress[] = [
+  {
+    id: "address-1",
+    label: "Address 1",
     streetAddress:
       "417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street",
     addressLocality: "Hung Hom",
     addressRegion: "Kowloon",
     postalCode: "999077",
     addressCountry: "HK",
+    lines: [
+      "417 Flat 4 Floor, Block B,",
+      "Focal Industrial Centre,",
+      "21 Man Lok Street,",
+      "Hung Hom, Kowloon, Hong Kong",
+    ],
+    fullAddress:
+      "417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong",
   },
+  {
+    id: "address-2",
+    label: "Address 2",
+    streetAddress:
+      "1028 Flat, 10th Floor, Block B, Focal Industrial Building, 21 Man Lok Street",
+    addressLocality: "Hung Hom",
+    addressRegion: "Kowloon",
+    addressCountry: "HK",
+    lines: [
+      "1028 Flat, 10th Floor, Block B,",
+      "Focal Industrial Building,",
+      "21 Man Lok Street,",
+      "Hung Hom, Kowloon, Hong Kong",
+    ],
+    fullAddress:
+      "1028 Flat, 10th Floor, Block B, Focal Industrial Building, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong",
+  },
+];
+
+export const siteConfig = {
+  name: "Saif Trading Co",
+  legalName: "Saif Trading Co",
+  description:
+    "Hong Kong supplier of natural rough Tourmaline, Kunzite, and Morganite gemstone crystals. Documented physical dimensions, crystalline habits, and transparent commercial correspondence.",
+  url: SITE_URL,
+  addresses: businessAddresses,
+  address: businessAddresses[0],
   telephone: "+852 3525 1640",
   mobiles: ["+852 9064 9593", "+852 6903 7690"],
   email: "Saiftradingco@yahoo.com",
@@ -175,14 +219,14 @@ export function getOrganizationSchema() {
       "Gemstone Documentation",
       "Gemological Testing Reports",
     ],
-    address: {
+    address: siteConfig.addresses.map((addr) => ({
       "@type": "PostalAddress",
-      streetAddress: siteConfig.address.streetAddress,
-      addressLocality: siteConfig.address.addressLocality,
-      addressRegion: siteConfig.address.addressRegion,
-      postalCode: siteConfig.address.postalCode,
-      addressCountry: siteConfig.address.addressCountry,
-    },
+      streetAddress: addr.streetAddress,
+      addressLocality: addr.addressLocality,
+      addressRegion: addr.addressRegion,
+      ...(addr.postalCode ? { postalCode: addr.postalCode } : {}),
+      addressCountry: addr.addressCountry,
+    })),
     contactPoint: [
       {
         "@type": "ContactPoint",

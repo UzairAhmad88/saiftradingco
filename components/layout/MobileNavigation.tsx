@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
+import { siteConfig } from "@/lib/seo/metadata";
 
 export interface MobileNavigationProps {
   isOpen: boolean;
@@ -199,15 +200,20 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
         {/* Verified Business Details */}
         <div className="pt-8 border-t border-[#242424] space-y-4 text-xs text-[#A5A5A0]">
           <span className="type-eyebrow text-[#B6D94C] block font-bold">
-            Hong Kong Office
+            Hong Kong Addresses
           </span>
-          <div className="space-y-2.5 leading-relaxed">
-            <div className="flex items-start gap-2.5">
-              <MapPin className="w-4 h-4 text-[#B6D94C] shrink-0 mt-0.5" />
-              <span className="text-[#A5A5A0]">
-                417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong
-              </span>
-            </div>
+          <div className="space-y-3 leading-relaxed">
+            {siteConfig.addresses.map((addr) => (
+              <div key={addr.id} className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-[#B6D94C] shrink-0 mt-0.5" />
+                <div className="text-xs">
+                  <span className="text-[#B6D94C] font-mono text-[10px] uppercase tracking-wider block font-medium">
+                    {addr.label}
+                  </span>
+                  <span className="text-[#A5A5A0]">{addr.fullAddress}</span>
+                </div>
+              </div>
+            ))}
             <div className="flex items-center gap-2.5">
               <Phone className="w-4 h-4 text-[#B6D94C] shrink-0" />
               <a href="tel:+85235251640" className="hover:text-[#B6D94C] font-medium transition-colors text-[#F5F3EE]">

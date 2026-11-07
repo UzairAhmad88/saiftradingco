@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail, ExternalLink, ShieldCheck } from "lucide-react";
+import { siteConfig } from "@/lib/seo/metadata";
 
 export function ContactInfo() {
   return (
@@ -17,35 +18,57 @@ export function ContactInfo() {
         </p>
       </div>
 
-      {/* Office Address Card — Dry Black Surface */}
-      <div className="p-6 bg-[#0C0C0C] border border-[#242424] rounded-[2px] space-y-4">
+      {/* Office Addresses Card — Dry Black Surface */}
+      <div className="p-6 bg-[#0C0C0C] border border-[#242424] rounded-[2px] space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#B6D94C] font-medium">
             <MapPin className="w-4 h-4 text-[#B6D94C]" aria-hidden="true" />
-            <span>Hong Kong Office</span>
+            <span>Our Hong Kong Addresses</span>
           </div>
           <a
             href="https://maps.google.com/?q=Focal+Industrial+Centre,+21+Man+Lok+Street,+Hung+Hom,+Kowloon,+Hong+Kong"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-[11px] text-[#B6D94C] hover:text-[#F5F3EE] font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B6D94C]"
-            aria-label="View Focal Industrial Centre on Google Maps in a new tab"
+            aria-label="View 21 Man Lok Street on Google Maps in a new tab"
           >
             <span>Map</span>
             <ExternalLink className="w-3 h-3" aria-hidden="true" />
           </a>
         </div>
 
-        <address className="not-italic text-sm text-[#F5F3EE] space-y-1 leading-relaxed font-light">
-          <p className="font-medium text-[#F5F3EE]">Saif Trading Co</p>
-          <p className="text-[#A5A5A0]">417 Flat 4 Floor, Block B</p>
-          <p className="text-[#A5A5A0]">Focal Industrial Centre</p>
-          <p className="text-[#A5A5A0]">21 Man Lok Street</p>
-          <p className="text-[#A5A5A0]">Hung Hom, Kowloon</p>
-          <p className="text-[#777772]">Hong Kong</p>
-        </address>
+        <div className="space-y-6">
+          {siteConfig.addresses.map((addr, index) => (
+            <div
+              key={addr.id}
+              className={index > 0 ? "pt-5 border-t border-[#242424]" : ""}
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-[#B6D94C] font-semibold bg-[#B6D94C]/10 border border-[#B6D94C]/25 px-2 py-0.5 rounded-[2px]">
+                  {addr.label}
+                </span>
+              </div>
+              <address className="not-italic text-sm text-[#F5F3EE] space-y-1 leading-relaxed font-light">
+                {addr.lines.map((line, lineIndex) => (
+                  <p
+                    key={lineIndex}
+                    className={
+                      lineIndex === addr.lines.length - 1
+                        ? "text-[#777772]"
+                        : lineIndex === 0
+                        ? "text-[#F5F3EE] font-medium"
+                        : "text-[#A5A5A0]"
+                    }
+                  >
+                    {line}
+                  </p>
+                ))}
+              </address>
+            </div>
+          ))}
+        </div>
 
-        <div className="pt-3 border-t border-[#242424]">
+        <div className="pt-2 border-t border-[#242424]">
           <p className="text-xs text-[#777772] leading-relaxed">
             In-person lot viewings and physical rough inspections at our Hung Hom premises are arranged by appointment.
           </p>

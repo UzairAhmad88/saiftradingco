@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { siteConfig } from "@/lib/seo/metadata";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -82,15 +83,21 @@ export function Footer() {
           {/* Column 3: Contact Information (lg:col-span-5) */}
           <div className="lg:col-span-5 space-y-4">
             <h3 className="type-eyebrow text-[#B6D94C] font-semibold">
-              Hong Kong Trade Office
+              Hong Kong Addresses
             </h3>
             <address className="not-italic text-sm space-y-3 leading-relaxed text-[#A5A5A0] font-light">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#B6D94C] shrink-0 mt-1" aria-hidden="true" />
-                <span className="text-[#F5F3EE]">
-                  417 Flat 4 Floor, Block B, Focal Industrial Centre,<br />
-                  21 Man Lok Street, Hung Hom, Kowloon, Hong Kong
-                </span>
+              <div className="space-y-2.5">
+                {siteConfig.addresses.map((addr) => (
+                  <div key={addr.id} className="flex items-start gap-2.5">
+                    <MapPin className="w-4 h-4 text-[#B6D94C] shrink-0 mt-0.5" aria-hidden="true" />
+                    <div className="text-xs leading-relaxed">
+                      <span className="text-[#B6D94C] font-mono text-[10px] uppercase tracking-wider block font-medium">
+                        {addr.label}
+                      </span>
+                      <span className="text-[#F5F3EE]">{addr.fullAddress}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               <div className="flex items-start gap-3 pt-1">

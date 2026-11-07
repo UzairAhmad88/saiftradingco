@@ -2,7 +2,9 @@
 
 **Project:** Saif Trading Co — Premium Rough Gemstone Catalogue & Business Website  
 **Business Specialty:** Natural Rough Tourmaline, Kunzite & Morganite  
-**Address:** 417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong  
+**Addresses:**  
+- **Address 1:** 417 Flat 4 Floor, Block B, Focal Industrial Centre, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong  
+- **Address 2:** 1028 Flat, 10th Floor, Block B, Focal Industrial Building, 21 Man Lok Street, Hung Hom, Kowloon, Hong Kong  
 **Contact:** Tel: +852 3525 1640 | Mobile: +852 9064 9593 / +852 6903 7690 | Email: Saiftradingco@yahoo.com  
 **Handover Status:** **READY FOR HANDOVER**  
 

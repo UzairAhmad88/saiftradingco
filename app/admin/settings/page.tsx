@@ -14,7 +14,7 @@ import {
 import { requireAdmin } from "@/lib/auth/server";
 import { signOutAction } from "@/lib/auth/actions";
 import { Button } from "@/components/ui/Button";
-import { constructMetadata } from "@/lib/seo/metadata";
+import { constructMetadata, siteConfig } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = constructMetadata({
   title: "Administrative Settings | Saif Trading Co",
@@ -168,18 +168,22 @@ export default async function AdminSettingsPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-            <div className="p-3.5 bg-[#0A0A0A] border border-[#1F1F1F] rounded-[4px] space-y-1">
+            <div className="p-3.5 bg-[#0A0A0A] border border-[#1F1F1F] rounded-[4px] space-y-2">
               <div className="flex items-center gap-1.5 text-[#9CCB63] mb-1">
                 <MapPin className="w-3.5 h-3.5" />
-                <span className="font-mono text-[10px] uppercase">Registered Office</span>
+                <span className="font-mono text-[10px] uppercase">Registered Addresses</span>
               </div>
               <p className="text-[#F5F5F0] font-medium">Saif Trading Co</p>
-              <p className="text-[#9A9A94] text-[11px] leading-relaxed">
-                417 Flat 4 Floor, Block B,<br />
-                Focal Industrial Centre,<br />
-                21 Man Lok Street, Hung Hom,<br />
-                Kowloon, Hong Kong
-              </p>
+              <div className="space-y-2 text-[#9A9A94] text-[11px] leading-relaxed">
+                {siteConfig.addresses.map((addr) => (
+                  <div key={addr.id}>
+                    <span className="text-[#9CCB63] font-mono text-[10px] uppercase block">
+                      {addr.label}
+                    </span>
+                    <p>{addr.fullAddress}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="p-3.5 bg-[#0A0A0A] border border-[#1F1F1F] rounded-[4px] space-y-1">

@@ -90,7 +90,7 @@ export function GemstoneIdentity({ gemstone }: GemstoneIdentityProps) {
         ) : (
           <div className="flex items-center gap-2 text-xs text-[#EDEDE4]">
             <MapPin className="w-3.5 h-3.5 text-[#B6D94C] shrink-0" />
-            <span>Available for inspection at Focal Industrial Centre, Hung Hom, Hong Kong</span>
+            <span>Available for inspection at our Hung Hom premises, Hong Kong</span>
           </div>
         )}
       </div>
