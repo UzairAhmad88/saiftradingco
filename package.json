@@ -15,11 +15,11 @@
     "@tailwindcss/postcss": "^4.3.3",
     "clsx": "latest",
     "lucide-react": "^1.52.0",
-    "next": "latest",
+    "next": "16.4.1",
     "react": "latest",
     "react-dom": "latest",
     "tailwind-merge": "latest",
-    "zod": "latest"
+    "zod": "4.6.6"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
